@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gerador de orçamento e recibo grátis em PDF · Saigg Digital</title>
+<meta name="description" content="Monte um orçamento ou recibo de prestação de serviço com seus dados, itens, desconto, prazo e forma de pagamento, e baixe em PDF para mandar no WhatsApp. Grátis, sem cadastro, para MEI e autônomos.">
+<link rel="canonical" href="https://saiggdigital.com.br/geradores/orcamento-e-recibo/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Gerador de orçamento e recibo grátis em PDF">
+<meta property="og:description" content="Monte um orçamento ou recibo de prestação de serviço com seus dados, itens, desconto, prazo e forma de pagamento, e baixe em PDF para mandar no WhatsApp. Grátis, sem cadastro, para MEI e autônomos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://saiggdigital.com.br/geradores/orcamento-e-recibo/">
+<meta property="og:site_name" content="Saigg Digital">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://saiggdigital.com.br/static/og/calc-orcamento-e-recibo.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2315171c'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='17' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/static/estilo.css?v=843630ef">
+<link rel="alternate" type="application/rss+xml" title="Saigg Digital" href="/feed.xml">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://saiggdigital.com.br/", "name": "In\u00edcio", "position": 1}, {"@type": "ListItem", "item": "https://saiggdigital.com.br/ferramentas/", "name": "Ferramentas gr\u00e1tis", "position": 2}, {"@type": "ListItem", "item": "https://saiggdigital.com.br/geradores/orcamento-e-recibo/", "name": "Or\u00e7amento e recibo", "position": 3}]}</script>
+
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "applicationCategory": "BusinessApplication", "description": "Monte um or\u00e7amento ou recibo de presta\u00e7\u00e3o de servi\u00e7o com seus dados, itens, desconto, prazo e forma de pagamento, e baixe em PDF para mandar no WhatsApp. Gr\u00e1tis, sem cadastro, para MEI e aut\u00f4nomos.", "inLanguage": "pt-BR", "isAccessibleForFree": true, "name": "Gerador de or\u00e7amento e recibo gr\u00e1tis em PDF", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"}, "operatingSystem": "Web", "url": "https://saiggdigital.com.br/geradores/orcamento-e-recibo/"}
+</script>
+
+<style>
+/* documento gerado: na tela é uma prévia; na impressão (ou "Salvar como PDF") só ele aparece */
+.doc-acoes{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.doc-acoes small{color:var(--muted)}
+.doc{grid-column:1/-1;background:#fff;color:#111;border:1px solid var(--line);border-radius:12px;padding:2.2rem 2.4rem;font-size:.95rem;line-height:1.55;box-shadow:var(--shadow)}
+.doc h2{font-size:1.25rem;margin:0;letter-spacing:.02em}
+.doc .doc-topo{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;border-bottom:2px solid #111;padding-bottom:.8rem;margin-bottom:1.2rem}
+.doc .doc-valor{font-size:1.15rem;font-weight:700;text-align:right;white-space:nowrap}
+.doc .doc-num{color:#555;font-size:.85rem}
+.doc table{width:100%;border-collapse:collapse;margin:1rem 0}
+.doc th,.doc td{border-bottom:1px solid #ddd;padding:.45rem .3rem;text-align:left;vertical-align:top}
+.doc th{font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+.doc td.n,.doc th.n{text-align:right;white-space:nowrap}
+.doc tfoot td{font-weight:700;border-bottom:0;border-top:2px solid #111}
+.doc .doc-partes{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.doc .doc-partes small{display:block;color:#666;text-transform:uppercase;font-size:.72rem;letter-spacing:.05em}
+.doc .doc-ass{margin:3rem auto 0;max-width:340px;text-align:center;border-top:1px solid #111;padding-top:.4rem}
+.doc .doc-local{text-align:right;margin-top:1.5rem}
+.doc .doc-obs{white-space:pre-wrap;color:#333;font-size:.9rem}
+.doc .doc-rodape{margin-top:2rem;color:#888;font-size:.72rem;text-align:center}
+.itens-linha{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,3fr) minmax(70px,.7fr) minmax(100px,1fr) auto;gap:.5rem;align-items:end}
+.itens-linha button{font:inherit;border:1px solid var(--line-2);background:#fff;border-radius:var(--r-sm);padding:.7rem .8rem;cursor:pointer;color:var(--muted)}
+.calc-box .grupo{grid-column:1/-1;margin:.6rem 0 -.3rem;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+@media (max-width:600px){.doc{padding:1.3rem 1.1rem;font-size:.9rem}.doc .doc-partes{grid-template-columns:1fr}.itens-linha{grid-template-columns:1fr 1fr}.itens-linha label:first-child{grid-column:1/-1}}
+#doc-impressao{display:none}
+@media print{
+  @page{margin:16mm}
+  body > *:not(#doc-impressao){display:none!important}
+  body{background:#fff!important;margin:0!important;padding:0!important}
+  #doc-impressao{display:block}
+  #doc-impressao .doc{border:0;box-shadow:none;padding:0;font-size:11pt}
+}
+</style>
+
+
+</head>
+<body>
+<header class="topo" id="topo">
+  <div class="container">
+    <a class="logo" href="/"><span class="marca">S</span>Saigg Digital</a>
+    
+    <nav class="nav" id="nav" aria-label="Principal">
+      <div class="nav-grupo">
+        <button type="button" class="nav-botao" aria-expanded="false">Produtos <svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-painel">
+          <a href="/assinar/"><span class="np-ico"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></span><span><b>Assinatura online</b><small>Aluguel, MEI, Carro e Finanças no celular, com lembretes</small></span></a>
+          <a href="/planilhas/"><span class="np-ico"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/></svg></span><span><b>Planilhas</b><small>Prontas para Excel e Google Planilhas, pagamento único</small></span></a>
+          <a href="/modelos/"><span class="np-ico"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span><b>Modelos de documentos</b><small>Contratos, propostas e recibos em Word</small></span></a>
+          <a class="np-todos" href="/produtos/">Ver todos os produtos <svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="nav-grupo">
+        <button type="button" class="nav-botao" aria-expanded="false" aria-current="page">Ferramentas grátis <svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-painel">
+          <a href="/calculadoras/"><span class="np-ico"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M8 6h8"/><path d="M16 14v4"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg></span><span><b>Calculadoras</b><small>Reajuste, DAS, preço de venda, custo do carro…</small></span></a>
+          <a href="/ferramentas/#comparadores"><span class="np-ico"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span><span><b>Comparadores</b><small>Qual maquininha e qual conta PJ compensam</small></span></a>
+          <a href="/ferramentas/#geradores"><span class="np-ico"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span><b>Geradores de documentos</b><small>Recibo de aluguel e orçamento em PDF</small></span></a>
+          <a class="np-todos" href="/ferramentas/">Ver todas as ferramentas <svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="nav-grupo">
+        <button type="button" class="nav-botao" aria-expanded="false">Assuntos <svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-painel nav-painel-assuntos">
+          <a href="/mei/"><span class="icone-area" style="--cor: #4f46e5"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><span><b>MEI &amp; pequenos negócios</b></span></a><a href="/aluguel/"><span class="icone-area" style="--cor: #0b6b56"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><span><b>Aluguel &amp; imóveis</b></span></a><a href="/carro/"><span class="icone-area" style="--cor: #c2410c"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></span><span><b>Carro na ponta do lápis</b></span></a><a href="/financas/"><span class="icone-area" style="--cor: #be185d"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></span><span><b>Finanças pessoais</b></span></a><a href="/autonomos/"><span class="icone-area" style="--cor: #0369a1"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg></span><span><b>Autônomos &amp; freelancers</b></span></a>
+        </div>
+      </div>
+      <a class="nav-link" href="/blog/">Guias</a>
+      <a class="nav-link" href="/">Quem somos</a>
+      <div class="nav-acoes">
+        <a class="entrar" href="/app/">Entrar</a>
+        <a class="btn btn-sm" href="/assinar/">Assinar</a>
+      </div>
+    </nav>
+    <button class="menu-btn" type="button" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<main class="container">
+<nav class="migalhas" aria-label="Você está em"><a href="/">Início</a><span>/</span><a href="/ferramentas/">Ferramentas grátis</a><span>/</span>Orçamento e recibo</nav>
+
+
+<article class="calc-pagina">
+  <header class="pagina-topo">
+    <span class="icone-area" style="--cor: #0369a1"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg></span>
+    <h1>Gerador de orçamento e recibo grátis em PDF</h1>
+    <p class="lead">Monte um orçamento ou recibo de prestação de serviço com seus dados, itens, desconto, prazo e forma de pagamento, e baixe em PDF para mandar no WhatsApp. Grátis, sem cadastro, para MEI e autônomos.</p>
+    <p class="acoes-topo">
+<a class="btn btn-sec btn-sm compartilhar" href="https://wa.me/?text=Or%C3%A7amento%20e%20recibo%3A%20calculadora%20gr%C3%A1tis%2C%20sem%20cadastro.%20https%3A//saiggdigital.com.br/geradores/orcamento-e-recibo/%3Futm_source%3Dwhatsapp-compartilhar" target="_blank" rel="noopener"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Enviar no WhatsApp</a></p>
+  </header>
+  <div class="calc-box">
+    <form onsubmit="return false">
+  <label>Documento<select id="tipo_doc"><option value="orcamento">Orçamento</option><option value="recibo">Recibo de pagamento</option></select></label>
+  <label>Número<input id="numero" type="number" min="1" step="1" value="1"></label>
+  <label>Data<input id="data" type="date"></label>
+  <label id="lb_validade">Validade do orçamento (dias)<input id="validade" type="number" min="1" step="1" value="15"></label>
+  <p class="grupo">Seus dados</p>
+  <label>Seu nome ou empresa<input id="pr_nome" placeholder="Ana Lima Design"></label>
+  <label>CPF ou CNPJ<input id="pr_doc" placeholder="00.000.000/0001-00"></label>
+  <label>WhatsApp ou telefone<input id="pr_tel" placeholder="(11) 90000-0000"></label>
+  <label>E-mail<input id="pr_email" placeholder="contato@exemplo.com"></label>
+  <p class="grupo">Cliente</p>
+  <label>Nome do cliente<input id="cl_nome" placeholder="Padaria Bom Dia"></label>
+  <label>CPF/CNPJ ou contato do cliente <small>opcional</small><input id="cl_doc"></label>
+  <p class="grupo">Itens</p>
+  <div id="itens" style="display:contents"></div>
+  <p style="grid-column:1/-1;margin:0"><button class="btn btn-sec btn-sm" type="button" onclick="addItem()">+ Adicionar item</button></p>
+  <p class="grupo">Condições</p>
+  <label>Desconto (R$)<input id="desconto" type="number" step="0.01" min="0"></label>
+  <label>Forma de pagamento<input id="pagamento" placeholder="50% na aprovação e 50% na entrega, via Pix"></label>
+  <label id="lb_prazo">Prazo de entrega<input id="prazo" placeholder="10 dias úteis após a aprovação"></label>
+  <label style="grid-column:1/-1">Observações<textarea id="obs" rows="3" placeholder="O que está incluído, o que não está, número de revisões…" style="font:inherit;font-size:1rem;padding:.7rem .8rem;border:1px solid var(--line-2);border-radius:var(--r-sm);resize:vertical"></textarea></label>
+</form>
+    <div class="calc-resultado" id="resultado" aria-live="polite"></div>
+  </div>
+  <div class="artigo"><div class="prosa"><h2 id="orcamento-que-fecha-mais">Orçamento que fecha mais</h2>
+<p>Um orçamento claro passa confiança e evita a discussão de depois. O que não pode faltar:</p>
+<ul>
+<li><strong>Seus dados e os do cliente</strong>, com um contato para tirar dúvidas;</li>
+<li><strong>Os itens separados</strong>, com quantidade e valor — o cliente entende o que está pagando e você consegue negociar tirando um item, não baixando o preço de tudo;</li>
+<li><strong>Validade</strong>: preço de material e a sua agenda mudam; 15 dias é o mais comum;</li>
+<li><strong>Forma de pagamento e prazo de entrega</strong>: &ldquo;50 % na aprovação&rdquo; protege você de quem some no meio do trabalho;</li>
+<li><strong>O que está e o que não está incluído</strong>, nas observações (número de revisões, deslocamento, material).</li>
+</ul>
+<p>Não sabe quanto cobrar? Calcule primeiro o <a href="/calculadoras/valor-da-hora/">valor mínimo da sua hora</a> e multiplique pelas horas do trabalho. Para produtos, use a <a href="/calculadoras/preco-de-venda/">calculadora de preço de venda</a>.</p>
+<h2 id="recibo-depois-de-receber">Recibo depois de receber</h2>
+<p>Troque &ldquo;Documento&rdquo; para <strong>Recibo de pagamento</strong> e o mesmo formulário vira um recibo com o valor por extenso. Ele serve de comprovante para o cliente e para o seu controle — mas <strong>não substitui a nota fiscal</strong> quando o cliente for empresa: veja <a href="/blog/nota-fiscal-mei-como-emitir/">como o MEI emite nota fiscal</a>.</p>
+<h2 id="para-trabalhos-maiores">Para trabalhos maiores</h2>
+<p>Se o serviço dura semanas ou tem várias entregas, formalize com um contrato: o <a href="/blog/contrato-prestacao-de-servicos-autonomo/">modelo de contrato de prestação de serviços</a> explica as cláusulas que evitam calote e retrabalho.</p></div>
+  <aside class="cta-box">
+  <div>
+    <span class="eyebrow">Modelo pronto</span>
+    <h3>Kit de Modelos: Contrato, Proposta, Ordem de Serviço e Recibo</h3>
+    <p>Quatro documentos em Word, prontos para preencher os campos em amarelo e enviar em PDF. Escritos para autônomo e MEI, sem juridiquês.</p>
+  </div>
+  <a class="btn btn-primario" href="/modelos/kit-modelos-documentos/">Conhecer · R$ 19,90</a>
+</aside>
+  </div>
+  
+  <section>
+    <div class="cabeca-secao"><div><h2>Outras calculadoras</h2></div><a class="link-seta" href="/calculadoras/">Ver todas <svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+    <div class="ferramentas">
+<a class="ferramenta" href="/calculadoras/valor-da-hora/" data-area="autonomos">
+  <span class="icone-area" style="--cor: #0369a1"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg></span>
+  <div><b>Valor da hora</b><small>Autônomos</small></div>
+  <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+</a>
+<a class="ferramenta" href="/calculadoras/aluguel-proporcional/" data-area="aluguel">
+  <span class="icone-area" style="--cor: #0b6b56"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span>
+  <div><b>Aluguel proporcional</b><small>Aluguel</small></div>
+  <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+</a>
+<a class="ferramenta" href="/calculadoras/comparar-maquininhas/" data-area="mei">
+  <span class="icone-area" style="--cor: #4f46e5"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+  <div><b>Comparar maquininhas</b><small>MEI</small></div>
+  <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+</a>
+<a class="ferramenta" href="/calculadoras/conta-pj-mei/" data-area="mei">
+  <span class="icone-area" style="--cor: #4f46e5"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+  <div><b>Conta PJ para MEI</b><small>MEI</small></div>
+  <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+</a>
+<a class="ferramenta" href="/calculadoras/custo-do-carro/" data-area="carro">
+  <span class="icone-area" style="--cor: #c2410c"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></span>
+  <div><b>Custo do carro por mês</b><small>Carro</small></div>
+  <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+</a>
+<a class="ferramenta" href="/calculadoras/das-mei/" data-area="mei">
+  <span class="icone-area" style="--cor: #4f46e5"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+  <div><b>DAS do MEI</b><small>MEI</small></div>
+  <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+</a></div>
+  </section>
+  
+</article>
+
+</main>
+<footer class="rodape">
+  <div class="container">
+    <div class="colunas">
+      <div class="sobre">
+        <a class="logo" href="/"><span class="marca">S</span>Saigg Digital</a>
+        <p>Ferramentas simples para as decisões de dinheiro de quem é MEI, trabalha por conta própria, aluga imóvel ou tem carro.</p>
+      </div>
+      <div>
+        <h3>Produtos</h3>
+        <ul>
+          <li><a href="/assinar/">Assinatura online</a></li>
+          <li><a href="/planilhas/">Planilhas</a></li>
+          <li><a href="/modelos/">Modelos de documentos</a></li>
+          <li><a href="/produtos/">Todos os produtos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ferramentas grátis</h3>
+        <ul>
+          <li><a href="/calculadoras/">Calculadoras</a></li>
+          <li><a href="/ferramentas/#comparadores">Comparadores</a></li>
+          <li><a href="/ferramentas/#geradores">Geradores de documentos</a></li>
+          <li><a href="/blog/">Guias</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Assuntos</h3>
+        <ul><li><a href="/mei/">MEI &amp; pequenos negócios</a></li><li><a href="/aluguel/">Aluguel &amp; imóveis</a></li><li><a href="/carro/">Carro na ponta do lápis</a></li><li><a href="/financas/">Finanças pessoais</a></li><li><a href="/autonomos/">Autônomos &amp; freelancers</a></li>
+          <li><a href="/indicacoes/">Insumos para o MEI</a></li></ul>
+      </div>
+      <div>
+        <h3>Saigg Digital</h3>
+        <ul>
+          <li><a href="/">Quem somos</a></li>
+          <li><a href="/suporte/">Suporte e contato</a></li>
+          <li><a href="/termos-assinatura/">Termos</a></li>
+          <li><a href="/privacidade/">Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>© 2026 Saigg Digital. Conteúdo informativo; não substitui orientação contábil ou jurídica.</span>
+      <span>Feito no Brasil</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var t=document.getElementById('topo'),b=t.querySelector('.menu-btn');
+  // grupos do menu: clique abre/fecha (no computador também abre ao passar o mouse); Esc ou clique fora fecha
+  var gs=t.querySelectorAll('.nav-grupo');
+  function fecha(ex){gs.forEach(function(g){if(g!==ex){g.classList.remove('aberto');g.querySelector('.nav-botao').setAttribute('aria-expanded','false');}});}
+  gs.forEach(function(g){var bt=g.querySelector('.nav-botao');bt.addEventListener('click',function(){var a=g.classList.toggle('aberto');bt.setAttribute('aria-expanded',a);fecha(g);});});
+  document.addEventListener('click',function(e){if(!e.target.closest('.nav-grupo'))fecha();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fecha();});
+  b.addEventListener('click',function(){var a=t.classList.toggle('aberto');b.setAttribute('aria-expanded',a);b.setAttribute('aria-label',a?'Fechar menu':'Abrir menu');b.innerHTML=a?"\u003csvg class=\"ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"\u003e\u003cpath d=\"M18 6 6 18\"/\u003e\u003cpath d=\"m6 6 12 12\"/\u003e\u003c/svg\u003e":"\u003csvg class=\"ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"\u003e\u003cpath d=\"M4 6h16\"/\u003e\u003cpath d=\"M4 12h16\"/\u003e\u003cpath d=\"M4 18h16\"/\u003e\u003c/svg\u003e";});
+  // medição própria, sem cookies: visita por página e cliques de compra/assinatura/download (Worker saigg-app)
+  if(location.hostname!=='saiggdigital.com.br'||navigator.doNotTrack==='1')return;
+  var API="https://saigg-app.montacamisa.workers.dev/v";
+  function envia(d){try{navigator.sendBeacon(API,JSON.stringify(d))}catch(e){}}
+  var q=new URLSearchParams(location.search);
+  envia({p:location.pathname,r:document.referrer,u:q.get('utm_source')||q.get('ref')||''});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'',ev='';
+    if(/pay\.kiwify|kiwify\.com\.br/.test(h))ev='comprar';else if(/^\/app\/entrar\/\?plano=/.test(h))ev='assinar';
+    else if(a.hasAttribute('download')||/\/static\/downloads\//.test(h))ev='baixar';else if(/sponsored/.test(a.rel))ev='afiliado';else if(/wa\.me\//.test(h))ev='compartilhar';
+    if(ev)envia({e:ev,p:location.pathname,a:h});
+  },true);
+})();
+</script>
+
+<script>
+const REF = {"das_icms": 1.0, "das_iss": 5.0, "juros_mensal_estimado": 0.01, "limite_mei_anual": 81000.0, "salario_minimo": 1518.0};
+
+const esc = t => String(t ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const val = id => (document.getElementById(id)?.value || '').trim();
+const brl = v => v.toLocaleString('pt-BR', {style:'currency', currency:'BRL'});
+const pct = v => (v*100).toLocaleString('pt-BR', {maximumFractionDigits:1}) + ' %';
+const num = id => parseFloat(String(document.getElementById(id).value).replace(',', '.')) || 0;
+
+// valor por extenso em reais (até 999 milhões)
+function extenso(v){
+  v = Math.round((+v || 0) * 100) / 100;
+  const reais = Math.floor(v), cent = Math.round((v - reais) * 100);
+  const U = ['','um','dois','três','quatro','cinco','seis','sete','oito','nove','dez','onze','doze','treze','catorze','quinze','dezesseis','dezessete','dezoito','dezenove'];
+  const D = ['','','vinte','trinta','quarenta','cinquenta','sessenta','setenta','oitenta','noventa'];
+  const C = ['','cento','duzentos','trezentos','quatrocentos','quinhentos','seiscentos','setecentos','oitocentos','novecentos'];
+  const ate999 = n => { if (n === 100) return 'cem'; const p = [], c = Math.floor(n / 100), r = n % 100;
+    if (c) p.push(C[c]); if (r) p.push(r < 20 ? U[r] : D[Math.floor(r / 10)] + (r % 10 ? ' e ' + U[r % 10] : '')); return p.join(' e '); };
+  const inteiro = n => { const g = [[Math.floor(n / 1e6), x => x === 1 ? 'um milhão' : ate999(x) + ' milhões'],
+                                   [Math.floor(n / 1e3) % 1e3, x => x === 1 ? 'mil' : ate999(x) + ' mil'], [n % 1e3, ate999]].filter(([x]) => x);
+    return g.map(([x, f], i) => (i ? (x < 100 || x % 100 === 0 ? ' e ' : ' ') : '') + f(x)).join(''); };
+  const partes = [];
+  if (reais) partes.push(inteiro(reais) + (reais % 1e6 === 0 ? ' de reais' : reais === 1 ? ' real' : ' reais'));
+  if (cent) partes.push(ate999(cent) + (cent === 1 ? ' centavo' : ' centavos'));
+  return partes.join(' e ') || 'zero real';
+}
+const dataBR = iso => iso ? new Date(iso + 'T12:00:00').toLocaleDateString('pt-BR') : '';
+const dataExtenso = iso => iso ? new Date(iso + 'T12:00:00').toLocaleDateString('pt-BR', {day:'numeric', month:'long', year:'numeric'}) : '';
+const mesExtenso = m => m ? new Date(m + '-15T12:00:00').toLocaleDateString('pt-BR', {month:'long', year:'numeric'}) : '';
+const hojeISO = () => new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+// lembra o que foi digitado neste aparelho (só no navegador; nada vai para o site)
+// impressão / PDF: copia o documento para um contêiner direto no <body>; o CSS de impressão esconde todo o resto
+function prepararImpressao(){ const d = document.getElementById('documento'); if (!d) return;
+  let alvo = document.getElementById('doc-impressao'); if (!alvo) { alvo = document.createElement('div'); alvo.id = 'doc-impressao'; document.body.appendChild(alvo); }
+  alvo.innerHTML = d.outerHTML.replace('id="documento"', ''); }
+function imprimir(){ prepararImpressao(); window.print(); }
+window.addEventListener('beforeprint', prepararImpressao);
+const MEM = 'saigg:orcamento-e-recibo';
+function lembrar(){ try { const d = {}; document.querySelectorAll('.calc-box [id]').forEach(el => { if (el.matches('input,select,textarea') && !el.dataset.naoLembrar) d[el.id] = el.value; }); localStorage.setItem(MEM, JSON.stringify(d)); } catch(e){} }
+function recuperar(){ try { return JSON.parse(localStorage.getItem(MEM) || 'null'); } catch(e){ return null; } }
+function aplicarMemoria(d){ if (!d) return; for (const [id, v] of Object.entries(d)) { const el = document.getElementById(id); if (el && el.matches('input,select,textarea')) el.value = v; } }
+
+// itens dinâmicos: guardados como JSON num campo oculto para a memória do navegador
+const campoItens = Object.assign(document.createElement('input'), {type: 'hidden', id: 'itens_json'});
+document.querySelector('.calc-box form').appendChild(campoItens);
+function lerItens(){ return [...document.querySelectorAll('#itens .itens-linha')].map(l => ({d: l.querySelector('[data-c=d]').value, q: l.querySelector('[data-c=q]').value, v: l.querySelector('[data-c=v]').value})); }
+function salvarItens(){ campoItens.value = JSON.stringify(lerItens()); }
+function addItem(it = {d: '', q: '1', v: ''}, foco = true){
+  const l = document.createElement('div'); l.className = 'itens-linha';
+  l.innerHTML = `<label>Descrição<input data-c="d" placeholder="Criação de logotipo"></label>
+    <label>Qtd.<input data-c="q" type="number" min="0" step="any"></label>
+    <label>Valor unit. (R$)<input data-c="v" type="number" min="0" step="0.01"></label>
+    <button type="button" aria-label="Remover item" title="Remover item">✕</button>`;
+  l.querySelector('[data-c=d]').value = it.d; l.querySelector('[data-c=q]').value = it.q; l.querySelector('[data-c=v]').value = it.v;
+  l.querySelector('button').onclick = () => { l.remove(); salvarItens(); lembrar(); calcular(); };
+  document.getElementById('itens').appendChild(l);
+  if (foco) l.querySelector('input').focus();
+  salvarItens();
+}
+document.getElementById('itens').addEventListener('input', salvarItens);
+(function(){
+  const d = recuperar();
+  if (d) aplicarMemoria(d); else document.getElementById('data').value = hojeISO();
+  let its = []; try { its = JSON.parse(campoItens.value || '[]'); } catch(e){}
+  (its.length ? its : [{d: 'Serviço', q: '1', v: '500'}]).forEach(it => addItem(it, false));
+})();
+function novoDocumento(){
+  document.getElementById('numero').value = (parseInt(val('numero'), 10) || 0) + 1;
+  document.getElementById('data').value = hojeISO();
+  ['cl_nome', 'cl_doc', 'desconto', 'obs'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('itens').innerHTML = ''; addItem({d: '', q: '1', v: ''}, false);
+  lembrar(); calcular(); document.getElementById('cl_nome').focus();
+}
+function calcular(){
+  const recibo = val('tipo_doc') === 'recibo';
+  document.getElementById('lb_validade').style.display = recibo ? 'none' : '';
+  document.getElementById('lb_prazo').style.display = recibo ? 'none' : '';
+  const r = document.getElementById('resultado');
+  const itens = lerItens().map(i => ({d: i.d.trim(), q: parseFloat(String(i.q).replace(',', '.')) || 0, v: parseFloat(String(i.v).replace(',', '.')) || 0}))
+    .filter(i => i.d || i.v);
+  const subtotal = itens.reduce((s, i) => s + i.q * i.v, 0), desc = num('desconto'), total = Math.max(subtotal - desc, 0);
+  if (!itens.length || total <= 0) { r.innerHTML = '<div class="alerta atencao">Adicione pelo menos um item com valor.</div>'; return; }
+  const ou = (v, ph) => v ? esc(v) : `<span style="color:#b45309">${ph}</span>`;
+  const data = val('data') || hojeISO();
+  const ate = new Date(new Date(data + 'T12:00:00').getTime() + (parseInt(val('validade'), 10) || 15) * 864e5).toISOString().slice(0, 10);
+  const contato = [val('pr_doc') && 'CPF/CNPJ ' + val('pr_doc'), val('pr_tel'), val('pr_email')].filter(Boolean).map(esc).join(' · ');
+  const tabela = `<table><thead><tr><th>Descrição</th><th class="n">Qtd.</th><th class="n">Unitário</th><th class="n">Total</th></tr></thead>
+    <tbody>${itens.map(i => `<tr><td>${esc(i.d) || '—'}</td><td class="n">${i.q.toLocaleString('pt-BR')}</td><td class="n">${brl(i.v)}</td><td class="n">${brl(i.q * i.v)}</td></tr>`).join('')}
+    ${desc > 0 ? `<tr><td colspan="3">Subtotal</td><td class="n">${brl(subtotal)}</td></tr><tr><td colspan="3">Desconto</td><td class="n">− ${brl(desc)}</td></tr>` : ''}</tbody>
+    <tfoot><tr><td colspan="3">Total</td><td class="n">${brl(total)}</td></tr></tfoot></table>`;
+  const corpo = recibo
+    ? `<p>Recebi de <b>${ou(val('cl_nome'), 'nome do cliente')}</b>${val('cl_doc') ? ' (' + esc(val('cl_doc')) + ')' : ''} a importância de <b>${brl(total)}</b> (${extenso(total)}), referente aos serviços/produtos abaixo:</p>
+       ${tabela}${val('pagamento') ? `<p>Forma de pagamento: ${esc(val('pagamento'))}.</p>` : ''}<p>Pelo que dou plena quitação do valor acima.</p>`
+    : `<div class="doc-partes"><div><small>Cliente</small><b>${ou(val('cl_nome'), 'nome do cliente')}</b>${val('cl_doc') ? '<br>' + esc(val('cl_doc')) : ''}</div>
+       <div><small>Validade</small>Até ${dataBR(ate)}</div></div>
+       ${tabela}
+       ${val('pagamento') ? `<p><b>Pagamento:</b> ${esc(val('pagamento'))}</p>` : ''}${val('prazo') ? `<p><b>Prazo de entrega:</b> ${esc(val('prazo'))}</p>` : ''}`;
+  r.innerHTML = `
+    <div class="doc-acoes">
+      <button class="btn btn-primario" type="button" onclick="imprimir()">Baixar PDF / imprimir</button>
+      <button class="btn btn-sec" type="button" onclick="novoDocumento()">Novo ${recibo ? 'recibo' : 'orçamento'}</button>
+      <small>Seus dados ficam lembrados neste aparelho para o próximo.</small>
+    </div>
+    <div class="doc" id="documento">
+      <div class="doc-topo"><div><h2>${ou(val('pr_nome'), 'seu nome ou empresa')}</h2>${contato ? `<span class="doc-num">${contato}</span>` : ''}</div>
+        <div class="doc-valor">${recibo ? 'RECIBO' : 'ORÇAMENTO'} Nº ${esc(val('numero') || '1')}<br><span class="doc-num">${dataBR(data)}</span></div></div>
+      ${corpo}
+      ${val('obs') ? `<p class="doc-obs">${esc(val('obs'))}</p>` : ''}
+      ${recibo ? `<p class="doc-local">${dataExtenso(data)}.</p>` : ''}
+      <div class="doc-ass">${ou(val('pr_nome'), 'seu nome')}<br><small>${recibo ? 'Recebedor' : 'Responsável pelo orçamento'}</small></div>
+      <p class="doc-rodape">Documento gerado em saiggdigital.com.br</p>
+    </div>`;
+}
+document.querySelector('.calc-box').addEventListener('input', e => { if (e.target.matches('input,select,textarea')) { calcular(); lembrar(); } });
+document.querySelector('.calc-box').addEventListener('change', e => { if (e.target.matches('select,input[type=checkbox],input[type=radio]')) calcular(); });
+calcular();
+</script>
+
+</body>
+</html>

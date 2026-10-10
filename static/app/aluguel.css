@@ -1,0 +1,129 @@
+.aluguel-app{--mod:var(--accent);--mod-2:var(--accent);--ok:#17803d;--warn:#9a6200;--bad:#b42318;--soft:var(--bg-2);margin:2rem 0 4rem}
+.aluguel-carregando{display:grid;place-items:center;gap:.8rem;min-height:320px;color:var(--ink-2);font-weight:800}
+.aluguel-spinner{width:42px;height:42px;border:4px solid var(--bg-3);border-top-color:var(--mod);border-radius:50%;animation:alg-spin .85s linear infinite}
+@keyframes alg-spin{to{transform:rotate(360deg)}}
+.aluguel-hero{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.5rem;box-shadow:var(--shadow);display:grid;gap:1rem}
+.aluguel-hero h1{margin:.2rem 0 .35rem;font-size:clamp(1.8rem,4vw,2.7rem)}
+.aluguel-hero p{margin:0;color:var(--ink-2)}
+.aluguel-topo{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.aluguel-selo{display:inline-flex;align-items:center;gap:.45rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .75rem;color:var(--ink-2);font-weight:600;font-size:.86rem}
+.aluguel-status{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-radius:18px;padding:.9rem 1rem;border:1px solid #d9f5df;background:#ecfff1;color:#185d2d;font-weight:800}
+.aluguel-status small{display:block;font-weight:700;color:inherit;opacity:.82}
+.aluguel-status.atencao{background:#fff8db;border-color:#ffe39a;color:#805600}
+.aluguel-status.vencida{background:#fff1d6;border-color:#ffd68a;color:#805000}
+.aluguel-status .btn,.aluguel-status .btn-sec{padding:.62rem 1rem;font-size:.92rem;box-shadow:none}
+.aluguel-abas{display:flex;gap:.45rem;overflow:auto;padding:.55rem;margin:1.1rem -1.25rem 0;padding-left:1.25rem;scrollbar-width:thin}
+.aluguel-aba{border:1px solid var(--line);background:#fff;color:var(--ink-2);font:inherit;font-weight:600;border-radius:999px;padding:.65rem 1rem;white-space:nowrap;cursor:pointer}
+.aluguel-aba:hover,.aluguel-aba.ativa{background:var(--mod);border-color:var(--mod);color:#fff}
+.aluguel-corpo{margin-top:1.2rem}
+.aluguel-toolbar{display:flex;align-items:center;justify-content:space-between;gap:.9rem;flex-wrap:wrap;margin-bottom:1rem}
+.aluguel-toolbar h2,.aluguel-bloco h2{margin:0}
+.aluguel-toolbar p{margin:.2rem 0 0;color:var(--ink-2)}
+.aluguel-acoes{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.aluguel-app button,.aluguel-app input,.aluguel-app select,.aluguel-app textarea{font:inherit}
+.aluguel-app button{cursor:pointer}
+.aluguel-app button:disabled{opacity:.55;cursor:not-allowed}
+.aluguel-btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;border:0;border-radius:999px;background:var(--ink);color:#fff!important;font-weight:600;padding:.72rem 1.05rem;text-decoration:none;box-shadow:var(--shadow)}
+.aluguel-btn:hover{transform:translateY(-1px)}
+.aluguel-btn.primario{background:var(--grad)}
+.aluguel-btn.sec{background:#fff;color:var(--ink)!important;border:1px solid var(--line);box-shadow:none}
+.aluguel-btn.perigo{background:#fff0f0;color:var(--bad)!important;border:1px solid #ffd2d2;box-shadow:none}
+.aluguel-btn.ok{background:#eafaf0;color:var(--ok)!important;border:1px solid #caeed5;box-shadow:none}
+.aluguel-btn.pequeno{padding:.48rem .78rem;font-size:.88rem}
+.aluguel-campo{display:grid;gap:.35rem}
+.aluguel-campo label,.aluguel-label{font-weight:600;font-size:.88rem;color:var(--ink)}
+.aluguel-campo small{color:var(--muted);font-weight:700}
+.aluguel-campo input,.aluguel-campo select,.aluguel-campo textarea,.aluguel-filtro{width:100%;border:1px solid var(--line);border-radius:14px;background:#fff;padding:.75rem .85rem;color:var(--ink);outline:none}
+.aluguel-campo textarea{min-height:92px;resize:vertical}
+.aluguel-campo input:focus,.aluguel-campo select:focus,.aluguel-campo textarea:focus,.aluguel-filtro:focus{border-color:var(--mod-2);box-shadow:0 0 0 4px var(--accent-soft)}
+.aluguel-check{display:flex;align-items:center;gap:.55rem;font-weight:600}
+.aluguel-check input{width:1.15rem;height:1.15rem}
+.aluguel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+.aluguel-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-bottom:1rem}
+.aluguel-kpi{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1rem;box-shadow:var(--shadow)}
+.aluguel-kpi small{display:block;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:.72rem}
+.aluguel-kpi b{display:block;font-size:clamp(1.25rem,3vw,1.75rem);line-height:1.15;margin:.3rem 0;color:var(--ink)}
+.aluguel-kpi.atraso b{color:var(--bad)}
+.aluguel-kpi.ok b{color:var(--ok)}
+.aluguel-bloco{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.1rem;box-shadow:var(--shadow);margin:1rem 0}
+.aluguel-bloco-cab{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.85rem}
+.aluguel-bloco-cab p{margin:.25rem 0 0;color:var(--ink-2)}
+.aluguel-tabela-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:#fff}
+.aluguel-tabela{width:100%;border-collapse:collapse;min-width:720px;font-size:.94rem}
+.aluguel-tabela th,.aluguel-tabela td{padding:.72rem .78rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.aluguel-tabela th{background:#f6f3ff;color:var(--ink);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.aluguel-tabela tr:last-child td{border-bottom:0}
+.aluguel-tabela td.num,.aluguel-tabela th.num{text-align:right}
+.aluguel-mutado{color:var(--muted)}
+.aluguel-badge{display:inline-flex;align-items:center;gap:.3rem;border-radius:999px;padding:.22rem .55rem;font-weight:600;font-size:.78rem;border:1px solid transparent;white-space:nowrap}
+.aluguel-badge.ok{background:#eafaf0;color:var(--ok);border-color:#cdebd6}
+.aluguel-badge.warn{background:#fff8db;color:var(--warn);border-color:#ffe6a7}
+.aluguel-badge.bad{background:#fff0f0;color:var(--bad);border-color:#ffd2d2}
+.aluguel-badge.neutro{background:#f1f2f7;color:var(--ink-2);border-color:#e4e6ef}
+.aluguel-lista{display:grid;gap:.85rem}
+.aluguel-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1rem;box-shadow:var(--shadow)}
+.aluguel-card-topo{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.75rem}
+.aluguel-card h3{margin:.05rem 0 .2rem;font-size:1.16rem}
+.aluguel-card p{margin:.2rem 0;color:var(--ink-2)}
+.aluguel-card dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.65rem;margin:.9rem 0 0}
+.aluguel-card dt{font-size:.74rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+.aluguel-card dd{margin:0;font-weight:600;color:var(--ink)}
+.aluguel-vazio{display:grid;gap:.8rem;place-items:start;background:var(--bg-2);border:1px dashed var(--line-2);border-radius:14px;padding:1.4rem}
+.aluguel-vazio h2,.aluguel-vazio h3{margin:0}
+.aluguel-vazio p{margin:0;color:var(--ink-2);max-width:720px}
+.aluguel-atencao-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.aluguel-mini-lista{display:grid;gap:.55rem}
+.aluguel-mini-item{padding:.75rem;border:1px solid var(--line);border-radius:14px;background:#fff}
+.aluguel-mini-item b{display:block}
+.aluguel-grafico{display:grid;gap:.65rem}
+.aluguel-barra-linha{display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:.75rem;font-size:.9rem}
+.aluguel-barras{position:relative;display:grid;gap:.25rem}
+.aluguel-barra{height:12px;border-radius:999px;background:#ececf4;overflow:hidden}
+.aluguel-barra i{display:block;height:100%;border-radius:999px}
+.aluguel-barra.previsto i{background:#c9c2ff}
+.aluguel-barra.recebido i{background:var(--mod)}
+.aluguel-legenda{display:flex;gap:1rem;flex-wrap:wrap;color:var(--muted);font-weight:800;font-size:.86rem}
+.aluguel-legenda span{display:inline-flex;align-items:center;gap:.35rem}
+.aluguel-legenda i{width:.8rem;height:.8rem;border-radius:50%;display:inline-block;background:var(--mod)}
+.aluguel-legenda span:first-child i{background:#c9c2ff}
+.aluguel-editor{border:1px solid #d8d0ff;background:#fbfaff;border-radius:14px;padding:1rem;margin:1rem 0;box-shadow:var(--shadow)}
+.aluguel-editor h3{margin:.1rem 0 .8rem}
+.aluguel-form-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem}
+.aluguel-form-grid .span-2{grid-column:span 2}
+.aluguel-form-grid .span-3{grid-column:1/-1}
+.aluguel-form-acoes{display:flex;justify-content:flex-end;gap:.65rem;flex-wrap:wrap;margin-top:1rem}
+.aluguel-erro{background:#fff0f0;color:var(--bad);border:1px solid #ffd2d2;border-radius:14px;padding:.75rem;font-weight:800;margin:.8rem 0}
+.aluguel-exporta{display:grid;grid-template-columns:1.1fr .9fr;gap:1rem;align-items:start}
+.aluguel-exporta-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.1rem;box-shadow:var(--shadow)}
+.aluguel-exporta-card h3{margin:.1rem 0 .5rem}
+.aluguel-exporta-card p{color:var(--ink-2)}
+.aluguel-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:860px){
+  .aluguel-kpis,.aluguel-atencao-grid,.aluguel-exporta{grid-template-columns:1fr}
+  .aluguel-form-grid{grid-template-columns:1fr 1fr}
+  .aluguel-form-grid .span-3{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .aluguel-app{margin-top:1rem}
+  .aluguel-hero{padding:1rem;border-radius:22px}
+  .aluguel-topo,.aluguel-toolbar,.aluguel-status,.aluguel-card-topo{display:grid}
+  .aluguel-acoes,.aluguel-status .btn,.aluguel-status .btn-sec,.aluguel-btn{width:100%}
+  .aluguel-acoes{grid-template-columns:1fr}
+  .aluguel-form-grid{grid-template-columns:1fr}
+  .aluguel-form-grid .span-2{grid-column:1}
+  .aluguel-kpis{gap:.75rem}
+  .aluguel-bloco,.aluguel-card{padding:.9rem;border-radius:18px}
+  .aluguel-barra-linha{grid-template-columns:56px 1fr}
+  .aluguel-barra-linha strong{grid-column:1/-1}
+}
+/* módulos genéricos (MEI, Carro, Finanças) — site/static/app/modulo.js */
+.aluguel-barra.previsto i{background:color-mix(in srgb,var(--accent) 25%,#fff)}
+.aluguel-barra.gasto i{background:#9aa0aa}
+.aluguel-barra.alerta i{background:var(--bad)}
+.modulo-lista{list-style:none;margin:0 0 .8rem;padding:0;display:grid;gap:.4rem}
+.modulo-lista li{display:flex;align-items:center;justify-content:space-between;gap:.6rem;border-bottom:1px solid var(--line);padding:.45rem 0;font-size:.93rem}
+.modulo-lista li:last-child{border-bottom:0}
+.modulo-progresso{height:8px;background:var(--bg-3);border-radius:99px;overflow:hidden;margin:.35rem 0}
+.modulo-progresso i{display:block;height:100%;background:var(--accent);border-radius:99px}
+.aluguel-atencao-grid.dois{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:760px){.aluguel-atencao-grid.dois{grid-template-columns:1fr}}

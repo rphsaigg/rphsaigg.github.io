@@ -1,0 +1,51 @@
+/* Área do assinante — base compartilhada (módulos têm CSS próprio, ex.: aluguel.css) */
+.app-toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);padding:.8rem 1.2rem;border-radius:999px;font-weight:700;opacity:0;transition:.25s;z-index:99;pointer-events:none;max-width:92vw;text-align:center;box-shadow:var(--shadow)}
+.app-toast.on{opacity:1;transform:translate(-50%,0)}
+.app-toast.ok{background:#0a6b43;color:#fff}.app-toast.erro{background:#9b2c22;color:#fff}
+.app-wrap{max-width:980px;margin:0 auto}
+.app-barra{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:space-between;margin:1rem 0 1.4rem}
+.app-barra h1{margin:0;font-size:1.7rem}
+.app-barra .acoes{display:flex;gap:.5rem;flex-wrap:wrap}
+.app-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.3rem;margin-bottom:1rem}
+.app-card h2{margin-top:0;font-size:1.2rem}
+.app-form{display:grid;gap:.9rem;max-width:420px}
+.app-form label{display:grid;gap:.3rem;font-weight:700;font-size:.92rem}
+.app-form input,.app-form select{font:inherit;padding:.75rem .9rem;border:1px solid var(--line);border-radius:12px;background:#fff;width:100%;box-sizing:border-box}
+.app-form .codigo{font-size:1.8rem;letter-spacing:.5rem;text-align:center;font-weight:800}
+.app-form .btn,.app-card .btn,.app-modulo .btn{justify-content:center;border:0;cursor:pointer;font:inherit;font-weight:800}
+.app-msg{min-height:1.3em;margin:.2rem 0;font-weight:600}
+.app-msg.erro{color:#9b2c22}.app-msg.ok{color:#0a6b43}
+.app-modulos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.app-modulo{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.2rem;display:flex;flex-direction:column;gap:.6rem;border-top:6px solid var(--cor,var(--roxo))}
+.app-modulo h3{margin:0;font-size:1.15rem}
+.app-modulo .status{font-weight:700;font-size:.92rem}
+.app-modulo .status.ativa{color:#0a6b43}.app-modulo .status.vencida{color:#9b2c22}.app-modulo .status.nenhuma{color:var(--ink-2)}
+.app-modulo.em-breve{opacity:.6}
+.app-periodos{display:grid;grid-template-columns:repeat(2,1fr);gap:.4rem}
+.app-periodos button{font:inherit;font-size:.88rem;padding:.55rem .4rem;border-radius:10px;border:1px solid var(--line);background:#fff;cursor:pointer;line-height:1.25}
+.app-periodos button b{display:block;font-size:1rem}
+.app-periodos button:hover{border-color:var(--roxo)}
+.app-periodos button[disabled]{opacity:.6;cursor:wait}
+.app-tabela{width:100%;border-collapse:collapse;font-size:.93rem}
+.app-tabela th,.app-tabela td{padding:.5rem .6rem;border-bottom:1px solid var(--line);text-align:left}
+.app-faixa{border-radius:var(--r-sm);padding:.9rem 1.1rem;font-weight:600;margin-bottom:1rem}
+.app-faixa.ok{background:#e6f9f0;color:#0a6b43}.app-faixa.atencao{background:#fff8dc;color:#8a6d00}.app-faixa.erro{background:#ffe8e6;color:#9b2c22}
+.app-perigo{border-color:#f3c4bf}
+.app-perigo .btn{background:#9b2c22;color:#fff!important}
+.app-carregando{color:var(--ink-2);padding:2rem 0;text-align:center}
+/* página de planos (/assinar/) */
+.planos-tabela{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.planos-tabela th,.planos-tabela td{padding:.9rem 1rem;text-align:center;border-bottom:1px solid var(--line)}
+.planos-tabela th{background:color-mix(in srgb,var(--roxo) 10%,#fff)}
+.planos-tabela td:first-child,.planos-tabela th:first-child{text-align:left;font-weight:700}
+.planos-tabela .mensal{display:block;font-size:.82rem;color:var(--ink-2);font-weight:500}
+.planos-tabela .destaque{background:#fffbea}
+.planos-tabela tr:last-child td{border-bottom:0}
+@media (max-width:640px){.planos-tabela th,.planos-tabela td{padding:.6rem .4rem;font-size:.9rem}}
+.pag-status{display:inline-block;font-size:.8rem;font-weight:600;border-radius:999px;padding:.15rem .55rem;background:var(--bg-2);color:var(--ink-2);white-space:nowrap}
+.pag-status.aprovado{background:var(--ok-soft);color:var(--ok)}
+.pag-status.pendente{background:var(--warn-soft);color:var(--warn)}
+.pag-status.recusado,.pag-status.cancelado{background:var(--bg-2);color:var(--muted)}
+
+.app-check{display:flex;align-items:center;gap:.6rem;font-weight:600;cursor:pointer}
+.app-check input{width:1.15rem;height:1.15rem;accent-color:var(--accent,#0b6b56)}
