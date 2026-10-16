@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Belém · Bairro Ideal</title>
+<meta name="description" content="Mapa de Belém com notas de 71 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/belem/">
+<meta property="og:title" content="Melhores bairros para morar em Belém · Bairro Ideal">
+<meta property="og:description" content="Mapa de Belém com notas de 71 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/belem/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="app" data-capital="belem">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem" selected>Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Belém</h1>
+      <p class="sub">71 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 71 regiões de Belém (A–Z)</summary>
+      <ul><li><a href="/belem/aeroporto/" data-id="1501402053">Aeroporto</a></li><li><a href="/belem/agua-boa/" data-id="1501402052">Água Boa</a></li><li><a href="/belem/aguas-lindas/" data-id="1501402030">Águas Lindas</a></li><li><a href="/belem/aguas-negras/" data-id="1501402040">Águas Negras</a></li><li><a href="/belem/agulha/" data-id="1501402041">Agulha</a></li><li><a href="/belem/ariramba/" data-id="1501402054">Arirambá</a></li><li><a href="/belem/aura/" data-id="1501402031">Aurá</a></li><li><a href="/belem/baia-do-sol/" data-id="1501402071">Baía do Sol</a></li><li><a href="/belem/barreiro/" data-id="1501402021">Barreiro</a></li><li><a href="/belem/batista-campos/" data-id="1501402001">Batista Campos</a></li><li><a href="/belem/bengui/" data-id="1501402032">Bengui</a></li><li><a href="/belem/bonfim/" data-id="1501402068">Bonfim</a></li><li><a href="/belem/brasilia/" data-id="1501402051">Brasília</a></li><li><a href="/belem/cabanagem/" data-id="1501402033">Cabanagem</a></li><li><a href="/belem/campina/" data-id="1501402019">Campina</a></li><li><a href="/belem/campina-de-icoaraci/" data-id="1501402042">Campina de Icoaraci</a></li><li><a href="/belem/canudos/" data-id="1501402002">Canudos</a></li><li><a href="/belem/carananduba/" data-id="1501402055">Carananduba</a></li><li><a href="/belem/caruara/" data-id="1501402056">Caruara</a></li><li><a href="/belem/castanheira/" data-id="1501402028">Castanheira</a></li><li><a href="/belem/chapeu-virado/" data-id="1501402066">Chapéu Virado</a></li><li><a href="/belem/cidade-velha/" data-id="1501402003">Cidade Velha</a></li><li><a href="/belem/condor/" data-id="1501402004">Condor</a></li><li><a href="/belem/coqueiro/" data-id="1501402034">Coqueiro</a></li><li><a href="/belem/cremacao/" data-id="1501402005">Cremação</a></li><li><a href="/belem/cruzeiro/" data-id="1501402043">Cruzeiro</a></li><li><a href="/belem/curio-utinga/" data-id="1501402024">Curió-Utinga</a></li><li><a href="/belem/farol/" data-id="1501402057">Farol</a></li><li><a href="/belem/fatima/" data-id="1501402010">Fátima</a></li><li><a href="/belem/guama/" data-id="1501402006">Guamá</a></li><li><a href="/belem/guanabara/" data-id="1501402029">Guanabara</a></li><li><a href="/belem/itaiteua/" data-id="1501402050">Itaiteua</a></li><li><a href="/belem/jurunas/" data-id="1501402007">Jurunas</a></li><li><a href="/belem/mangueirao/" data-id="1501402026">Mangueirão</a></li><li><a href="/belem/mangueiras/" data-id="1501402058">Mangueiras</a></li><li><a href="/belem/maracacuera/" data-id="1501402044">Maracacuera</a></li><li><a href="/belem/maracaja/" data-id="1501402059">Maracajá</a></li><li><a href="/belem/maracangalha/" data-id="1501402022">Maracangalha</a></li><li><a href="/belem/marahu/" data-id="1501402069">Marahú</a></li><li><a href="/belem/marambaia/" data-id="1501402008">Marambaia</a></li><li><a href="/belem/marco/" data-id="1501402009">Marco</a></li><li><a href="/belem/miramar/" data-id="1501402023">Miramar</a></li><li><a href="/belem/montese-terra-firme/" data-id="1501402018">Montese (Terra Firme)</a></li><li><a href="/belem/murubira/" data-id="1501402067">Murubira</a></li><li><a href="/belem/natal-do-murubira/" data-id="1501402060">Natal do Murubira</a></li><li><a href="/belem/nazare/" data-id="1501402011">Nazaré</a></li><li><a href="/belem/paracuri/" data-id="1501402045">Paracuri</a></li><li><a href="/belem/paraiso/" data-id="1501402070">Paraíso</a></li><li><a href="/belem/parque-guajara/" data-id="1501402046">Parque Guajará</a></li><li><a href="/belem/parque-verde/" data-id="1501402035">Parque Verde</a></li><li><a href="/belem/pedreira/" data-id="1501402012">Pedreira</a></li><li><a href="/belem/ponta-grossa/" data-id="1501402047">Ponta Grossa</a></li><li><a href="/belem/porto-arthur/" data-id="1501402061">Porto Arthur</a></li><li><a href="/belem/praia-grande/" data-id="1501402065">Praia Grande</a></li><li><a href="/belem/pratinha/" data-id="1501402036">Pratinha</a></li><li><a href="/belem/reduto/" data-id="1501402013">Reduto</a></li><li><a href="/belem/sacramenta/" data-id="1501402014">Sacramenta</a></li><li><a href="/belem/sao-bras/" data-id="1501402015">São Brás</a></li><li><a href="/belem/sao-clemente/" data-id="1501402037">São Clemente</a></li><li><a href="/belem/sao-francisco/" data-id="1501402062">São Francisco</a></li><li><a href="/belem/sao-joao-do-outeiro/" data-id="1501402049">São João do Outeiro</a></li><li><a href="/belem/souza/" data-id="1501402016">Souza</a></li><li><a href="/belem/sucurijuquara/" data-id="1501402063">Sucurijuquara</a></li><li><a href="/belem/tapana/" data-id="1501402038">Tapanã</a></li><li><a href="/belem/telegrafo/" data-id="1501402017">Telégrafo</a></li><li><a href="/belem/tenone/" data-id="1501402048">Tenoné</a></li><li><a href="/belem/umarizal/" data-id="1501402020">Umarizal</a></li><li><a href="/belem/una/" data-id="1501402039">Una</a></li><li><a href="/belem/universitario/" data-id="1501402027">Universitário</a></li><li><a href="/belem/val-de-caes/" data-id="1501402025">Val-de-Cães</a></li><li><a href="/belem/vila/" data-id="1501402064">Vila</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Belém"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 62.3, "bbox": [-48.5077, -1.4792, -48.3278, -1.0494], "centro": [-48.4421, -1.3213], "fipezap_ref": "2026-09", "melhores": [{"nome": "Nazar\u00e9", "nota": 8.4}, {"nome": "Batista Campos", "nota": 8.3}, {"nome": "S\u00e3o Br\u00e1s", "nota": 8.1}], "nivel": "bairros", "nome": "Bel\u00e9m", "slug": "belem", "uf": "PA", "unidades": 71, "venda_m2": 8830};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=92faf7fb"></script>
+
+</body>
+</html>

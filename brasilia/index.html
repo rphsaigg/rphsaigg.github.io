@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores regiões para morar em Brasília · Bairro Ideal</title>
+<meta name="description" content="Mapa de Brasília com notas de 33 regiões em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/brasilia/">
+<meta property="og:title" content="Melhores regiões para morar em Brasília · Bairro Ideal">
+<meta property="og:description" content="Mapa de Brasília com notas de 33 regiões em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/brasilia/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="app" data-capital="brasilia">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia" selected>Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Brasília</h1>
+      <p class="sub">33 regiões administrativas comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 33 regiões de Brasília (A–Z)</summary>
+      <ul><li><a href="/brasilia/aguas-claras/" data-id="53001080536">Águas Claras</a></li><li><a href="/brasilia/arniqueira/" data-id="53001080532">Arniqueira</a></li><li><a href="/brasilia/brazlandia/" data-id="53001080509">Brazlândia</a></li><li><a href="/brasilia/candangolandia/" data-id="53001080519">Candangolândia</a></li><li><a href="/brasilia/ceilandia/" data-id="53001080515">Ceilândia</a></li><li><a href="/brasilia/cruzeiro/" data-id="53001080517">Cruzeiro</a></li><li><a href="/brasilia/fercal/" data-id="53001080539">Fercal</a></li><li><a href="/brasilia/gama/" data-id="53001080507">Gama</a></li><li><a href="/brasilia/guara/" data-id="53001080516">Guará</a></li><li><a href="/brasilia/itapoa/" data-id="53001080538">Itapoã</a></li><li><a href="/brasilia/jardim-botanico/" data-id="53001080540">Jardim Botânico</a></li><li><a href="/brasilia/lago-norte/" data-id="53001080521">Lago Norte</a></li><li><a href="/brasilia/lago-sul/" data-id="53001080523">Lago Sul</a></li><li><a href="/brasilia/nucleo-bandeirante/" data-id="53001080514">Núcleo Bandeirante</a></li><li><a href="/brasilia/paranoa/" data-id="53001080512">Paranoá</a></li><li><a href="/brasilia/park-way/" data-id="53001080542">Park Way</a></li><li><a href="/brasilia/planaltina/" data-id="53001080511">Planaltina</a></li><li><a href="/brasilia/plano-piloto/" data-id="53001080506">Plano Piloto</a></li><li><a href="/brasilia/recanto-das-emas/" data-id="53001080520">Recanto das Emas</a></li><li><a href="/brasilia/riacho-fundo/" data-id="53001080513">Riacho Fundo</a></li><li><a href="/brasilia/riacho-fundo-ii/" data-id="53001080541">Riacho Fundo II</a></li><li><a href="/brasilia/samambaia/" data-id="53001080518">Samambaia</a></li><li><a href="/brasilia/santa-maria/" data-id="53001080525">Santa Maria</a></li><li><a href="/brasilia/sao-sebastiao/" data-id="53001080530">São Sebastião</a></li><li><a href="/brasilia/scia/" data-id="53001080534">SCIA</a></li><li><a href="/brasilia/sia/" data-id="53001080533">SIA</a></li><li><a href="/brasilia/sobradinho/" data-id="53001080510">Sobradinho</a></li><li><a href="/brasilia/sobradinho-ii/" data-id="53001080544">Sobradinho II</a></li><li><a href="/brasilia/sol-nascente-por-do-sol/" data-id="53001080531">Sol Nascente/Pôr do Sol</a></li><li><a href="/brasilia/sudoeste-octogonal/" data-id="53001080535">Sudoeste/Octogonal</a></li><li><a href="/brasilia/taguatinga/" data-id="53001080508">Taguatinga</a></li><li><a href="/brasilia/varjao/" data-id="53001080543">Varjão</a></li><li><a href="/brasilia/vicente-pires/" data-id="53001080537">Vicente Pires</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Brasília"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 53.8, "bbox": [-48.2858, -16.05, -47.3085, -15.5018], "centro": [-47.7968, -15.7812], "fipezap_ref": "2026-09", "melhores": [{"nome": "Lago Sul", "nota": 7.8}, {"nome": "Plano Piloto", "nota": 7.7}, {"nome": "Taguatinga", "nota": 7.5}], "nivel": "subdistritos", "nome": "Bras\u00edlia", "slug": "brasilia", "uf": "DF", "unidades": 33, "venda_m2": 10453};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=92faf7fb"></script>
+
+</body>
+</html>

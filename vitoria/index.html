@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Vitória · Bairro Ideal</title>
+<meta name="description" content="Mapa de Vitória com notas de 80 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/vitoria/">
+<meta property="og:title" content="Melhores bairros para morar em Vitória · Bairro Ideal">
+<meta property="og:description" content="Mapa de Vitória com notas de 80 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/vitoria/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="app" data-capital="vitoria">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria" selected>Vitória</option>
+      </select>
+      <h1>Onde morar em Vitória</h1>
+      <p class="sub">80 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 80 regiões de Vitória (A–Z)</summary>
+      <ul><li><a href="/vitoria/aeroporto/" data-id="3205309056">Aeroporto</a></li><li><a href="/vitoria/andorinhas/" data-id="3205309035">Andorinhas</a></li><li><a href="/vitoria/antonio-honorio/" data-id="3205309057">Antônio Honório</a></li><li><a href="/vitoria/ariovaldo-favalessa/" data-id="3205309009">Ariovaldo Favalessa</a></li><li><a href="/vitoria/barro-vermelho/" data-id="3205309047">Barro Vermelho</a></li><li><a href="/vitoria/bela-vista/" data-id="3205309010">Bela Vista</a></li><li><a href="/vitoria/bento-ferreira/" data-id="3205309022">Bento Ferreira</a></li><li><a href="/vitoria/boa-vista/" data-id="3205309058">Boa Vista</a></li><li><a href="/vitoria/bonfim/" data-id="3205309036">Bonfim</a></li><li><a href="/vitoria/caratoira/" data-id="3205309011">Caratoíra</a></li><li><a href="/vitoria/centro/" data-id="3205309001">Centro</a></li><li><a href="/vitoria/comdusa/" data-id="3205309074">Comdusa</a></li><li><a href="/vitoria/conquista/" data-id="3205309075">Conquista</a></li><li><a href="/vitoria/consolacao/" data-id="3205309023">Consolação</a></li><li><a href="/vitoria/cruzamento/" data-id="3205309024">Cruzamento</a></li><li><a href="/vitoria/da-penha/" data-id="3205309037">da Penha</a></li><li><a href="/vitoria/de-lourdes/" data-id="3205309025">de Lourdes</a></li><li><a href="/vitoria/do-cabral/" data-id="3205309012">do Cabral</a></li><li><a href="/vitoria/do-moscoso/" data-id="3205309002">do Moscoso</a></li><li><a href="/vitoria/do-quadro/" data-id="3205309013">do Quadro</a></li><li><a href="/vitoria/enseada-do-sua/" data-id="3205309048">Enseada do Suá</a></li><li><a href="/vitoria/estrelinha/" data-id="3205309014">Estrelinha</a></li><li><a href="/vitoria/fonte-grande/" data-id="3205309003">Fonte Grande</a></li><li><a href="/vitoria/forte-sao-joao/" data-id="3205309004">Forte São João</a></li><li><a href="/vitoria/fradinhos/" data-id="3205309026">Fradinhos</a></li><li><a href="/vitoria/goiabeiras/" data-id="3205309061">Goiabeiras</a></li><li><a href="/vitoria/grande-vitoria/" data-id="3205309015">Grande Vitória</a></li><li><a href="/vitoria/gurigica/" data-id="3205309027">Gurigica</a></li><li><a href="/vitoria/horto/" data-id="3205309028">Horto</a></li><li><a href="/vitoria/ilha-das-caieiras/" data-id="3205309076">Ilha das Caieiras</a></li><li><a href="/vitoria/ilha-de-santa-maria/" data-id="3205309029">Ilha de Santa Maria</a></li><li><a href="/vitoria/ilha-do-boi/" data-id="3205309049">Ilha do Boi</a></li><li><a href="/vitoria/ilha-do-frade/" data-id="3205309050">Ilha do Frade</a></li><li><a href="/vitoria/ilha-do-principe/" data-id="3205309016">Ilha do Príncipe</a></li><li><a href="/vitoria/inhangueta/" data-id="3205309017">Inhanguetá</a></li><li><a href="/vitoria/itarare/" data-id="3205309038">Itararé</a></li><li><a href="/vitoria/jabour/" data-id="3205309063">Jabour</a></li><li><a href="/vitoria/jardim-camburi/" data-id="3205309064">Jardim Camburí</a></li><li><a href="/vitoria/jardim-da-penha/" data-id="3205309065">Jardim da Penha</a></li><li><a href="/vitoria/jesus-de-nazareth/" data-id="3205309030">Jesus de Nazareth</a></li><li><a href="/vitoria/joana-d-arc/" data-id="3205309039">Joana D&#39;arc</a></li><li><a href="/vitoria/jucutuquara/" data-id="3205309031">Jucutuquara</a></li><li><a href="/vitoria/maria-ortiz/" data-id="3205309066">Maria Ortiz</a></li><li><a href="/vitoria/mario-cypreste/" data-id="3205309018">Mário Cypreste</a></li><li><a href="/vitoria/maruipe/" data-id="3205309040">Maruípe</a></li><li><a href="/vitoria/mata-da-praia/" data-id="3205309067">Mata da Praia</a></li><li><a href="/vitoria/monte-belo/" data-id="3205309032">Monte Belo</a></li><li><a href="/vitoria/morada-de-camburi/" data-id="3205309068">Morada de Camburí</a></li><li><a href="/vitoria/nazareth/" data-id="3205309033">Nazareth</a></li><li><a href="/vitoria/nova-palestina/" data-id="3205309077">Nova Palestina</a></li><li><a href="/vitoria/parque-industrial/" data-id="3205309069">Parque Industrial</a></li><li><a href="/vitoria/parque-moscoso/" data-id="3205309005">Parque Moscoso</a></li><li><a href="/vitoria/piedade/" data-id="3205309006">Piedade</a></li><li><a href="/vitoria/pontal-de-camburi/" data-id="3205309070">Pontal de Camburí</a></li><li><a href="/vitoria/praia-do-canto/" data-id="3205309051">Praia do Canto</a></li><li><a href="/vitoria/praia-do-sua/" data-id="3205309052">Praia do Suá</a></li><li><a href="/vitoria/redencao/" data-id="3205309078">Redenção</a></li><li><a href="/vitoria/republica/" data-id="3205309071">República</a></li><li><a href="/vitoria/resistencia/" data-id="3205309079">Resistência</a></li><li><a href="/vitoria/romao/" data-id="3205309034">Romão</a></li><li><a href="/vitoria/santa-cecilia/" data-id="3205309041">Santa Cecília</a></li><li><a href="/vitoria/santa-clara/" data-id="3205309007">Santa Clara</a></li><li><a href="/vitoria/santa-helena/" data-id="3205309053">Santa Helena</a></li><li><a href="/vitoria/santa-lucia/" data-id="3205309054">Santa Lúcia</a></li><li><a href="/vitoria/santa-luiza/" data-id="3205309055">Santa Luíza</a></li><li><a href="/vitoria/santa-martha/" data-id="3205309042">Santa Martha</a></li><li><a href="/vitoria/santa-tereza/" data-id="3205309020">Santa Tereza</a></li><li><a href="/vitoria/santo-andre/" data-id="3205309080">Santo André</a></li><li><a href="/vitoria/santo-antonio/" data-id="3205309019">Santo Antônio</a></li><li><a href="/vitoria/santos-dumont/" data-id="3205309043">Santos Dumont</a></li><li><a href="/vitoria/santos-reis/" data-id="3205309081">Santos Reis</a></li><li><a href="/vitoria/sao-benedito/" data-id="3205309044">São Benedito</a></li><li><a href="/vitoria/sao-cristovao/" data-id="3205309045">São Cristóvão</a></li><li><a href="/vitoria/sao-jose/" data-id="3205309082">São José</a></li><li><a href="/vitoria/sao-pedro/" data-id="3205309083">São Pedro</a></li><li><a href="/vitoria/seguranca-do-lar/" data-id="3205309072">Segurança do Lar</a></li><li><a href="/vitoria/solon-borges/" data-id="3205309073">Solon Borges</a></li><li><a href="/vitoria/tabuazeiro/" data-id="3205309046">Tabuazeiro</a></li><li><a href="/vitoria/universitario/" data-id="3205309021">Universitário</a></li><li><a href="/vitoria/vila-rubim/" data-id="3205309008">Vila Rubim</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Vitória"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 57.1, "bbox": [-40.359, -20.3247, -40.2149, -20.239], "centro": [-40.2884, -20.2789], "fipezap_ref": "2026-09", "melhores": [{"nome": "Santa L\u00facia", "nota": 8.5}, {"nome": "Enseada do Su\u00e1", "nota": 8.3}, {"nome": "Centro", "nota": 7.8}], "nivel": "bairros", "nome": "Vit\u00f3ria", "slug": "vitoria", "uf": "ES", "unidades": 80, "venda_m2": 15905};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=92faf7fb"></script>
+
+</body>
+</html>

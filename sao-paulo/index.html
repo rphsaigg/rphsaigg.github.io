@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores distritos para morar em São Paulo · Bairro Ideal</title>
+<meta name="description" content="Mapa de São Paulo com notas de 96 distritos em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/sao-paulo/">
+<meta property="og:title" content="Melhores distritos para morar em São Paulo · Bairro Ideal">
+<meta property="og:description" content="Mapa de São Paulo com notas de 96 distritos em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/sao-paulo/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="app" data-capital="sao-paulo">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo" selected>São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em São Paulo</h1>
+      <p class="sub">96 distritos comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 96 regiões de São Paulo (A–Z)</summary>
+      <ul><li><a href="/sao-paulo/agua-rasa/" data-id="355030801">Água Rasa</a></li><li><a href="/sao-paulo/alto-de-pinheiros/" data-id="355030802">Alto de Pinheiros</a></li><li><a href="/sao-paulo/anhanguera/" data-id="355030803">Anhanguera</a></li><li><a href="/sao-paulo/aricanduva/" data-id="355030804">Aricanduva</a></li><li><a href="/sao-paulo/artur-alvim/" data-id="355030805">Artur Alvim</a></li><li><a href="/sao-paulo/barra-funda/" data-id="355030806">Barra Funda</a></li><li><a href="/sao-paulo/bela-vista/" data-id="355030807">Bela Vista</a></li><li><a href="/sao-paulo/belem/" data-id="355030808">Belém</a></li><li><a href="/sao-paulo/bom-retiro/" data-id="355030809">Bom Retiro</a></li><li><a href="/sao-paulo/bras/" data-id="355030810">Brás</a></li><li><a href="/sao-paulo/brasilandia/" data-id="355030811">Brasilândia</a></li><li><a href="/sao-paulo/butanta/" data-id="355030812">Butantã</a></li><li><a href="/sao-paulo/cachoeirinha/" data-id="355030813">Cachoeirinha</a></li><li><a href="/sao-paulo/cambuci/" data-id="355030814">Cambuci</a></li><li><a href="/sao-paulo/campo-belo/" data-id="355030815">Campo Belo</a></li><li><a href="/sao-paulo/campo-grande/" data-id="355030816">Campo Grande</a></li><li><a href="/sao-paulo/campo-limpo/" data-id="355030817">Campo Limpo</a></li><li><a href="/sao-paulo/cangaiba/" data-id="355030818">Cangaiba</a></li><li><a href="/sao-paulo/capao-redondo/" data-id="355030819">Capão Redondo</a></li><li><a href="/sao-paulo/carrao/" data-id="355030820">Carrão</a></li><li><a href="/sao-paulo/casa-verde/" data-id="355030821">Casa Verde</a></li><li><a href="/sao-paulo/cidade-ademar/" data-id="355030822">Cidade Ademar</a></li><li><a href="/sao-paulo/cidade-dutra/" data-id="355030823">Cidade Dutra</a></li><li><a href="/sao-paulo/cidade-lider/" data-id="355030824">Cidade Lider</a></li><li><a href="/sao-paulo/cidade-tiradentes/" data-id="355030825">Cidade Tiradentes</a></li><li><a href="/sao-paulo/consolacao/" data-id="355030826">Consolação</a></li><li><a href="/sao-paulo/cursino/" data-id="355030827">Cursino</a></li><li><a href="/sao-paulo/ermelino-matarazzo/" data-id="355030828">Ermelino Matarazzo</a></li><li><a href="/sao-paulo/freguesia-do-o/" data-id="355030829">Freguesia do Ó</a></li><li><a href="/sao-paulo/grajau/" data-id="355030830">Grajaú</a></li><li><a href="/sao-paulo/guaianases/" data-id="355030831">Guaianases</a></li><li><a href="/sao-paulo/iguatemi/" data-id="355030833">Iguatemi</a></li><li><a href="/sao-paulo/ipiranga/" data-id="355030834">Ipiranga</a></li><li><a href="/sao-paulo/itaim-bibi/" data-id="355030835">Itaim Bibi</a></li><li><a href="/sao-paulo/itaim-paulista/" data-id="355030836">Itaim Paulista</a></li><li><a href="/sao-paulo/itaquera/" data-id="355030837">Itaquera</a></li><li><a href="/sao-paulo/jabaquara/" data-id="355030838">Jabaquara</a></li><li><a href="/sao-paulo/jacana/" data-id="355030839">Jaçanã</a></li><li><a href="/sao-paulo/jaguara/" data-id="355030840">Jaguara</a></li><li><a href="/sao-paulo/jaguare/" data-id="355030841">Jaguaré</a></li><li><a href="/sao-paulo/jaragua/" data-id="355030842">Jaraguá</a></li><li><a href="/sao-paulo/jardim-angela/" data-id="355030843">Jardim Ângela</a></li><li><a href="/sao-paulo/jardim-helena/" data-id="355030844">Jardim Helena</a></li><li><a href="/sao-paulo/jardim-paulista/" data-id="355030845">Jardim Paulista</a></li><li><a href="/sao-paulo/jardim-sao-luis/" data-id="355030846">Jardim São Luís</a></li><li><a href="/sao-paulo/jose-bonifacio/" data-id="355030847">José Bonifácio</a></li><li><a href="/sao-paulo/lajeado/" data-id="355030896">Lajeado</a></li><li><a href="/sao-paulo/lapa/" data-id="355030848">Lapa</a></li><li><a href="/sao-paulo/liberdade/" data-id="355030849">Liberdade</a></li><li><a href="/sao-paulo/limao/" data-id="355030850">Limão</a></li><li><a href="/sao-paulo/mandaqui/" data-id="355030851">Mandaqui</a></li><li><a href="/sao-paulo/marsilac/" data-id="355030852">Marsilac</a></li><li><a href="/sao-paulo/moema/" data-id="355030832">Moema</a></li><li><a href="/sao-paulo/mooca/" data-id="355030853">Mooca</a></li><li><a href="/sao-paulo/morumbi/" data-id="355030854">Morumbi</a></li><li><a href="/sao-paulo/parelheiros/" data-id="355030855">Parelheiros</a></li><li><a href="/sao-paulo/pari/" data-id="355030856">Pari</a></li><li><a href="/sao-paulo/parque-do-carmo/" data-id="355030857">Parque do Carmo</a></li><li><a href="/sao-paulo/pedreira/" data-id="355030858">Pedreira</a></li><li><a href="/sao-paulo/penha/" data-id="355030859">Penha</a></li><li><a href="/sao-paulo/perdizes/" data-id="355030860">Perdizes</a></li><li><a href="/sao-paulo/perus/" data-id="355030861">Perus</a></li><li><a href="/sao-paulo/pinheiros/" data-id="355030862">Pinheiros</a></li><li><a href="/sao-paulo/pirituba/" data-id="355030863">Pirituba</a></li><li><a href="/sao-paulo/ponte-rasa/" data-id="355030864">Ponte Rasa</a></li><li><a href="/sao-paulo/raposo-tavares/" data-id="355030865">Raposo Tavares</a></li><li><a href="/sao-paulo/republica/" data-id="355030866">República</a></li><li><a href="/sao-paulo/rio-pequeno/" data-id="355030867">Rio Pequeno</a></li><li><a href="/sao-paulo/sacoma/" data-id="355030868">Sacomã</a></li><li><a href="/sao-paulo/santa-cecilia/" data-id="355030869">Santa Cecília</a></li><li><a href="/sao-paulo/santana/" data-id="355030870">Santana</a></li><li><a href="/sao-paulo/santo-amaro/" data-id="355030871">Santo Amaro</a></li><li><a href="/sao-paulo/sao-domingos/" data-id="355030895">São Domingos</a></li><li><a href="/sao-paulo/sao-lucas/" data-id="355030872">São Lucas</a></li><li><a href="/sao-paulo/sao-mateus/" data-id="355030873">São Mateus</a></li><li><a href="/sao-paulo/sao-miguel/" data-id="355030874">São Miguel</a></li><li><a href="/sao-paulo/sao-rafael/" data-id="355030875">São Rafael</a></li><li><a href="/sao-paulo/sapopemba/" data-id="355030876">Sapopemba</a></li><li><a href="/sao-paulo/saude/" data-id="355030877">Saúde</a></li><li><a href="/sao-paulo/se/" data-id="355030878">Sé</a></li><li><a href="/sao-paulo/socorro/" data-id="355030879">Socorro</a></li><li><a href="/sao-paulo/tatuape/" data-id="355030880">Tatuapé</a></li><li><a href="/sao-paulo/tremembe/" data-id="355030881">Tremembé</a></li><li><a href="/sao-paulo/tucuruvi/" data-id="355030882">Tucuruvi</a></li><li><a href="/sao-paulo/vila-andrade/" data-id="355030883">Vila Andrade</a></li><li><a href="/sao-paulo/vila-curuca/" data-id="355030884">Vila Curuçá</a></li><li><a href="/sao-paulo/vila-formosa/" data-id="355030885">Vila Formosa</a></li><li><a href="/sao-paulo/vila-guilherme/" data-id="355030886">Vila Guilherme</a></li><li><a href="/sao-paulo/vila-jacui/" data-id="355030887">Vila Jacuí</a></li><li><a href="/sao-paulo/vila-leopoldina/" data-id="355030888">Vila Leopoldina</a></li><li><a href="/sao-paulo/vila-maria/" data-id="355030889">Vila Maria</a></li><li><a href="/sao-paulo/vila-mariana/" data-id="355030890">Vila Mariana</a></li><li><a href="/sao-paulo/vila-matilde/" data-id="355030891">Vila Matilde</a></li><li><a href="/sao-paulo/vila-medeiros/" data-id="355030892">Vila Medeiros</a></li><li><a href="/sao-paulo/vila-prudente/" data-id="355030893">Vila Prudente</a></li><li><a href="/sao-paulo/vila-sonia/" data-id="355030894">Vila Sônia</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de São Paulo"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 65.8, "bbox": [-46.8262, -24.0084, -46.3652, -23.3563], "centro": [-46.6481, -23.6501], "fipezap_ref": "2026-09", "melhores": [{"nome": "Santo Amaro", "nota": 8.8}, {"nome": "Santana", "nota": 8.6}, {"nome": "Tatuap\u00e9", "nota": 8.6}], "nivel": "distritos", "nome": "S\u00e3o Paulo", "slug": "sao-paulo", "uf": "SP", "unidades": 96, "venda_m2": 12206};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=92faf7fb"></script>
+
+</body>
+</html>

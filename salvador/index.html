@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Salvador · Bairro Ideal</title>
+<meta name="description" content="Mapa de Salvador com notas de 170 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/salvador/">
+<meta property="og:title" content="Melhores bairros para morar em Salvador · Bairro Ideal">
+<meta property="og:description" content="Mapa de Salvador com notas de 170 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/salvador/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="app" data-capital="salvador">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador" selected>Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Salvador</h1>
+      <p class="sub">170 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 170 regiões de Salvador (A–Z)</summary>
+      <ul><li><a href="/salvador/acupe/" data-id="2927408001">Acupe</a></li><li><a href="/salvador/aeroporto/" data-id="2927408002">Aeroporto</a></li><li><a href="/salvador/aguas-claras/" data-id="2927408003">Águas Claras</a></li><li><a href="/salvador/alto-da-terezinha/" data-id="2927408004">Alto da Terezinha</a></li><li><a href="/salvador/alto-das-pombas/" data-id="2927408005">Alto das Pombas</a></li><li><a href="/salvador/alto-do-cabrito/" data-id="2927408006">Alto do Cabrito</a></li><li><a href="/salvador/alto-do-coqueirinho/" data-id="2927408007">Alto do Coqueirinho</a></li><li><a href="/salvador/amaralina/" data-id="2927408008">Amaralina</a></li><li><a href="/salvador/areia-branca/" data-id="2927408009">Areia Branca</a></li><li><a href="/salvador/arenoso/" data-id="2927408010">Arenoso</a></li><li><a href="/salvador/arraial-do-retiro/" data-id="2927408011">Arraial do Retiro</a></li><li><a href="/salvador/bairro-da-paz/" data-id="2927408012">Bairro da Paz</a></li><li><a href="/salvador/baixa-de-quintas/" data-id="2927408013">Baixa de Quintas</a></li><li><a href="/salvador/barbalho/" data-id="2927408014">Barbalho</a></li><li><a href="/salvador/barra/" data-id="2927408015">Barra</a></li><li><a href="/salvador/barreiras/" data-id="2927408016">Barreiras</a></li><li><a href="/salvador/barris/" data-id="2927408017">Barris</a></li><li><a href="/salvador/beiru-tancredo-neves/" data-id="2927408018">Beiru / Tancredo Neves</a></li><li><a href="/salvador/boa-viagem/" data-id="2927408019">Boa Viagem</a></li><li><a href="/salvador/boa-vista-de-brotas/" data-id="2927408020">Boa Vista de Brotas</a></li><li><a href="/salvador/boa-vista-de-sao-caetano/" data-id="2927408021">Boa Vista de São Caetano</a></li><li><a href="/salvador/boca-da-mata/" data-id="2927408022">Boca da Mata</a></li><li><a href="/salvador/boca-do-rio/" data-id="2927408023">Boca do Rio</a></li><li><a href="/salvador/bom-jua/" data-id="2927408024">Bom Juá</a></li><li><a href="/salvador/bonfim/" data-id="2927408025">Bonfim</a></li><li><a href="/salvador/brotas/" data-id="2927408026">Brotas</a></li><li><a href="/salvador/cabula/" data-id="2927408027">Cabula</a></li><li><a href="/salvador/cabula-vi/" data-id="2927408028">Cabula VI</a></li><li><a href="/salvador/caixa-d-agua/" data-id="2927408029">Caixa D&#39;água</a></li><li><a href="/salvador/cajazeiras-ii/" data-id="2927408030">Cajazeiras II</a></li><li><a href="/salvador/cajazeiras-iv/" data-id="2927408031">Cajazeiras IV</a></li><li><a href="/salvador/cajazeiras-v/" data-id="2927408032">Cajazeiras V</a></li><li><a href="/salvador/cajazeiras-vi/" data-id="2927408033">Cajazeiras VI</a></li><li><a href="/salvador/cajazeiras-vii/" data-id="2927408034">Cajazeiras VII</a></li><li><a href="/salvador/cajazeiras-viii/" data-id="2927408035">Cajazeiras VIII</a></li><li><a href="/salvador/cajazeiras-x/" data-id="2927408036">Cajazeiras X</a></li><li><a href="/salvador/cajazeiras-xi/" data-id="2927408037">Cajazeiras XI</a></li><li><a href="/salvador/calabar/" data-id="2927408038">Calabar</a></li><li><a href="/salvador/calabetao/" data-id="2927408039">Calabetão</a></li><li><a href="/salvador/calcada/" data-id="2927408040">Calçada</a></li><li><a href="/salvador/caminho-das-arvores/" data-id="2927408041">Caminho das Árvores</a></li><li><a href="/salvador/caminho-de-areia/" data-id="2927408042">Caminho de Areia</a></li><li><a href="/salvador/campinas-de-piraja/" data-id="2927408043">Campinas de Pirajá</a></li><li><a href="/salvador/canabrava/" data-id="2927408044">Canabrava</a></li><li><a href="/salvador/candeal/" data-id="2927408045">Candeal</a></li><li><a href="/salvador/canela/" data-id="2927408046">Canela</a></li><li><a href="/salvador/capelinha/" data-id="2927408047">Capelinha</a></li><li><a href="/salvador/cassange/" data-id="2927408048">Cassange</a></li><li><a href="/salvador/castelo-branco/" data-id="2927408049">Castelo Branco</a></li><li><a href="/salvador/centro/" data-id="2927408050">Centro</a></li><li><a href="/salvador/centro-administrativo-da-bahia-cab/" data-id="2927408051">Centro Administrativo da Bahia - CAB</a></li><li><a href="/salvador/centro-historico/" data-id="2927408052">Centro Histórico</a></li><li><a href="/salvador/chame-chame/" data-id="2927408164">Chame-Chame</a></li><li><a href="/salvador/chapada-do-rio-vermelho/" data-id="2927408053">Chapada do Rio Vermelho</a></li><li><a href="/salvador/cidade-nova/" data-id="2927408054">Cidade Nova</a></li><li><a href="/salvador/colinas-de-periperi/" data-id="2927408165">Colinas de Periperi</a></li><li><a href="/salvador/comercio/" data-id="2927408055">Comércio</a></li><li><a href="/salvador/cosme-de-farias/" data-id="2927408056">Cosme de Farias</a></li><li><a href="/salvador/costa-azul/" data-id="2927408057">Costa Azul</a></li><li><a href="/salvador/coutos/" data-id="2927408058">Coutos</a></li><li><a href="/salvador/curuzu/" data-id="2927408059">Curuzu</a></li><li><a href="/salvador/dois-de-julho/" data-id="2927408166">Dois de Julho</a></li><li><a href="/salvador/dom-avelar/" data-id="2927408060">Dom Avelar</a></li><li><a href="/salvador/doron/" data-id="2927408061">Doron</a></li><li><a href="/salvador/engenho-velho-da-federacao/" data-id="2927408062">Engenho Velho da Federação</a></li><li><a href="/salvador/engenho-velho-de-brotas/" data-id="2927408063">Engenho Velho de Brotas</a></li><li><a href="/salvador/engomadeira/" data-id="2927408064">Engomadeira</a></li><li><a href="/salvador/fazenda-coutos/" data-id="2927408065">Fazenda Coutos</a></li><li><a href="/salvador/fazenda-grande-do-retiro/" data-id="2927408066">Fazenda Grande do Retiro</a></li><li><a href="/salvador/fazenda-grande-i/" data-id="2927408067">Fazenda Grande I</a></li><li><a href="/salvador/fazenda-grande-ii/" data-id="2927408068">Fazenda Grande II</a></li><li><a href="/salvador/fazenda-grande-iii/" data-id="2927408069">Fazenda Grande III</a></li><li><a href="/salvador/fazenda-grande-iv/" data-id="2927408070">Fazenda Grande IV</a></li><li><a href="/salvador/federacao/" data-id="2927408071">Federação</a></li><li><a href="/salvador/garcia/" data-id="2927408072">Garcia</a></li><li><a href="/salvador/graca/" data-id="2927408073">Graça</a></li><li><a href="/salvador/granjas-rurais-presidente-vargas/" data-id="2927408074">Granjas Rurais Presidente Vargas</a></li><li><a href="/salvador/horto-florestal/" data-id="2927408167">Horto Florestal</a></li><li><a href="/salvador/iapi/" data-id="2927408075">IAPI</a></li><li><a href="/salvador/ilha-amarela/" data-id="2927408168">Ilha Amarela</a></li><li><a href="/salvador/ilha-bom-jesus-dos-passos/" data-id="2927408161">Ilha Bom Jesus dos Passos</a></li><li><a href="/salvador/ilha-de-mare/" data-id="2927408162">Ilha de Maré</a></li><li><a href="/salvador/ilha-dos-frades-ilha-de-santo-antonio/" data-id="2927408163">Ilha dos Frades / Ilha de Santo Antônio</a></li><li><a href="/salvador/imbui/" data-id="2927408076">Imbuí</a></li><li><a href="/salvador/itacaranha/" data-id="2927408077">Itacaranha</a></li><li><a href="/salvador/itaigara/" data-id="2927408078">Itaigara</a></li><li><a href="/salvador/itapua/" data-id="2927408079">Itapuã</a></li><li><a href="/salvador/itinga/" data-id="2927408080">Itinga</a></li><li><a href="/salvador/jaguaripe-i/" data-id="2927408081">Jaguaripe I</a></li><li><a href="/salvador/jardim-armacao/" data-id="2927408082">Jardim Armação</a></li><li><a href="/salvador/jardim-cajazeiras/" data-id="2927408083">Jardim Cajazeiras</a></li><li><a href="/salvador/jardim-das-margaridas/" data-id="2927408084">Jardim das Margaridas</a></li><li><a href="/salvador/jardim-nova-esperanca/" data-id="2927408085">Jardim Nova Esperança</a></li><li><a href="/salvador/jardim-santo-inacio/" data-id="2927408086">Jardim Santo Inácio</a></li><li><a href="/salvador/lapinha/" data-id="2927408087">Lapinha</a></li><li><a href="/salvador/liberdade/" data-id="2927408088">Liberdade</a></li><li><a href="/salvador/lobato/" data-id="2927408089">Lobato</a></li><li><a href="/salvador/luiz-anselmo/" data-id="2927408090">Luiz Anselmo</a></li><li><a href="/salvador/macaubas/" data-id="2927408091">Macaúbas</a></li><li><a href="/salvador/mangueira/" data-id="2927408092">Mangueira</a></li><li><a href="/salvador/marechal-rondon/" data-id="2927408093">Marechal Rondon</a></li><li><a href="/salvador/mares/" data-id="2927408094">Mares</a></li><li><a href="/salvador/massaranduba/" data-id="2927408095">Massaranduba</a></li><li><a href="/salvador/mata-escura/" data-id="2927408096">Mata Escura</a></li><li><a href="/salvador/matatu/" data-id="2927408097">Matatu</a></li><li><a href="/salvador/mirantes-de-periperi/" data-id="2927408169">Mirantes de Periperi</a></li><li><a href="/salvador/monte-serrat/" data-id="2927408098">Monte Serrat</a></li><li><a href="/salvador/moradas-da-lagoa/" data-id="2927408099">Moradas da Lagoa</a></li><li><a href="/salvador/mussurunga/" data-id="2927408100">Mussurunga</a></li><li><a href="/salvador/narandiba/" data-id="2927408101">Narandiba</a></li><li><a href="/salvador/nazare/" data-id="2927408102">Nazaré</a></li><li><a href="/salvador/nordeste-do-amaralina/" data-id="2927408103">Nordeste do Amaralina</a></li><li><a href="/salvador/nova-brasilia/" data-id="2927408104">Nova Brasília</a></li><li><a href="/salvador/nova-constituinte/" data-id="2927408105">Nova Constituinte</a></li><li><a href="/salvador/nova-esperanca/" data-id="2927408106">Nova Esperança</a></li><li><a href="/salvador/nova-sussuarana/" data-id="2927408107">Nova Sussuarana</a></li><li><a href="/salvador/novo-horizonte/" data-id="2927408108">Novo Horizonte</a></li><li><a href="/salvador/novo-marotinho/" data-id="2927408109">Novo Marotinho</a></li><li><a href="/salvador/ondina/" data-id="2927408110">Ondina</a></li><li><a href="/salvador/palestina/" data-id="2927408111">Palestina</a></li><li><a href="/salvador/paripe/" data-id="2927408112">Paripe</a></li><li><a href="/salvador/patamares/" data-id="2927408113">Patamares</a></li><li><a href="/salvador/pau-da-lima/" data-id="2927408114">Pau da Lima</a></li><li><a href="/salvador/pau-miudo/" data-id="2927408115">Pau Miúdo</a></li><li><a href="/salvador/periperi/" data-id="2927408116">Periperi</a></li><li><a href="/salvador/pernambues/" data-id="2927408117">Pernambués</a></li><li><a href="/salvador/pero-vaz/" data-id="2927408118">Pero Vaz</a></li><li><a href="/salvador/piata/" data-id="2927408119">Piatã</a></li><li><a href="/salvador/piraja/" data-id="2927408120">Pirajá</a></li><li><a href="/salvador/pituacu/" data-id="2927408121">Pituaçu</a></li><li><a href="/salvador/pituba/" data-id="2927408122">Pituba</a></li><li><a href="/salvador/plataforma/" data-id="2927408123">Plataforma</a></li><li><a href="/salvador/porto-seco-piraja/" data-id="2927408124">Porto Seco Pirajá</a></li><li><a href="/salvador/praia-grande/" data-id="2927408125">Praia Grande</a></li><li><a href="/salvador/resgate/" data-id="2927408126">Resgate</a></li><li><a href="/salvador/retiro/" data-id="2927408127">Retiro</a></li><li><a href="/salvador/ribeira/" data-id="2927408128">Ribeira</a></li><li><a href="/salvador/rio-sena/" data-id="2927408129">Rio Sena</a></li><li><a href="/salvador/rio-vermelho/" data-id="2927408130">Rio Vermelho</a></li><li><a href="/salvador/roma/" data-id="2927408131">Roma</a></li><li><a href="/salvador/saboeiro/" data-id="2927408132">Saboeiro</a></li><li><a href="/salvador/santa-cruz/" data-id="2927408133">Santa Cruz</a></li><li><a href="/salvador/santa-luzia/" data-id="2927408134">Santa Luzia</a></li><li><a href="/salvador/santa-monica/" data-id="2927408135">Santa Mônica</a></li><li><a href="/salvador/santo-agostinho/" data-id="2927408136">Santo Agostinho</a></li><li><a href="/salvador/santo-antonio/" data-id="2927408137">Santo Antônio</a></li><li><a href="/salvador/sao-caetano/" data-id="2927408138">São Caetano</a></li><li><a href="/salvador/sao-cristovao/" data-id="2927408139">São Cristóvão</a></li><li><a href="/salvador/sao-goncalo/" data-id="2927408140">São Gonçalo</a></li><li><a href="/salvador/sao-joao-do-cabrito/" data-id="2927408141">São João do Cabrito</a></li><li><a href="/salvador/sao-marcos/" data-id="2927408142">São Marcos</a></li><li><a href="/salvador/sao-rafael/" data-id="2927408143">São Rafael</a></li><li><a href="/salvador/sao-tome/" data-id="2927408144">São Tomé</a></li><li><a href="/salvador/saramandaia/" data-id="2927408145">Saramandaia</a></li><li><a href="/salvador/saude/" data-id="2927408146">Saúde</a></li><li><a href="/salvador/sete-de-abril/" data-id="2927408147">Sete de Abril</a></li><li><a href="/salvador/stella-maris/" data-id="2927408148">Stella Maris</a></li><li><a href="/salvador/stiep/" data-id="2927408149">STIEP</a></li><li><a href="/salvador/sussuarana/" data-id="2927408150">Sussuarana</a></li><li><a href="/salvador/tororo/" data-id="2927408151">Tororó</a></li><li><a href="/salvador/trobogy/" data-id="2927408152">Trobogy</a></li><li><a href="/salvador/uruguai/" data-id="2927408153">Uruguai</a></li><li><a href="/salvador/vale-das-pedrinhas/" data-id="2927408154">Vale das Pedrinhas</a></li><li><a href="/salvador/vale-dos-lagos/" data-id="2927408155">Vale dos Lagos</a></li><li><a href="/salvador/valeria/" data-id="2927408156">Valéria</a></li><li><a href="/salvador/vila-canaria/" data-id="2927408157">Vila Canária</a></li><li><a href="/salvador/vila-laura/" data-id="2927408158">Vila Laura</a></li><li><a href="/salvador/vila-ruy-barbosa-jardim-cruzeiro/" data-id="2927408159">Vila Ruy Barbosa / Jardim Cruzeiro</a></li><li><a href="/salvador/vista-alegre/" data-id="2927408170">Vista Alegre</a></li><li><a href="/salvador/vitoria/" data-id="2927408160">Vitória</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Salvador"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 55.4, "bbox": [-38.6575, -13.0173, -38.3043, -12.7424], "centro": [-38.4435, -12.9054], "fipezap_ref": "2026-09", "melhores": [{"nome": "Rio Vermelho", "nota": 8.8}, {"nome": "Caminho das \u00c1rvores", "nota": 8.3}, {"nome": "Pituba", "nota": 8.0}], "nivel": "bairros", "nome": "Salvador", "slug": "salvador", "uf": "BA", "unidades": 170, "venda_m2": 8691};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=92faf7fb"></script>
+
+</body>
+</html>

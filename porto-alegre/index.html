@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Porto Alegre · Bairro Ideal</title>
+<meta name="description" content="Mapa de Porto Alegre com notas de 94 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/porto-alegre/">
+<meta property="og:title" content="Melhores bairros para morar em Porto Alegre · Bairro Ideal">
+<meta property="og:description" content="Mapa de Porto Alegre com notas de 94 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/porto-alegre/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="app" data-capital="porto-alegre">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre" selected>Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Porto Alegre</h1>
+      <p class="sub">94 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 94 regiões de Porto Alegre (A–Z)</summary>
+      <ul><li><a href="/porto-alegre/aberta-dos-morros/" data-id="4314902080">Aberta dos Morros</a></li><li><a href="/porto-alegre/agronomia/" data-id="4314902035">Agronomia</a></li><li><a href="/porto-alegre/anchieta/" data-id="4314902055">Anchieta</a></li><li><a href="/porto-alegre/arquipelago/" data-id="4314902033">Arquipélago</a></li><li><a href="/porto-alegre/auxiliadora/" data-id="4314902045">Auxiliadora</a></li><li><a href="/porto-alegre/azenha/" data-id="4314902008">Azenha</a></li><li><a href="/porto-alegre/bela-vista/" data-id="4314902043">Bela Vista</a></li><li><a href="/porto-alegre/belem-novo/" data-id="4314902073">Belém Novo</a></li><li><a href="/porto-alegre/belem-velho/" data-id="4314902037">Belém Velho</a></li><li><a href="/porto-alegre/boa-vista/" data-id="4314902056">Boa Vista</a></li><li><a href="/porto-alegre/boa-vista-do-sul/" data-id="4314902081">Boa Vista do Sul</a></li><li><a href="/porto-alegre/bom-fim/" data-id="4314902038">Bom Fim</a></li><li><a href="/porto-alegre/bom-jesus/" data-id="4314902021">Bom Jesus</a></li><li><a href="/porto-alegre/camaqua/" data-id="4314902023">Camaquã</a></li><li><a href="/porto-alegre/campo-novo/" data-id="4314902082">Campo Novo</a></li><li><a href="/porto-alegre/cascata/" data-id="4314902034">Cascata</a></li><li><a href="/porto-alegre/cavalhada/" data-id="4314902022">Cavalhada</a></li><li><a href="/porto-alegre/centro-historico/" data-id="4314902036">Centro Histórico</a></li><li><a href="/porto-alegre/chacara-das-pedras/" data-id="4314902059">Chácara das Pedras</a></li><li><a href="/porto-alegre/chapeu-do-sol/" data-id="4314902083">Chapéu do Sol</a></li><li><a href="/porto-alegre/cidade-baixa/" data-id="4314902003">Cidade Baixa</a></li><li><a href="/porto-alegre/coronel-aparicio-borges/" data-id="4314902013">Coronel Aparício Borges</a></li><li><a href="/porto-alegre/costa-e-silva/" data-id="4314902084">Costa e Silva</a></li><li><a href="/porto-alegre/cristal/" data-id="4314902024">Cristal</a></li><li><a href="/porto-alegre/cristo-redentor/" data-id="4314902051">Cristo Redentor</a></li><li><a href="/porto-alegre/espirito-santo/" data-id="4314902030">Espírito Santo</a></li><li><a href="/porto-alegre/extrema/" data-id="4314902085">Extrema</a></li><li><a href="/porto-alegre/farrapos/" data-id="4314902067">Farrapos</a></li><li><a href="/porto-alegre/farroupilha/" data-id="4314902005">Farroupilha</a></li><li><a href="/porto-alegre/floresta/" data-id="4314902040">Floresta</a></li><li><a href="/porto-alegre/gloria/" data-id="4314902012">Glória</a></li><li><a href="/porto-alegre/guaruja/" data-id="4314902031">Guarujá</a></li><li><a href="/porto-alegre/higienopolis/" data-id="4314902049">Higienópolis</a></li><li><a href="/porto-alegre/hipica/" data-id="4314902072">Hípica</a></li><li><a href="/porto-alegre/humaita/" data-id="4314902066">Humaitá</a></li><li><a href="/porto-alegre/independencia/" data-id="4314902039">Independência</a></li><li><a href="/porto-alegre/ipanema/" data-id="4314902029">Ipanema</a></li><li><a href="/porto-alegre/jardim-botanico/" data-id="4314902018">Jardim Botânico</a></li><li><a href="/porto-alegre/jardim-carvalho/" data-id="4314902068">Jardim Carvalho</a></li><li><a href="/porto-alegre/jardim-do-salso/" data-id="4314902069">Jardim do Salso</a></li><li><a href="/porto-alegre/jardim-europa/" data-id="4314902086">Jardim Europa</a></li><li><a href="/porto-alegre/jardim-floresta/" data-id="4314902087">Jardim Floresta</a></li><li><a href="/porto-alegre/jardim-isabel/" data-id="4314902079">Jardim Isabel</a></li><li><a href="/porto-alegre/jardim-itu/" data-id="4314902088">Jardim Itu</a></li><li><a href="/porto-alegre/jardim-leopoldina/" data-id="4314902089">Jardim Leopoldina</a></li><li><a href="/porto-alegre/jardim-lindoia/" data-id="4314902054">Jardim Lindóia</a></li><li><a href="/porto-alegre/jardim-sabara/" data-id="4314902090">Jardim Sabará</a></li><li><a href="/porto-alegre/jardim-sao-pedro/" data-id="4314902052">Jardim São Pedro</a></li><li><a href="/porto-alegre/lageado/" data-id="4314902076">Lageado</a></li><li><a href="/porto-alegre/lami/" data-id="4314902074">Lami</a></li><li><a href="/porto-alegre/lomba-do-pinheiro/" data-id="4314902077">Lomba do Pinheiro</a></li><li><a href="/porto-alegre/mario-quintana/" data-id="4314902078">Mário Quintana</a></li><li><a href="/porto-alegre/medianeira/" data-id="4314902001">Medianeira</a></li><li><a href="/porto-alegre/menino-deus/" data-id="4314902004">Menino-Deus</a></li><li><a href="/porto-alegre/moinhos-de-vento/" data-id="4314902041">Moinhos de Vento</a></li><li><a href="/porto-alegre/montserrat/" data-id="4314902044">MontSerrat</a></li><li><a href="/porto-alegre/morro-santana/" data-id="4314902091">Morro Santana</a></li><li><a href="/porto-alegre/navegantes/" data-id="4314902048">Navegantes</a></li><li><a href="/porto-alegre/nonoai/" data-id="4314902010">Nonoai</a></li><li><a href="/porto-alegre/parque-santa-fe/" data-id="4314902092">Parque Santa Fé</a></li><li><a href="/porto-alegre/partenon/" data-id="4314902015">Partenon</a></li><li><a href="/porto-alegre/passo-da-areia/" data-id="4314902050">Passo da Areia</a></li><li><a href="/porto-alegre/passo-das-pedras/" data-id="4314902093">Passo das Pedras</a></li><li><a href="/porto-alegre/pedra-redonda/" data-id="4314902028">Pedra Redonda</a></li><li><a href="/porto-alegre/petropolis/" data-id="4314902019">Petrópolis</a></li><li><a href="/porto-alegre/pitinga/" data-id="4314902094">Pitinga</a></li><li><a href="/porto-alegre/ponta-grossa/" data-id="4314902071">Ponta Grossa</a></li><li><a href="/porto-alegre/praia-de-belas/" data-id="4314902002">Praia de Belas</a></li><li><a href="/porto-alegre/restinga/" data-id="4314902070">Restinga</a></li><li><a href="/porto-alegre/rio-branco/" data-id="4314902042">Rio Branco</a></li><li><a href="/porto-alegre/rubem-berta/" data-id="4314902063">Rubem Berta</a></li><li><a href="/porto-alegre/santa-cecilia/" data-id="4314902006">Santa Cecília</a></li><li><a href="/porto-alegre/santa-maria-goretti/" data-id="4314902062">Santa Maria Goretti</a></li><li><a href="/porto-alegre/santa-rosa-de-lima/" data-id="4314902095">Santa Rosa de Lima</a></li><li><a href="/porto-alegre/santa-tereza/" data-id="4314902009">Santa Tereza</a></li><li><a href="/porto-alegre/santana/" data-id="4314902007">Santana</a></li><li><a href="/porto-alegre/santo-antonio/" data-id="4314902014">Santo Antônio</a></li><li><a href="/porto-alegre/sao-caetano/" data-id="4314902096">São Caetano</a></li><li><a href="/porto-alegre/sao-geraldo/" data-id="4314902047">São Geraldo</a></li><li><a href="/porto-alegre/sao-joao/" data-id="4314902046">São João</a></li><li><a href="/porto-alegre/sao-sebastiao/" data-id="4314902065">São Sebastião</a></li><li><a href="/porto-alegre/sarandi/" data-id="4314902061">Sarandi</a></li><li><a href="/porto-alegre/serraria/" data-id="4314902075">Serraria</a></li><li><a href="/porto-alegre/setimo-ceu/" data-id="4314902097">Sétimo Céu</a></li><li><a href="/porto-alegre/teresopolis/" data-id="4314902011">Teresópolis</a></li><li><a href="/porto-alegre/tres-figueiras/" data-id="4314902058">Três Figueiras</a></li><li><a href="/porto-alegre/tristeza/" data-id="4314902026">Tristeza</a></li><li><a href="/porto-alegre/vila-assuncao/" data-id="4314902025">Vila Assunção</a></li><li><a href="/porto-alegre/vila-conceicao/" data-id="4314902027">Vila Conceição</a></li><li><a href="/porto-alegre/vila-ipiranga/" data-id="4314902057">Vila Ipiranga</a></li><li><a href="/porto-alegre/vila-jardim/" data-id="4314902060">Vila Jardim</a></li><li><a href="/porto-alegre/vila-joao-pessoa/" data-id="4314902016">Vila João Pessoa</a></li><li><a href="/porto-alegre/vila-nova/" data-id="4314902032">Vila Nova</a></li><li><a href="/porto-alegre/vila-sao-jose/" data-id="4314902098">Vila São José</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Porto Alegre"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 46.8, "bbox": [-51.3032, -30.2694, -51.0119, -29.9323], "centro": [-51.1645, -30.0953], "fipezap_ref": "2026-09", "melhores": [{"nome": "Centro Hist\u00f3rico", "nota": 8.0}, {"nome": "Moinhos de Vento", "nota": 7.9}, {"nome": "Cristo Redentor", "nota": 7.8}], "nivel": "bairros", "nome": "Porto Alegre", "slug": "porto-alegre", "uf": "RS", "unidades": 94, "venda_m2": 7545};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=92faf7fb"></script>
+
+</body>
+</html>

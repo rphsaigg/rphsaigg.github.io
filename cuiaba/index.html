@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Cuiabá · Bairro Ideal</title>
+<meta name="description" content="Mapa de Cuiabá com notas de 119 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/cuiaba/">
+<meta property="og:title" content="Melhores bairros para morar em Cuiabá · Bairro Ideal">
+<meta property="og:description" content="Mapa de Cuiabá com notas de 119 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/cuiaba/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="app" data-capital="cuiaba">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba" selected>Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Cuiabá</h1>
+      <p class="sub">119 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 119 regiões de Cuiabá (A–Z)</summary>
+      <ul><li><a href="/cuiaba/alto-da-serra-i/" data-id="5103403118">Alto da Serra I</a></li><li><a href="/cuiaba/altos-do-coxipo/" data-id="5103403104">Altos do Coxipó</a></li><li><a href="/cuiaba/alvorada/" data-id="5103403041">Alvorada</a></li><li><a href="/cuiaba/araes/" data-id="5103403009">Araés</a></li><li><a href="/cuiaba/areao/" data-id="5103403007">Areão</a></li><li><a href="/cuiaba/bandeirantes/" data-id="5103403006">Bandeirantes</a></li><li><a href="/cuiaba/barbado/" data-id="5103403500">Barbado</a></li><li><a href="/cuiaba/barra-do-pari/" data-id="5103403033">Barra do Pari</a></li><li><a href="/cuiaba/bau/" data-id="5103403016">Baú</a></li><li><a href="/cuiaba/bela-marina/" data-id="5103403048">Bela Marina</a></li><li><a href="/cuiaba/bela-vista/" data-id="5103403064">Bela Vista</a></li><li><a href="/cuiaba/boa-esperanca/" data-id="5103403044">Boa Esperança</a></li><li><a href="/cuiaba/bosque-da-saude/" data-id="5103403060">Bosque da Saúde</a></li><li><a href="/cuiaba/cachoeira-das-garcas/" data-id="5103403083">Cachoeira das Garças</a></li><li><a href="/cuiaba/campo-velho/" data-id="5103403054">Campo Velho</a></li><li><a href="/cuiaba/campo-verde/" data-id="5103403066">Campo Verde</a></li><li><a href="/cuiaba/canjica/" data-id="5103403062">Canjica</a></li><li><a href="/cuiaba/carumbe/" data-id="5103403067">Carumbé</a></li><li><a href="/cuiaba/centro-norte/" data-id="5103403002">Centro Norte</a></li><li><a href="/cuiaba/centro-politico-administrativo/" data-id="5103403020">Centro Político Administrativo</a></li><li><a href="/cuiaba/centro-sul/" data-id="5103403001">Centro Sul</a></li><li><a href="/cuiaba/chacara-dos-pinheiros/" data-id="5103403097">Chácara dos Pinheiros</a></li><li><a href="/cuiaba/cidade-alta/" data-id="5103403014">Cidade Alta</a></li><li><a href="/cuiaba/cidade-verde/" data-id="5103403031">Cidade Verde</a></li><li><a href="/cuiaba/cohab-sao-goncalo/" data-id="5103403088">Cohab São Gonçalo</a></li><li><a href="/cuiaba/coophamil/" data-id="5103403029">Coophamil</a></li><li><a href="/cuiaba/coophema/" data-id="5103403095">Coophema</a></li><li><a href="/cuiaba/coxipo/" data-id="5103403096">Coxipó</a></li><li><a href="/cuiaba/despraiado/" data-id="5103403040">Despraiado</a></li><li><a href="/cuiaba/dom-aquino/" data-id="5103403004">Dom Aquino</a></li><li><a href="/cuiaba/dom-bosco/" data-id="5103403065">Dom Bosco</a></li><li><a href="/cuiaba/dr-fabio-leite-i/" data-id="5103403119">Dr. Fábio Leite I</a></li><li><a href="/cuiaba/duque-de-caxias/" data-id="5103403011">Duque de Caxias</a></li><li><a href="/cuiaba/goiabeira/" data-id="5103403012">Goiabeira</a></li><li><a href="/cuiaba/grande-terceiro/" data-id="5103403051">Grande Terceiro</a></li><li><a href="/cuiaba/jardim-aclimacao/" data-id="5103403061">Jardim Aclimação</a></li><li><a href="/cuiaba/jardim-california/" data-id="5103403047">Jardim Califórnia</a></li><li><a href="/cuiaba/jardim-campus-elizius/" data-id="5103403501">Jardim Campus Elizius</a></li><li><a href="/cuiaba/jardim-comodoro/" data-id="5103403102">Jardim Comodoro</a></li><li><a href="/cuiaba/jardim-cuiaba/" data-id="5103403013">Jardim Cuiabá</a></li><li><a href="/cuiaba/jardim-das-americas/" data-id="5103403057">Jardim das Américas</a></li><li><a href="/cuiaba/jardim-das-palmeiras/" data-id="5103403098">Jardim das Palmeiras</a></li><li><a href="/cuiaba/jardim-dos-ipes/" data-id="5103403105">Jardim dos Ipês</a></li><li><a href="/cuiaba/jardim-eldorado/" data-id="5103403075">Jardim Eldorado</a></li><li><a href="/cuiaba/jardim-europa/" data-id="5103403052">Jardim Europa</a></li><li><a href="/cuiaba/jardim-florianopolis/" data-id="5103403022">Jardim Florianópolis</a></li><li><a href="/cuiaba/jardim-fortaleza/" data-id="5103403110">Jardim Fortaleza</a></li><li><a href="/cuiaba/jardim-gramado/" data-id="5103403094">Jardim Gramado</a></li><li><a href="/cuiaba/jardim-imperial/" data-id="5103403081">Jardim Imperial</a></li><li><a href="/cuiaba/jardim-industriario/" data-id="5103403115">Jardim Industriário</a></li><li><a href="/cuiaba/jardim-italia/" data-id="5103403077">Jardim Itália</a></li><li><a href="/cuiaba/jardim-leblon/" data-id="5103403058">Jardim Leblon</a></li><li><a href="/cuiaba/jardim-mariana/" data-id="5103403036">Jardim Mariana</a></li><li><a href="/cuiaba/jardim-mossoro/" data-id="5103403089">Jardim Mossoró</a></li><li><a href="/cuiaba/jardim-passaredo/" data-id="5103403084">Jardim Passaredo</a></li><li><a href="/cuiaba/jardim-paulista/" data-id="5103403053">Jardim Paulista</a></li><li><a href="/cuiaba/jardim-petropolis/" data-id="5103403046">Jardim Petrópolis</a></li><li><a href="/cuiaba/jardim-presidente/" data-id="5103403086">Jardim Presidente</a></li><li><a href="/cuiaba/jardim-shangri-la/" data-id="5103403045">Jardim Shangri-lá</a></li><li><a href="/cuiaba/jardim-tropical/" data-id="5103403055">Jardim Tropical</a></li><li><a href="/cuiaba/jardim-ubirajara/" data-id="5103403039">Jardim Ubirajara</a></li><li><a href="/cuiaba/jardim-universitario/" data-id="5103403082">Jardim Universitário</a></li><li><a href="/cuiaba/jardim-vitoria/" data-id="5103403023">Jardim Vitória</a></li><li><a href="/cuiaba/lagoa-azul/" data-id="5103403107">Lagoa Azul</a></li><li><a href="/cuiaba/lixeira/" data-id="5103403008">Lixeira</a></li><li><a href="/cuiaba/morada-da-serra/" data-id="5103403028">Morada da Serra</a></li><li><a href="/cuiaba/morada-do-ouro/" data-id="5103403019">Morada do Ouro</a></li><li><a href="/cuiaba/morada-dos-nobres/" data-id="5103403078">Morada dos Nobres</a></li><li><a href="/cuiaba/nossa-senhora-aparecida/" data-id="5103403101">Nossa Senhora Aparecida</a></li><li><a href="/cuiaba/nova-conquista/" data-id="5103403025">Nova Conquista</a></li><li><a href="/cuiaba/nova-esperanca/" data-id="5103403114">Nova Esperança</a></li><li><a href="/cuiaba/novo-colorado/" data-id="5103403037">Novo Colorado</a></li><li><a href="/cuiaba/novo-horizonte/" data-id="5103403070">Novo Horizonte</a></li><li><a href="/cuiaba/novo-mato-grosso/" data-id="5103403069">Novo Mato Grosso</a></li><li><a href="/cuiaba/novo-terceiro/" data-id="5103403030">Novo Terceiro</a></li><li><a href="/cuiaba/osmar-cabral/" data-id="5103403112">Osmar Cabral</a></li><li><a href="/cuiaba/paiaguas/" data-id="5103403021">Paiaguás</a></li><li><a href="/cuiaba/paraiso/" data-id="5103403024">Paraíso</a></li><li><a href="/cuiaba/parque-atalaia/" data-id="5103403091">Parque Atalaia</a></li><li><a href="/cuiaba/parque-cuiaba/" data-id="5103403090">Parque Cuiabá</a></li><li><a href="/cuiaba/parque-georgia/" data-id="5103403092">Parque Geórgia</a></li><li><a href="/cuiaba/parque-ohara/" data-id="5103403099">Parque Ohara</a></li><li><a href="/cuiaba/pascoal-ramos/" data-id="5103403116">Pascoal Ramos</a></li><li><a href="/cuiaba/pedra-90/" data-id="5103403113">Pedra 90</a></li><li><a href="/cuiaba/pedregal/" data-id="5103403059">Pedregal</a></li><li><a href="/cuiaba/pico-do-amor/" data-id="5103403056">Pico do Amor</a></li><li><a href="/cuiaba/planalto/" data-id="5103403071">Planalto</a></li><li><a href="/cuiaba/pocao/" data-id="5103403005">Poção</a></li><li><a href="/cuiaba/popular/" data-id="5103403017">Popular</a></li><li><a href="/cuiaba/porto/" data-id="5103403015">Porto</a></li><li><a href="/cuiaba/praeirinho/" data-id="5103403049">Praeirinho</a></li><li><a href="/cuiaba/praeiro/" data-id="5103403050">Praeiro</a></li><li><a href="/cuiaba/primeiro-de-marco/" data-id="5103403026">Primeiro de Março</a></li><li><a href="/cuiaba/quilombo/" data-id="5103403010">Quilombo</a></li><li><a href="/cuiaba/recanto-dos-passaros/" data-id="5103403080">Recanto dos Pássaros</a></li><li><a href="/cuiaba/residencial-coxipo/" data-id="5103403087">Residencial Coxipó</a></li><li><a href="/cuiaba/residencial-itamaraty/" data-id="5103403072">Residencial Itamaraty</a></li><li><a href="/cuiaba/residencial-santa-ines/" data-id="5103403076">Residencial Santa Inês</a></li><li><a href="/cuiaba/residencial-sao-carlos/" data-id="5103403074">Residencial São Carlos</a></li><li><a href="/cuiaba/ribeirao-da-ponte/" data-id="5103403035">Ribeirão da Ponte</a></li><li><a href="/cuiaba/ribeirao-do-lipa/" data-id="5103403038">Ribeirão do Lipa</a></li><li><a href="/cuiaba/santa-cruz/" data-id="5103403079">Santa Cruz</a></li><li><a href="/cuiaba/santa-isabel/" data-id="5103403032">Santa Isabel</a></li><li><a href="/cuiaba/santa-laura/" data-id="5103403109">Santa Laura</a></li><li><a href="/cuiaba/santa-marta/" data-id="5103403042">Santa Marta</a></li><li><a href="/cuiaba/santa-rosa/" data-id="5103403034">Santa Rosa</a></li><li><a href="/cuiaba/sao-francisco/" data-id="5103403085">São Francisco</a></li><li><a href="/cuiaba/sao-goncalo-beira-rio/" data-id="5103403093">São Gonçalo Beira Rio</a></li><li><a href="/cuiaba/sao-joao-del-rey/" data-id="5103403111">São João Del Rey</a></li><li><a href="/cuiaba/sao-jose/" data-id="5103403103">São José</a></li><li><a href="/cuiaba/sao-roque/" data-id="5103403068">São Roque</a></li><li><a href="/cuiaba/sao-sebastiao/" data-id="5103403108">São Sebastião</a></li><li><a href="/cuiaba/sol-nascente/" data-id="5103403073">Sol Nascente</a></li><li><a href="/cuiaba/terceiro/" data-id="5103403003">Terceiro</a></li><li><a href="/cuiaba/terra-nova/" data-id="5103403063">Terra Nova</a></li><li><a href="/cuiaba/tijucal/" data-id="5103403106">Tijucal</a></li><li><a href="/cuiaba/tres-barras/" data-id="5103403027">Três Barras</a></li><li><a href="/cuiaba/ufmt/" data-id="5103403043">Ufmt</a></li><li><a href="/cuiaba/vista-alegre/" data-id="5103403100">Vista Alegre</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Cuiabá"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 48.9, "bbox": [-56.144, -15.6826, -55.9335, -15.5336], "centro": [-56.055, -15.6068], "fipezap_ref": "2026-09", "melhores": [{"nome": "Quilombo", "nota": 7.8}, {"nome": "Are\u00e3o", "nota": 7.6}, {"nome": "Ara\u00e9s", "nota": 7.6}], "nivel": "bairros", "nome": "Cuiab\u00e1", "slug": "cuiaba", "uf": "MT", "unidades": 119, "venda_m2": 7102};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=92faf7fb"></script>
+
+</body>
+</html>

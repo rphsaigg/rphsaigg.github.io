@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como calculamos as notas · Bairro Ideal</title>
+<meta name="description" content="Fontes, método e limites do mapa de onde morar: IBGE, INEP, DataSUS, OpenStreetMap, ANP e FipeZap.">
+<link rel="canonical" href="https://bairroideal.com.br/metodologia/">
+<meta property="og:title" content="Como calculamos as notas · Bairro Ideal">
+<meta property="og:description" content="Fontes, método e limites do mapa de onde morar: IBGE, INEP, DataSUS, OpenStreetMap, ANP e FipeZap.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/metodologia/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+
+</head>
+<body class="">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="pagina texto">
+  <h1>Como calculamos as notas</h1>
+  <p class="lead">Tudo aqui vem de bases públicas. Explicamos cada número, e principalmente o que eles não conseguem mostrar.</p>
+
+  <h2>A região</h2>
+  <p>Na maioria das capitais usamos os <b>bairros oficiais do IBGE</b> (Censo 2022). São Paulo não tem bairros oficiais no IBGE, então usamos os 96 <b>distritos</b>. Em Brasília usamos as <b>regiões administrativas</b>; em Goiânia, as unidades territoriais de planejamento. Rio Branco, São Luís e Palmas também não têm bairros no IBGE: nelas, juntamos os setores censitários em <b>zonas</b> de cerca de 1,2 km e damos a cada zona o nome do bairro ou conjunto mais próximo no OpenStreetMap. Em Palmas, que se organiza por quadras, alguns nomes são aproximados.</p>
+
+  <h2>A nota</h2>
+  <p>Nos indicadores de cobertura (água, esgoto, coleta de lixo e infraestrutura da rua), a nota é o próprio percentual: 95% dos domicílios com esgoto na rede valem 9,5. Os demais indicadores são comparados só com as outras regiões da <b>mesma cidade</b>: 10 é a melhor região da cidade nesse ponto e 0 é a pior. A nota de um tema é a média dos seus indicadores, e a nota geral é a média dos temas disponíveis na cidade, todos com o mesmo peso. No mapa, você pode mudar os pesos. Uma nota 8 em Belo Horizonte, portanto, <b>não</b> se compara com uma nota 8 em Recife.</p>
+  <p>Contamos o que existe dentro da região em relação ao número de moradores. Para regiões com poucos moradores, como centros comerciais e campi, usamos como base a população típica dos bairros da cidade, para que uma única clínica não pareça "muita oferta". Para não ignorar o que fica logo do outro lado da divisa, também medimos a distância, em linha reta, do centro habitado da região até a UBS, o hospital, a UPA, a escola pública e a creche mais próximas.</p>
+
+  <h2>Os temas e as fontes</h2>
+  <table>
+    <tr><th>Tema</th><th>Indicadores</th><th>Fonte</th></tr>
+    <tr><td>Educação</td><td>IDEB médio das escolas públicas (ponderado por matrículas), escolas por criança de 0 a 14 anos, escolas com biblioteca, laboratório e quadra, oferta de escolas particulares, distância até a escola pública e a creche mais próximas</td><td>INEP: Censo Escolar 2024, IDEB 2023, Catálogo de Escolas (via IPEA/geobr)</td></tr>
+    <tr><td>Saúde</td><td>UBS, hospitais, UPAs e prontos-socorros, clínicas de especialidades, laboratórios, por morador, e distância até a UBS, o hospital e a UPA mais próximos</td><td>DataSUS: CNES (cadastro ativo)</td></tr>
+    <tr><td>Saneamento</td><td>Domicílios com água da rede geral, esgoto ligado à rede e lixo coletado</td><td>IBGE: Censo 2022</td></tr>
+    <tr><td>Infraestrutura da rua</td><td>Moradores em ruas com pavimento, iluminação, calçada, árvores, bueiro, rampa e ponto de ônibus</td><td>IBGE: Censo 2022, entorno dos domicílios</td></tr>
+    <tr><td>Lazer e cultura</td><td>Área verde por morador, parques, praças, espaços de esporte, cultura, bares, restaurantes e academias</td><td>OpenStreetMap; bares, restaurantes e academias pelo CNPJ (Receita Federal)</td></tr>
+    <tr><td>Comércio e serviços</td><td>Mercados e padarias, lojas, farmácias, bancos e lotéricas, salões, pet shops e shoppings por morador, e preço da gasolina</td><td>Receita Federal: CNPJ ativos (out/2026), localizados pelo bairro ou CEP do cadastro; OpenStreetMap (shoppings); ANP</td></tr>
+    <tr><td>Segurança</td><td>Roubos (a transeunte, de veículo, em coletivo, em comércio e em residência) e mortes violentas intencionais por 100 mil moradores, no último ano completo</td><td>Secretarias estaduais de segurança. Por enquanto só no DF (SSP-DF, por região administrativa); as demais secretarias ainda não publicam por bairro em formato aberto</td></tr>
+    <tr><td>Custo de moradia</td><td>Aluguel e compra por m² <b>estimados</b></td><td>FipeZap + renda da região (IBGE)</td></tr>
+  </table>
+
+  <h2>Limites que você precisa saber</h2>
+  <ul>
+    <li><b>Não existe preço oficial de aluguel por bairro.</b> Partimos do preço do m² da cidade no FipeZap, que reflete sobretudo os anúncios das áreas mais procuradas, e o ajustamos pela renda mediana de cada região: regiões de renda mais baixa têm aluguel estimado menor. É uma <b>estimativa</b>: confira anúncios reais antes de decidir. O FipeZap não cobre Macapá, Boa Vista e Porto Velho.</li>
+    <li><b>Escolas particulares não têm nota oficial.</b> O IDEB só existe para a rede pública. Por isso a rede privada entra pela oferta e pela infraestrutura.</li>
+    <li><b>O OpenStreetMap é colaborativo.</b> Ele é muito completo em algumas cidades e falho em outras: parques e praças podem estar subestimados onde o mapa é pouco editado. O comércio vem do CNPJ, que inclui MEIs que trabalham em casa e usa o endereço declarado à Receita.</li>
+    <li><b>Ainda não medimos onde as pessoas adoecem menos.</b> Os óbitos do Censo vêm subnotificados, então não os usamos. Estamos preparando um indicador com as internações do SUS por local de residência.</li>
+    <li>Regiões com menos de mil moradores aparecem marcadas: nelas, uma única escola ou clínica muda muito a nota.</li>
+  </ul>
+  <p class="nota">Encontrou algo estranho no seu bairro? Escreva para <a href="mailto:rphsaigg@gmail.com">rphsaigg@gmail.com</a>.</p>
+</main>
+
+
+<footer class="rodape">
+  <p>Dados oficiais: IBGE (Censo 2022), INEP (Censo Escolar 2024 e IDEB 2023), DataSUS (CNES), Receita Federal (CNPJ), SSP-DF, ANP e FipeZap; parques e lazer do OpenStreetMap. Mapa-base © <a href="https://openfreemap.org">OpenFreeMap</a> e © <a href="https://www.openstreetmap.org/copyright">colaboradores do OpenStreetMap</a>.</p>
+  <p>© 2026 Bairro Ideal, um projeto Saigg Digital · <a href="/metodologia/">Metodologia e limites</a> · <a href="mailto:rphsaigg@gmail.com">Contato</a></p>
+</footer>
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+</body>
+</html>

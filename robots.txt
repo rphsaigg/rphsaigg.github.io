@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /painel/
+Allow: /
+Sitemap: https://bairroideal.com.br/sitemap.xml

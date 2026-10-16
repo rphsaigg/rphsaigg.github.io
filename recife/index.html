@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Recife · Bairro Ideal</title>
+<meta name="description" content="Mapa de Recife com notas de 94 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/recife/">
+<meta property="og:title" content="Melhores bairros para morar em Recife · Bairro Ideal">
+<meta property="og:description" content="Mapa de Recife com notas de 94 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/recife/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="app" data-capital="recife">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife" selected>Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Recife</h1>
+      <p class="sub">94 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 94 regiões de Recife (A–Z)</summary>
+      <ul><li><a href="/recife/aflitos/" data-id="2611606015">Aflitos</a></li><li><a href="/recife/afogados/" data-id="2611606075">Afogados</a></li><li><a href="/recife/agua-fria/" data-id="2611606035">Água Fria</a></li><li><a href="/recife/alto-do-mandu/" data-id="2611606047">Alto do Mandu</a></li><li><a href="/recife/alto-jose-bonifacio/" data-id="2611606050">Alto José Bonifácio</a></li><li><a href="/recife/alto-jose-do-pinho/" data-id="2611606052">Alto José do Pinho</a></li><li><a href="/recife/alto-santa-terezinha/" data-id="2611606031">Alto Santa Terezinha</a></li><li><a href="/recife/apipucos/" data-id="2611606043">Apipucos</a></li><li><a href="/recife/areias/" data-id="2611606078">Areias</a></li><li><a href="/recife/arruda/" data-id="2611606021">Arruda</a></li><li><a href="/recife/barro/" data-id="2611606086">Barro</a></li><li><a href="/recife/beberibe/" data-id="2611606030">Beberibe</a></li><li><a href="/recife/boa-viagem/" data-id="2611606092">Boa Viagem</a></li><li><a href="/recife/boa-vista/" data-id="2611606003">Boa Vista</a></li><li><a href="/recife/bomba-do-hemeterio/" data-id="2611606036">Bomba do Hemetério</a></li><li><a href="/recife/bongi/" data-id="2611606065">Bongi</a></li><li><a href="/recife/brasilia-teimosa/" data-id="2611606094">Brasília Teimosa</a></li><li><a href="/recife/brejo-da-guabiraba/" data-id="2611606041">Brejo da Guabiraba</a></li><li><a href="/recife/brejo-de-beberibe/" data-id="2611606046">Brejo de Beberibe</a></li><li><a href="/recife/cabanga/" data-id="2611606010">Cabanga</a></li><li><a href="/recife/cacote/" data-id="2611606079">Caçote</a></li><li><a href="/recife/cajueiro/" data-id="2611606033">Cajueiro</a></li><li><a href="/recife/campina-do-barreto/" data-id="2611606020">Campina do Barreto</a></li><li><a href="/recife/campo-grande/" data-id="2611606024">Campo Grande</a></li><li><a href="/recife/casa-amarela/" data-id="2611606048">Casa Amarela</a></li><li><a href="/recife/casa-forte/" data-id="2611606055">Casa Forte</a></li><li><a href="/recife/caxanga/" data-id="2611606070">Caxangá</a></li><li><a href="/recife/cidade-universitaria/" data-id="2611606074">Cidade Universitária</a></li><li><a href="/recife/coelhos/" data-id="2611606008">Coelhos</a></li><li><a href="/recife/cohab/" data-id="2611606087">Cohab</a></li><li><a href="/recife/coqueiral/" data-id="2611606082">Coqueiral</a></li><li><a href="/recife/cordeiro/" data-id="2611606060">Cordeiro</a></li><li><a href="/recife/corrego-do-jenipapo/" data-id="2611606042">Córrego do Jenipapo</a></li><li><a href="/recife/curado/" data-id="2611606080">Curado</a></li><li><a href="/recife/derby/" data-id="2611606012">Derby</a></li><li><a href="/recife/dois-irmaos/" data-id="2611606040">Dois Irmãos</a></li><li><a href="/recife/dois-unidos/" data-id="2611606028">Dois Unidos</a></li><li><a href="/recife/encruzilhada/" data-id="2611606025">Encruzilhada</a></li><li><a href="/recife/engenho-do-meio/" data-id="2611606073">Engenho do Meio</a></li><li><a href="/recife/espinheiro/" data-id="2611606016">Espinheiro</a></li><li><a href="/recife/estancia/" data-id="2611606077">Estância</a></li><li><a href="/recife/fundao/" data-id="2611606034">Fundão</a></li><li><a href="/recife/gracas/" data-id="2611606013">Graças</a></li><li><a href="/recife/guabiraba/" data-id="2611606038">Guabiraba</a></li><li><a href="/recife/hipodromo/" data-id="2611606023">Hipódromo</a></li><li><a href="/recife/ibura/" data-id="2611606089">Ibura</a></li><li><a href="/recife/ilha-do-leite/" data-id="2611606007">Ilha do Leite</a></li><li><a href="/recife/ilha-do-retiro/" data-id="2611606064">Ilha do Retiro</a></li><li><a href="/recife/ilha-joana-bezerra/" data-id="2611606009">Ilha Joana Bezerra</a></li><li><a href="/recife/imbiribeira/" data-id="2611606091">Imbiribeira</a></li><li><a href="/recife/ipsep/" data-id="2611606090">Ipsep</a></li><li><a href="/recife/iputinga/" data-id="2611606071">Iputinga</a></li><li><a href="/recife/jaqueira/" data-id="2611606014">Jaqueira</a></li><li><a href="/recife/jardim-sao-paulo/" data-id="2611606085">Jardim São Paulo</a></li><li><a href="/recife/jiquia/" data-id="2611606076">Jiquiá</a></li><li><a href="/recife/jordao/" data-id="2611606088">Jordão</a></li><li><a href="/recife/linha-do-tiro/" data-id="2611606029">Linha do Tiro</a></li><li><a href="/recife/macaxeira/" data-id="2611606044">Macaxeira</a></li><li><a href="/recife/madalena/" data-id="2611606062">Madalena</a></li><li><a href="/recife/mangabeira/" data-id="2611606053">Mangabeira</a></li><li><a href="/recife/mangueira/" data-id="2611606068">Mangueira</a></li><li><a href="/recife/monteiro/" data-id="2611606058">Monteiro</a></li><li><a href="/recife/morro-da-conceicao/" data-id="2611606051">Morro da Conceição</a></li><li><a href="/recife/mustardinha/" data-id="2611606067">Mustardinha</a></li><li><a href="/recife/nova-descoberta/" data-id="2611606045">Nova Descoberta</a></li><li><a href="/recife/paissandu/" data-id="2611606006">Paissandu</a></li><li><a href="/recife/parnamirim/" data-id="2611606054">Parnamirim</a></li><li><a href="/recife/passarinho/" data-id="2611606027">Passarinho</a></li><li><a href="/recife/pau-ferro/" data-id="2611606037">Pau Ferro</a></li><li><a href="/recife/peixinhos/" data-id="2611606019">Peixinhos</a></li><li><a href="/recife/pina/" data-id="2611606093">Pina</a></li><li><a href="/recife/poco/" data-id="2611606057">Poço</a></li><li><a href="/recife/ponto-de-parada/" data-id="2611606022">Ponto de Parada</a></li><li><a href="/recife/porto-da-madeira/" data-id="2611606032">Porto da Madeira</a></li><li><a href="/recife/prado/" data-id="2611606063">Prado</a></li><li><a href="/recife/recife/" data-id="2611606001">Recife</a></li><li><a href="/recife/rosarinho/" data-id="2611606017">Rosarinho</a></li><li><a href="/recife/san-martin/" data-id="2611606066">San Martin</a></li><li><a href="/recife/sancho/" data-id="2611606083">Sancho</a></li><li><a href="/recife/santana/" data-id="2611606056">Santana</a></li><li><a href="/recife/santo-amaro/" data-id="2611606002">Santo Amaro</a></li><li><a href="/recife/santo-antonio/" data-id="2611606005">Santo Antônio</a></li><li><a href="/recife/sao-jose/" data-id="2611606011">São José</a></li><li><a href="/recife/sitio-dos-pintos-sao-bras/" data-id="2611606039">Sítio dos Pintos - São Brás</a></li><li><a href="/recife/soledade/" data-id="2611606004">Soledade</a></li><li><a href="/recife/tamarineira/" data-id="2611606018">Tamarineira</a></li><li><a href="/recife/tejipio/" data-id="2611606084">Tejipió</a></li><li><a href="/recife/torre/" data-id="2611606059">Torre</a></li><li><a href="/recife/torreao/" data-id="2611606026">Torreão</a></li><li><a href="/recife/torroes/" data-id="2611606072">Torrões</a></li><li><a href="/recife/toto/" data-id="2611606081">Totó</a></li><li><a href="/recife/varzea/" data-id="2611606069">Várzea</a></li><li><a href="/recife/vasco-da-gama/" data-id="2611606049">Vasco da Gama</a></li><li><a href="/recife/zumbi/" data-id="2611606061">Zumbí</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Recife"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 64.4, "bbox": [-35.0167, -8.1551, -34.859, -7.9292], "centro": [-34.9342, -8.0389], "fipezap_ref": "2026-09", "melhores": [{"nome": "Boa Vista", "nota": 8.6}, {"nome": "Parnamirim", "nota": 8.0}, {"nome": "Santo Amaro", "nota": 7.9}], "nivel": "bairros", "nome": "Recife", "slug": "recife", "uf": "PE", "unidades": 94, "venda_m2": 9045};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=92faf7fb"></script>
+
+</body>
+</html>

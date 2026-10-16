@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores zonas para morar em Palmas · Bairro Ideal</title>
+<meta name="description" content="Mapa de Palmas com notas de 69 zonas em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/palmas/">
+<meta property="og:title" content="Melhores zonas para morar em Palmas · Bairro Ideal">
+<meta property="og:description" content="Mapa de Palmas com notas de 69 zonas em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/palmas/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="app" data-capital="palmas">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas" selected>Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Palmas</h1>
+      <p class="sub">69 zonas comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 69 regiões de Palmas (A–Z)</summary>
+      <ul><li><a href="/palmas/104-sul-acse-1/" data-id="1721000Z140">104 Sul (ACSE 1)</a></li><li><a href="/palmas/202-sul-acsu-se-20/" data-id="1721000Z108">202 Sul (ACSU-SE 20)</a></li><li><a href="/palmas/607-sul-arso-63/" data-id="1721000Z076">607 Sul (ARSO 63)</a></li><li><a href="/palmas/apm-70-residencial-clara-nunes/" data-id="1721000Z143">APM-70 / Residencial Clara Nunes</a></li><li><a href="/palmas/av-308-sul-avse-33-104-sul-acse-1/" data-id="1721000Z170">AV 308 Sul (AVSE 33) / 104 Sul (ACSE 1)</a></li><li><a href="/palmas/buriti-garden-premium/" data-id="1721000Z135">Buriti Garden Premium</a></li><li><a href="/palmas/buriti-garden-premium-qd-115/" data-id="1721000Z134">Buriti Garden Premium / QD 115</a></li><li><a href="/palmas/condominio-alphaville-palmas/" data-id="1721000Z078">Condomínio Alphaville Palmas</a></li><li><a href="/palmas/condominio-alphaville-palmas-2/" data-id="1721000Z077">Condomínio Alphaville Palmas 2</a></li><li><a href="/palmas/condominio-alphaville-palmas-2-condominio-alphaville-palmas/" data-id="1721000Z046">Condomínio Alphaville Palmas 2 / Condomínio Alphaville Palmas</a></li><li><a href="/palmas/condominio-bom-sucesso-condominio-porto-belo/" data-id="1721000Z203">Condominio Bom Sucesso / Condominio Porto Belo</a></li><li><a href="/palmas/condominio-mirante-do-lago-palmas/" data-id="1721000Z073">Condomínio Mirante do Lago Palmas</a></li><li><a href="/palmas/condominio-mirante-do-lago-palmas-qd-01/" data-id="1721000Z103">Condomínio Mirante do Lago Palmas / QD 01</a></li><li><a href="/palmas/condominio-porto-belo-condominio-bom-sucesso/" data-id="1721000Z171">Condominio Porto Belo / Condominio Bom Sucesso</a></li><li><a href="/palmas/condominio-resort-caribe-golf-spa/" data-id="1721000Z081">Condomínio Resort Caribe Golf &amp; Spa</a></li><li><a href="/palmas/condominio-resort-caribe-golf-spa-residencial-polinesia/" data-id="1721000Z111">Condomínio Resort Caribe Golf &amp; Spa / Residencial Polinésia</a></li><li><a href="/palmas/condominio-serras-do-lageado/" data-id="1721000Z241">Condominio Serras do Lageado</a></li><li><a href="/palmas/condominio-villa-bella/" data-id="1721000Z144">Condomínio Villa Bella</a></li><li><a href="/palmas/fazenda-terra-prometida-quadra-c5/" data-id="1721000Z224">Fazenda Terra Prometida / Quadra C5</a></li><li><a href="/palmas/fazenda-terra-prometida-quadra-c5-2/" data-id="1721000Z443">Fazenda Terra Prometida / Quadra C5 (2)</a></li><li><a href="/palmas/fazenda-terra-prometida-quadra-c5-3/" data-id="1721000Z470">Fazenda Terra Prometida / Quadra C5 (3)</a></li><li><a href="/palmas/fazenda-terra-prometida-quadra-c5-4/" data-id="1721000Z627">Fazenda Terra Prometida / Quadra C5 (4)</a></li><li><a href="/palmas/fazenda-terra-prometida-quadra-c5-5/" data-id="1721000Z942">Fazenda Terra Prometida / Quadra C5 (5)</a></li><li><a href="/palmas/fazenda-terra-prometida-quadra-c5-6/" data-id="1721000Z973">Fazenda Terra Prometida / Quadra C5 (6)</a></li><li><a href="/palmas/hm-01/" data-id="1721000Z139">hm 01</a></li><li><a href="/palmas/jardim-aureny-iii/" data-id="1721000Z133">Jardim Aureny III</a></li><li><a href="/palmas/jardim-aureny-iii-qd-115/" data-id="1721000Z130">Jardim Aureny III / QD 115</a></li><li><a href="/palmas/jardim-aureny-iii-qd-115-2/" data-id="1721000Z131">Jardim Aureny III / QD 115 (2)</a></li><li><a href="/palmas/jardim-aureny-iii-qd-115-3/" data-id="1721000Z132">Jardim Aureny III / QD 115 (3)</a></li><li><a href="/palmas/jardim-aureny-iii-qd-115-4/" data-id="1721000Z161">Jardim Aureny III / QD 115 (4)</a></li><li><a href="/palmas/jardim-aureny-iii-qd-115-5/" data-id="1721000Z162">Jardim Aureny III / QD 115 (5)</a></li><li><a href="/palmas/jardim-aureny-iii-qd-115-6/" data-id="1721000Z163">Jardim Aureny III / QD 115 (6)</a></li><li><a href="/palmas/jardim-aureny-iii-qd-115-7/" data-id="1721000Z193">Jardim Aureny III / QD 115 (7)</a></li><li><a href="/palmas/jardim-aureny-iii-quadra-c5/" data-id="1721000Z194">Jardim Aureny III / Quadra C5</a></li><li><a href="/palmas/l-16/" data-id="1721000Z138">L-16</a></li><li><a href="/palmas/qd-115-jardim-aureny-iii/" data-id="1721000Z068">QD 115 / Jardim Aureny III</a></li><li><a href="/palmas/qd-115-jardim-aureny-iii-2/" data-id="1721000Z069">QD 115 / Jardim Aureny III (2)</a></li><li><a href="/palmas/qd-115-jardim-aureny-iii-3/" data-id="1721000Z070">QD 115 / Jardim Aureny III (3)</a></li><li><a href="/palmas/qd-115-jardim-aureny-iii-4/" data-id="1721000Z099">QD 115 / Jardim Aureny III (4)</a></li><li><a href="/palmas/qd-115-jardim-aureny-iii-5/" data-id="1721000Z100">QD 115 / Jardim Aureny III (5)</a></li><li><a href="/palmas/qi-35/" data-id="1721000Z107">QI 35</a></li><li><a href="/palmas/quadra-1305-sul-arso-132a/" data-id="1721000Z104">Quadra 1305 Sul (ARSO 132A)</a></li><li><a href="/palmas/quadra-1305-sul-arso-132a-607-sul-arso-63/" data-id="1721000Z075">Quadra 1305 Sul (ARSO 132A) / 607 Sul (ARSO 63)</a></li><li><a href="/palmas/quadra-1305-sul-arso-132a-riviera-residence/" data-id="1721000Z105">Quadra 1305 Sul (ARSO 132A) / Riviera Residence</a></li><li><a href="/palmas/quadra-c5/" data-id="1721000Z164">Quadra C5</a></li><li><a href="/palmas/quadra-c5-buriti-garden-premium/" data-id="1721000Z165">Quadra C5 / Buriti Garden Premium</a></li><li><a href="/palmas/quadra-c5-buriti-garden-premium-2/" data-id="1721000Z197">Quadra C5 / Buriti Garden Premium (2)</a></li><li><a href="/palmas/quadra-c5-buriti-garden-premium-3/" data-id="1721000Z321">Quadra C5 / Buriti Garden Premium (3)</a></li><li><a href="/palmas/quadra-c5-jardim-aureny-iii/" data-id="1721000Z195">Quadra C5 / Jardim Aureny III</a></li><li><a href="/palmas/quadra-c5-jardim-aureny-iii-2/" data-id="1721000Z196">Quadra C5 / Jardim Aureny III (2)</a></li><li><a href="/palmas/quadra-c5-jardim-aureny-iii-3/" data-id="1721000Z225">Quadra C5 / Jardim Aureny III (3)</a></li><li><a href="/palmas/quadra-c5-jardim-aureny-iii-4/" data-id="1721000Z256">Quadra C5 / Jardim Aureny III (4)</a></li><li><a href="/palmas/quadra-c5-riviera-residence/" data-id="1721000Z260">Quadra C5 / Riviera Residence</a></li><li><a href="/palmas/quadra-c5-riviera-residence-2/" data-id="1721000Z445">Quadra C5 / Riviera Residence (2)</a></li><li><a href="/palmas/residencial-marte-61/" data-id="1721000Z141">Residencial Marte 61</a></li><li><a href="/palmas/residencial-mediterraneo/" data-id="1721000Z109">Residencial Mediterrâneo</a></li><li><a href="/palmas/residencial-palma-di-maiorca-palmeira-real-mrv/" data-id="1721000Z106">Residencial Palma di Maiorca / Palmeira Real - MRV</a></li><li><a href="/palmas/residencial-polinesia/" data-id="1721000Z080">Residencial Polinésia</a></li><li><a href="/palmas/residencial-tiradentes/" data-id="1721000Z110">Residencial Tiradentes</a></li><li><a href="/palmas/residencial-tiradentes-apm-54/" data-id="1721000Z079">Residencial Tiradentes / APM-54</a></li><li><a href="/palmas/riviera-residence/" data-id="1721000Z137">Riviera Residence</a></li><li><a href="/palmas/riviera-residence-av-308-sul-avse-33/" data-id="1721000Z291">Riviera Residence / AV 308 Sul (AVSE 33)</a></li><li><a href="/palmas/riviera-residence-residencial-noel-rosa/" data-id="1721000Z136">Riviera Residence / Residencial Noel Rosa</a></li><li><a href="/palmas/riviera-residence-residencial-noel-rosa-2/" data-id="1721000Z199">Riviera Residence / Residencial Noel Rosa (2)</a></li><li><a href="/palmas/riviera-residence-residencial-palma-di-maiorca/" data-id="1721000Z168">Riviera Residence / Residencial Palma di Maiorca</a></li><li><a href="/palmas/santo-amaro/" data-id="1721000Z172">Santo Amaro</a></li><li><a href="/palmas/santo-amaro-condominio-bom-sucesso/" data-id="1721000Z328">Santo Amaro / Condominio Bom Sucesso</a></li><li><a href="/palmas/santo-amaro-condominio-bom-sucesso-2/" data-id="1721000Z1008">Santo Amaro / Condominio Bom Sucesso (2)</a></li><li><a href="/palmas/santo-amaro-residencial-netuno/" data-id="1721000Z142">Santo Amaro / Residencial Netuno</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Palmas"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": null, "bbox": [-48.3761, -10.4601, -47.7933, -9.9281], "centro": [-48.1307, -10.2219], "fipezap_ref": null, "melhores": [{"nome": "QI 35", "nota": 8.2}, {"nome": "Jardim Aureny III", "nota": 7.8}, {"nome": "L-16", "nota": 7.7}], "nivel": "zonas", "nome": "Palmas", "slug": "palmas", "uf": "TO", "unidades": 69, "venda_m2": null};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=92faf7fb"></script>
+
+</body>
+</html>

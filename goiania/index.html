@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores regiões para morar em Goiânia · Bairro Ideal</title>
+<meta name="description" content="Mapa de Goiânia com notas de 63 regiões em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/goiania/">
+<meta property="og:title" content="Melhores regiões para morar em Goiânia · Bairro Ideal">
+<meta property="og:description" content="Mapa de Goiânia com notas de 63 regiões em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/goiania/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=b92ff59b">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <nav>
+    <a href="/#capitais">Capitais</a>
+    <a href="/comparar/">Comparar</a>
+    <a href="/metodologia/">Como calculamos</a>
+  </nav>
+</header>
+
+<main class="app" data-capital="goiania">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania" selected>Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Goiânia</h1>
+      <p class="sub">63 regiões comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 63 regiões de Goiânia (A–Z)</summary>
+      <ul><li><a href="/goiania/u-t-p-aeroporto/" data-id="52087070505">U.T.P. Aeroporto</a></li><li><a href="/goiania/u-t-p-aeroporto-internacional-santa-genoveva/" data-id="52087070549">U.T.P. Aeroporto Internacional Santa Genoveva</a></li><li><a href="/goiania/u-t-p-aeroviarios/" data-id="52087070521">U.T.P. Aeroviários</a></li><li><a href="/goiania/u-t-p-alto-da-gloria-e-redencao/" data-id="52087070510">U.T.P. Alto da Glória e Redenção</a></li><li><a href="/goiania/u-t-p-autodromo-ou-parque-lozandes/" data-id="52087070528">U.T.P. Autódromo ou Parque Lozandes</a></li><li><a href="/goiania/u-t-p-bairro-feliz/" data-id="52087070525">U.T.P. Bairro Feliz</a></li><li><a href="/goiania/u-t-p-baliza-itaipu/" data-id="52087070535">U.T.P. Baliza-Itaipu</a></li><li><a href="/goiania/u-t-p-bueno/" data-id="52087070513">U.T.P. Bueno</a></li><li><a href="/goiania/u-t-p-campinas/" data-id="52087070520">U.T.P. Campinas</a></li><li><a href="/goiania/u-t-p-campus-universitario-conjunto-itatiaia/" data-id="52087070558">U.T.P. Campus Universitário/Conjunto Itatiaia</a></li><li><a href="/goiania/u-t-p-candida-de-morais-maria-dilce/" data-id="52087070544">U.T.P. Cândida de Morais/Maria Dilce</a></li><li><a href="/goiania/u-t-p-capuava/" data-id="52087070545">U.T.P. Capuava</a></li><li><a href="/goiania/u-t-p-caravelas/" data-id="52087070534">U.T.P. Caravelas</a></li><li><a href="/goiania/u-t-p-ceasa-aldeia-do-vale/" data-id="52087070561">U.T.P. CEASA/Aldeia do Vale</a></li><li><a href="/goiania/u-t-p-celina-park-recreio-dos-funcionarios/" data-id="52087070533">U.T.P. Celina Park/Recreio dos Funcionários</a></li><li><a href="/goiania/u-t-p-central/" data-id="52087070501">U.T.P. Central</a></li><li><a href="/goiania/u-t-p-chacaras-sao-joaquim/" data-id="52087070553">U.T.P. Chácaras São Joaquim</a></li><li><a href="/goiania/u-t-p-cidade-jardim/" data-id="52087070518">U.T.P. Cidade Jardim</a></li><li><a href="/goiania/u-t-p-coimbra/" data-id="52087070519">U.T.P. Coimbra</a></li><li><a href="/goiania/u-t-p-crimeia-leste/" data-id="52087070523">U.T.P. Criméia Leste</a></li><li><a href="/goiania/u-t-p-finsocial/" data-id="52087070556">U.T.P. Finsocial</a></li><li><a href="/goiania/u-t-p-goiania-ii/" data-id="52087070547">U.T.P. Goiânia II</a></li><li><a href="/goiania/u-t-p-jao/" data-id="52087070550">U.T.P. Jaó</a></li><li><a href="/goiania/u-t-p-jardim-america/" data-id="52087070516">U.T.P. Jardim América</a></li><li><a href="/goiania/u-t-p-jardim-atlantico/" data-id="52087070530">U.T.P. Jardim Atlântico</a></li><li><a href="/goiania/u-t-p-jardim-balneario-meia-ponte-mansoes-goian/" data-id="52087070557">U.T.P. Jardim Balneário Meia Ponte/Mansões Goian</a></li><li><a href="/goiania/u-t-p-jardim-europa/" data-id="52087070531">U.T.P. Jardim Europa</a></li><li><a href="/goiania/u-t-p-jardim-goias/" data-id="52087070509">U.T.P. Jardim Goiás</a></li><li><a href="/goiania/u-t-p-jardim-guanabara/" data-id="52087070560">U.T.P. Jardim Guanabara</a></li><li><a href="/goiania/u-t-p-jardim-novo-mundo/" data-id="52087070526">U.T.P. Jardim Novo Mundo</a></li><li><a href="/goiania/u-t-p-jardim-petropolis/" data-id="52087070542">U.T.P. Jardim Petrópolis</a></li><li><a href="/goiania/u-t-p-jardim-primavera/" data-id="52087070562">U.T.P. Jardim Primavera</a></li><li><a href="/goiania/u-t-p-joao-braz/" data-id="52087070538">U.T.P. João Braz</a></li><li><a href="/goiania/u-t-p-leste-universitario/" data-id="52087070508">U.T.P. Leste Universitário</a></li><li><a href="/goiania/u-t-p-marechal-rondon/" data-id="52087070522">U.T.P. Marechal Rondon</a></li><li><a href="/goiania/u-t-p-marista/" data-id="52087070503">U.T.P. Marista</a></li><li><a href="/goiania/u-t-p-mutirao-e-curitiba/" data-id="52087070554">U.T.P. Mutirão e Curitiba</a></li><li><a href="/goiania/u-t-p-negrao-de-lima/" data-id="52087070524">U.T.P. Negrão de Lima</a></li><li><a href="/goiania/u-t-p-norte-ferroviario/" data-id="52087070506">U.T.P. Norte Ferroviário</a></li><li><a href="/goiania/u-t-p-nova-suica/" data-id="52087070514">U.T.P. Nova Suiça</a></li><li><a href="/goiania/u-t-p-novo-horizonte-faicalville/" data-id="52087070532">U.T.P. Novo Horizonte/Faiçalville</a></li><li><a href="/goiania/u-t-p-oeste/" data-id="52087070504">U.T.P. Oeste</a></li><li><a href="/goiania/u-t-p-parque-amazonia/" data-id="52087070515">U.T.P. Parque Amazônia</a></li><li><a href="/goiania/u-t-p-parque-bom-jesus/" data-id="52087070540">U.T.P. Parque Bom Jesus</a></li><li><a href="/goiania/u-t-p-parque-das-laranjeiras-e-jardim-da-luz/" data-id="52087070529">U.T.P. Parque das Laranjeiras e Jardim da Luz</a></li><li><a href="/goiania/u-t-p-parque-oeste-industrial/" data-id="52087070537">U.T.P. Parque Oeste Industrial</a></li><li><a href="/goiania/u-t-p-parque-santa-rita/" data-id="52087070536">U.T.P. Parque Santa Rita</a></li><li><a href="/goiania/u-t-p-pedro-ludovico-bela-vista-jardins-das-esmer/" data-id="52087070512">U.T.P. Pedro Ludovico/Bela Vista/Jardins das Esmer</a></li><li><a href="/goiania/u-t-p-riviera-agua-branca/" data-id="52087070527">U.T.P. Riviera/Água Branca</a></li><li><a href="/goiania/u-t-p-santa-genoveva/" data-id="52087070548">U.T.P. Santa Genoveva</a></li><li><a href="/goiania/u-t-p-santo-antonio/" data-id="52087070511">U.T.P. Santo Antonio</a></li><li><a href="/goiania/u-t-p-santo-hilario/" data-id="52087070551">U.T.P. Santo Hilário</a></li><li><a href="/goiania/u-t-p-sao-domingos/" data-id="52087070555">U.T.P. São Domingos</a></li><li><a href="/goiania/u-t-p-sudoeste/" data-id="52087070517">U.T.P. Sudoeste</a></li><li><a href="/goiania/u-t-p-sul/" data-id="52087070502">U.T.P. Sul</a></li><li><a href="/goiania/u-t-p-urias-magalhaes/" data-id="52087070546">U.T.P. Urias Magalhães</a></li><li><a href="/goiania/u-t-p-vera-cruz/" data-id="52087070541">U.T.P. Vera Cruz</a></li><li><a href="/goiania/u-t-p-vila-jardim-sao-judas-tadeu-jardim-pompei/" data-id="52087070559">U.T.P. Vila Jardim São Judas Tadeu/Jardim Pompéi</a></li><li><a href="/goiania/u-t-p-vila-nova/" data-id="52087070507">U.T.P. Vila Nova</a></li><li><a href="/goiania/u-t-p-vila-pedroso/" data-id="52087070552">U.T.P. Vila Pedroso</a></li><li><a href="/goiania/u-t-p-vila-regina-parque-industrial-paulista-sant/" data-id="52087070543">U.T.P. Vila Regina/Parque Industrial Paulista/Sant</a></li><li><a href="/goiania/u-t-p-vila-rizzo/" data-id="52087070539">U.T.P. Vila Rizzo</a></li><li><a href="/goiania/u-t-p-zona-rural/" data-id="52087070563">U.T.P. Zona Rural</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Goiânia"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 43.9, "bbox": [-49.4469, -16.8319, -49.078, -16.5154], "centro": [-49.281, -16.6611], "fipezap_ref": "2026-09", "melhores": [{"nome": "U.T.P. Central", "nota": 8.3}, {"nome": "U.T.P. Marista", "nota": 8.2}, {"nome": "U.T.P. Cidade Jardim", "nota": 8.0}], "nivel": "subdistritos", "nome": "Goi\u00e2nia", "slug": "goiania", "uf": "GO", "unidades": 63, "venda_m2": 8527};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=92faf7fb"></script>
+
+</body>
+</html>
