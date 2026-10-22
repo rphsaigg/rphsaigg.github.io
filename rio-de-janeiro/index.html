@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Rio de Janeiro · Bairro Ideal</title>
+<meta name="description" content="Mapa de Rio de Janeiro com notas de 162 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/rio-de-janeiro/">
+<meta property="og:title" content="Melhores bairros para morar em Rio de Janeiro · Bairro Ideal">
+<meta property="og:description" content="Mapa de Rio de Janeiro com notas de 162 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/rio-de-janeiro/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=f0c95426">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+
+
+
+
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mb-abrir" d="M4 7h16M4 12h16M4 17h16"/><path class="mb-fechar" d="M6 6l12 12M18 6 6 18"/></svg><span>Menu</span></button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="m-drop">
+      <button type="button" class="m-link ativo" aria-expanded="false" aria-controls="m-bairros">Bairros de Rio de Janeiro <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="m-painel" id="m-bairros">
+        <div class="m-col">
+          <p class="m-rot">Escolha a capital</p>
+          <ul class="m-caps"><li><a href="/aracaju/">Aracaju</a></li><li><a href="/belo-horizonte/">Belo Horizonte</a></li><li><a href="/belem/">Belém</a></li><li><a href="/boa-vista/">Boa Vista</a></li><li><a href="/brasilia/">Brasília</a></li><li><a href="/campo-grande/">Campo Grande</a></li><li><a href="/cuiaba/">Cuiabá</a></li><li><a href="/curitiba/">Curitiba</a></li><li><a href="/florianopolis/">Florianópolis</a></li><li><a href="/fortaleza/">Fortaleza</a></li><li><a href="/goiania/">Goiânia</a></li><li><a href="/joao-pessoa/">João Pessoa</a></li><li><a href="/macapa/">Macapá</a></li><li><a href="/maceio/">Maceió</a></li><li><a href="/manaus/">Manaus</a></li><li><a href="/natal/">Natal</a></li><li><a href="/palmas/">Palmas</a></li><li><a href="/porto-alegre/">Porto Alegre</a></li><li><a href="/porto-velho/">Porto Velho</a></li><li><a href="/recife/">Recife</a></li><li><a href="/rio-branco/">Rio Branco</a></li><li><a href="/rio-de-janeiro/" aria-current="page">Rio de Janeiro</a></li><li><a href="/salvador/">Salvador</a></li><li><a href="/sao-luis/">São Luís</a></li><li><a href="/sao-paulo/">São Paulo</a></li><li><a href="/teresina/">Teresina</a></li><li><a href="/vitoria/">Vitória</a></li></ul>
+        </div>
+        <div class="m-col m-atalhos">
+          <p class="m-rot">Para decidir</p>
+          <a href="/rio-de-janeiro/?morar=1"><b>Onde eu poderia morar melhor?</b><span>Com a sua renda e o local de trabalho</span></a>
+          <a href="/rio-de-janeiro/melhores-bairros-para-familias/"><b>Melhores bairros de Rio de Janeiro</b><span>Para famílias, aposentados, quem não tem carro e mais baratos</span></a>
+          <a href="/metodologia/"><b>Como calculamos as notas</b><span>Fontes oficiais e o que os números não mostram</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="m-link" href="/comparar/">Comparar</a>
+    <a class="m-link" href="/esse-aluguel-vale/">Esse aluguel vale?</a>
+    <a class="m-link" href="/falar-com-corretor/">Falar com corretor</a>
+    <span class="m-sep" aria-hidden="true"></span>
+    <a class="m-link" href="/contato/">Ajuda</a>
+    <a class="m-link m-pro" href="/para-corretores/">Sou corretor</a>
+    <a class="m-entrar" href="/conta/" id="m-entrar">Entrar</a>
+  </nav>
+</header>
+<script>
+// menu: abre/fecha o "Bairros" e o menu do celular; fecha com Esc ou clique fora. "Entrar" vira "Minha área" com sessão do Pro.
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('menu'),d=n.querySelector('.m-drop > button'),p=document.getElementById('m-bairros');
+function drop(v){d.setAttribute('aria-expanded',v);p.classList.toggle('aberto',v)}
+function menu(v){b.setAttribute('aria-expanded',v);n.classList.toggle('aberto',v);document.body.classList.toggle('menu-aberto',v);if(!v)drop(false)}
+b.onclick=function(){menu(b.getAttribute('aria-expanded')!=='true')};
+d.onclick=function(e){e.stopPropagation();drop(d.getAttribute('aria-expanded')!=='true')};
+document.addEventListener('click',function(e){if(!e.target.closest('.m-drop'))drop(false);if(!e.target.closest('.topo'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(d.getAttribute('aria-expanded')==='true'){drop(false);d.focus()}else menu(false)}});
+try{if(localStorage.getItem('bi_token'))document.getElementById('m-entrar').textContent='Minha área'}catch(e){}})();
+</script>
+
+<main class="app" data-capital="rio-de-janeiro">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro" selected>Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Rio de Janeiro</h1>
+      <p class="sub">162 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes guias" open>
+      <summary>Guias de Rio de Janeiro</summary>
+      <ul class="lista-guias"><li><a href="/rio-de-janeiro/melhores-bairros-para-familias/">Melhores bairros de Rio de Janeiro para famílias com filhos</a></li><li><a href="/rio-de-janeiro/melhores-bairros-para-aposentados/">Melhores bairros de Rio de Janeiro para aposentados e idosos</a></li><li><a href="/rio-de-janeiro/melhores-bairros-para-quem-nao-tem-carro/">Melhores bairros de Rio de Janeiro para quem não tem carro</a></li><li><a href="/rio-de-janeiro/bairros-baratos-e-bons/">Bairros baratos e bons para morar em Rio de Janeiro</a></li>
+        <li><a href="/esse-aluguel-vale/?capital=rio-de-janeiro">Esse aluguel vale? Confira um anúncio</a></li></ul>
+    </details>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 162 regiões de Rio de Janeiro (A–Z)</summary>
+      <ul><li><a href="/rio-de-janeiro/abolicao/" data-id="3304557060">Abolição</a></li><li><a href="/rio-de-janeiro/acari/" data-id="3304557138">Acari</a></li><li><a href="/rio-de-janeiro/agua-santa/" data-id="3304557057">Água Santa</a></li><li><a href="/rio-de-janeiro/alto-da-boa-vista/" data-id="3304557031">Alto da Boa Vista</a></li><li><a href="/rio-de-janeiro/anchieta/" data-id="3304557125">Anchieta</a></li><li><a href="/rio-de-janeiro/andarai/" data-id="3304557034">Andaraí</a></li><li><a href="/rio-de-janeiro/anil/" data-id="3304557082">Anil</a></li><li><a href="/rio-de-janeiro/bancarios/" data-id="3304557115">Bancários</a></li><li><a href="/rio-de-janeiro/bangu/" data-id="3304557099">Bangu</a></li><li><a href="/rio-de-janeiro/barra-da-tijuca/" data-id="3304557131">Barra da Tijuca</a></li><li><a href="/rio-de-janeiro/barra-de-guaratiba/" data-id="3304557143">Barra de Guaratiba</a></li><li><a href="/rio-de-janeiro/barros-filho/" data-id="3304557139">Barros Filho</a></li><li><a href="/rio-de-janeiro/benfica/" data-id="3304557028">Benfica</a></li><li><a href="/rio-de-janeiro/bento-ribeiro/" data-id="3304557079">Bento Ribeiro</a></li><li><a href="/rio-de-janeiro/bonsucesso/" data-id="3304557037">Bonsucesso</a></li><li><a href="/rio-de-janeiro/botafogo/" data-id="3304557014">Botafogo</a></li><li><a href="/rio-de-janeiro/bras-de-pina/" data-id="3304557042">Brás de Pina</a></li><li><a href="/rio-de-janeiro/cachambi/" data-id="3304557055">Cachambi</a></li><li><a href="/rio-de-janeiro/cacuia/" data-id="3304557111">Cacuia</a></li><li><a href="/rio-de-janeiro/caju/" data-id="3304557004">Caju</a></li><li><a href="/rio-de-janeiro/camorim/" data-id="3304557132">Camorim</a></li><li><a href="/rio-de-janeiro/campinho/" data-id="3304557068">Campinho</a></li><li><a href="/rio-de-janeiro/campo-dos-afonsos/" data-id="3304557094">Campo dos Afonsos</a></li><li><a href="/rio-de-janeiro/campo-grande/" data-id="3304557102">Campo Grande</a></li><li><a href="/rio-de-janeiro/cascadura/" data-id="3304557072">Cascadura</a></li><li><a href="/rio-de-janeiro/catete/" data-id="3304557012">Catete</a></li><li><a href="/rio-de-janeiro/catumbi/" data-id="3304557005">Catumbi</a></li><li><a href="/rio-de-janeiro/cavalcanti/" data-id="3304557070">Cavalcanti</a></li><li><a href="/rio-de-janeiro/centro/" data-id="3304557001">Centro</a></li><li><a href="/rio-de-janeiro/cidade-de-deus/" data-id="3304557084">Cidade de Deus</a></li><li><a href="/rio-de-janeiro/cidade-nova/" data-id="3304557007">Cidade Nova</a></li><li><a href="/rio-de-janeiro/cidade-universitaria/" data-id="3304557123">Cidade Universitária</a></li><li><a href="/rio-de-janeiro/cocota/" data-id="3304557114">Cocotá</a></li><li><a href="/rio-de-janeiro/coelho-neto/" data-id="3304557137">Coelho Neto</a></li><li><a href="/rio-de-janeiro/colegio/" data-id="3304557067">Colégio</a></li><li><a href="/rio-de-janeiro/complexo-do-alemao/" data-id="3304557157">Complexo do Alemão</a></li><li><a href="/rio-de-janeiro/copacabana/" data-id="3304557018">Copacabana</a></li><li><a href="/rio-de-janeiro/cordovil/" data-id="3304557043">Cordovil</a></li><li><a href="/rio-de-janeiro/cosme-velho/" data-id="3304557013">Cosme Velho</a></li><li><a href="/rio-de-janeiro/cosmos/" data-id="3304557105">Cosmos</a></li><li><a href="/rio-de-janeiro/costa-barros/" data-id="3304557140">Costa Barros</a></li><li><a href="/rio-de-janeiro/curicica/" data-id="3304557085">Curicica</a></li><li><a href="/rio-de-janeiro/del-castilho/" data-id="3304557148">Del Castilho</a></li><li><a href="/rio-de-janeiro/deodoro/" data-id="3304557092">Deodoro</a></li><li><a href="/rio-de-janeiro/encantado/" data-id="3304557058">Encantado</a></li><li><a href="/rio-de-janeiro/engenheiro-leal/" data-id="3304557071">Engenheiro Leal</a></li><li><a href="/rio-de-janeiro/engenho-da-rainha/" data-id="3304557150">Engenho da Rainha</a></li><li><a href="/rio-de-janeiro/engenho-de-dentro/" data-id="3304557056">Engenho de Dentro</a></li><li><a href="/rio-de-janeiro/engenho-novo/" data-id="3304557051">Engenho Novo</a></li><li><a href="/rio-de-janeiro/estacio/" data-id="3304557008">Estácio</a></li><li><a href="/rio-de-janeiro/flamengo/" data-id="3304557009">Flamengo</a></li><li><a href="/rio-de-janeiro/freguesia-ilha-do-governador/" data-id="3304557116">Freguesia (Ilha do Governador)</a></li><li><a href="/rio-de-janeiro/freguesia-jacarepagua/" data-id="3304557086">Freguesia (Jacarepaguá)</a></li><li><a href="/rio-de-janeiro/galeao/" data-id="3304557122">Galeão</a></li><li><a href="/rio-de-janeiro/gamboa/" data-id="3304557002">Gamboa</a></li><li><a href="/rio-de-janeiro/gardenia-azul/" data-id="3304557083">Gardênia Azul</a></li><li><a href="/rio-de-janeiro/gavea/" data-id="3304557023">Gávea</a></li><li><a href="/rio-de-janeiro/gericino/" data-id="3304557160">Gericinó</a></li><li><a href="/rio-de-janeiro/gloria/" data-id="3304557010">Glória</a></li><li><a href="/rio-de-janeiro/grajau/" data-id="3304557035">Grajaú</a></li><li><a href="/rio-de-janeiro/grumari/" data-id="3304557136">Grumari</a></li><li><a href="/rio-de-janeiro/guadalupe/" data-id="3304557124">Guadalupe</a></li><li><a href="/rio-de-janeiro/guaratiba/" data-id="3304557142">Guaratiba</a></li><li><a href="/rio-de-janeiro/higienopolis/" data-id="3304557145">Higienópolis</a></li><li><a href="/rio-de-janeiro/honorio-gurgel/" data-id="3304557077">Honório Gurgel</a></li><li><a href="/rio-de-janeiro/humaita/" data-id="3304557016">Humaitá</a></li><li><a href="/rio-de-janeiro/inhauma/" data-id="3304557149">Inhaúma</a></li><li><a href="/rio-de-janeiro/inhoaiba/" data-id="3304557104">Inhoaíba</a></li><li><a href="/rio-de-janeiro/ipanema/" data-id="3304557019">Ipanema</a></li><li><a href="/rio-de-janeiro/iraja/" data-id="3304557066">Irajá</a></li><li><a href="/rio-de-janeiro/itanhanga/" data-id="3304557130">Itanhangá</a></li><li><a href="/rio-de-janeiro/jacare/" data-id="3304557146">Jacaré</a></li><li><a href="/rio-de-janeiro/jacarepagua/" data-id="3304557081">Jacarepaguá</a></li><li><a href="/rio-de-janeiro/jacarezinho/" data-id="3304557155">Jacarezinho</a></li><li><a href="/rio-de-janeiro/jardim-america/" data-id="3304557046">Jardim América</a></li><li><a href="/rio-de-janeiro/jardim-botanico/" data-id="3304557022">Jardim Botânico</a></li><li><a href="/rio-de-janeiro/jardim-carioca/" data-id="3304557118">Jardim Carioca</a></li><li><a href="/rio-de-janeiro/jardim-guanabara/" data-id="3304557117">Jardim Guanabara</a></li><li><a href="/rio-de-janeiro/jardim-sulacap/" data-id="3304557095">Jardim Sulacap</a></li><li><a href="/rio-de-janeiro/joa/" data-id="3304557129">Joá</a></li><li><a href="/rio-de-janeiro/lagoa/" data-id="3304557021">Lagoa</a></li><li><a href="/rio-de-janeiro/lapa/" data-id="3304557161">Lapa</a></li><li><a href="/rio-de-janeiro/laranjeiras/" data-id="3304557011">Laranjeiras</a></li><li><a href="/rio-de-janeiro/leblon/" data-id="3304557020">Leblon</a></li><li><a href="/rio-de-janeiro/leme/" data-id="3304557017">Leme</a></li><li><a href="/rio-de-janeiro/lins-de-vasconcelos/" data-id="3304557052">Lins de Vasconcelos</a></li><li><a href="/rio-de-janeiro/madureira/" data-id="3304557073">Madureira</a></li><li><a href="/rio-de-janeiro/magalhaes-bastos/" data-id="3304557096">Magalhães Bastos</a></li><li><a href="/rio-de-janeiro/mangueira/" data-id="3304557027">Mangueira</a></li><li><a href="/rio-de-janeiro/manguinhos/" data-id="3304557036">Manguinhos</a></li><li><a href="/rio-de-janeiro/maracana/" data-id="3304557032">Maracanã</a></li><li><a href="/rio-de-janeiro/mare/" data-id="3304557158">Maré</a></li><li><a href="/rio-de-janeiro/marechal-hermes/" data-id="3304557080">Marechal Hermes</a></li><li><a href="/rio-de-janeiro/maria-da-graca/" data-id="3304557147">Maria da Graça</a></li><li><a href="/rio-de-janeiro/meier/" data-id="3304557053">Méier</a></li><li><a href="/rio-de-janeiro/monero/" data-id="3304557120">Moneró</a></li><li><a href="/rio-de-janeiro/olaria/" data-id="3304557039">Olaria</a></li><li><a href="/rio-de-janeiro/oswaldo-cruz/" data-id="3304557078">Oswaldo Cruz</a></li><li><a href="/rio-de-janeiro/paciencia/" data-id="3304557106">Paciência</a></li><li><a href="/rio-de-janeiro/padre-miguel/" data-id="3304557098">Padre Miguel</a></li><li><a href="/rio-de-janeiro/paqueta/" data-id="3304557153">Paquetá</a></li><li><a href="/rio-de-janeiro/parada-de-lucas/" data-id="3304557044">Parada de Lucas</a></li><li><a href="/rio-de-janeiro/parque-anchieta/" data-id="3304557126">Parque Anchieta</a></li><li><a href="/rio-de-janeiro/parque-columbia/" data-id="3304557154">Parque Colúmbia</a></li><li><a href="/rio-de-janeiro/pavuna/" data-id="3304557141">Pavuna</a></li><li><a href="/rio-de-janeiro/pechincha/" data-id="3304557087">Pechincha</a></li><li><a href="/rio-de-janeiro/pedra-de-guaratiba/" data-id="3304557144">Pedra de Guaratiba</a></li><li><a href="/rio-de-janeiro/penha/" data-id="3304557040">Penha</a></li><li><a href="/rio-de-janeiro/penha-circular/" data-id="3304557041">Penha Circular</a></li><li><a href="/rio-de-janeiro/piedade/" data-id="3304557059">Piedade</a></li><li><a href="/rio-de-janeiro/pilares/" data-id="3304557061">Pilares</a></li><li><a href="/rio-de-janeiro/pitangueiras/" data-id="3304557112">Pitangueiras</a></li><li><a href="/rio-de-janeiro/portuguesa/" data-id="3304557121">Portuguesa</a></li><li><a href="/rio-de-janeiro/praca-da-bandeira/" data-id="3304557029">Praça da Bandeira</a></li><li><a href="/rio-de-janeiro/praca-seca/" data-id="3304557090">Praça Seca</a></li><li><a href="/rio-de-janeiro/praia-da-bandeira/" data-id="3304557113">Praia da Bandeira</a></li><li><a href="/rio-de-janeiro/quintino-bocaiuva/" data-id="3304557069">Quintino Bocaiúva</a></li><li><a href="/rio-de-janeiro/ramos/" data-id="3304557038">Ramos</a></li><li><a href="/rio-de-janeiro/realengo/" data-id="3304557097">Realengo</a></li><li><a href="/rio-de-janeiro/recreio-dos-bandeirantes/" data-id="3304557135">Recreio dos Bandeirantes</a></li><li><a href="/rio-de-janeiro/riachuelo/" data-id="3304557049">Riachuelo</a></li><li><a href="/rio-de-janeiro/ribeira/" data-id="3304557109">Ribeira</a></li><li><a href="/rio-de-janeiro/ricardo-de-albuquerque/" data-id="3304557127">Ricardo de Albuquerque</a></li><li><a href="/rio-de-janeiro/rio-comprido/" data-id="3304557006">Rio Comprido</a></li><li><a href="/rio-de-janeiro/rocha/" data-id="3304557048">Rocha</a></li><li><a href="/rio-de-janeiro/rocha-miranda/" data-id="3304557076">Rocha Miranda</a></li><li><a href="/rio-de-janeiro/rocinha/" data-id="3304557156">Rocinha</a></li><li><a href="/rio-de-janeiro/sampaio/" data-id="3304557050">Sampaio</a></li><li><a href="/rio-de-janeiro/santa-cruz/" data-id="3304557107">Santa Cruz</a></li><li><a href="/rio-de-janeiro/santa-teresa/" data-id="3304557128">Santa Teresa</a></li><li><a href="/rio-de-janeiro/santissimo/" data-id="3304557101">Santíssimo</a></li><li><a href="/rio-de-janeiro/santo-cristo/" data-id="3304557003">Santo Cristo</a></li><li><a href="/rio-de-janeiro/sao-conrado/" data-id="3304557025">São Conrado</a></li><li><a href="/rio-de-janeiro/sao-cristovao/" data-id="3304557026">São Cristóvão</a></li><li><a href="/rio-de-janeiro/sao-francisco-xavier/" data-id="3304557047">São Francisco Xavier</a></li><li><a href="/rio-de-janeiro/saude/" data-id="3304557152">Saúde</a></li><li><a href="/rio-de-janeiro/senador-camara/" data-id="3304557100">Senador Camará</a></li><li><a href="/rio-de-janeiro/senador-vasconcelos/" data-id="3304557103">Senador Vasconcelos</a></li><li><a href="/rio-de-janeiro/sepetiba/" data-id="3304557108">Sepetiba</a></li><li><a href="/rio-de-janeiro/tanque/" data-id="3304557089">Tanque</a></li><li><a href="/rio-de-janeiro/taquara/" data-id="3304557088">Taquara</a></li><li><a href="/rio-de-janeiro/taua/" data-id="3304557119">Tauá</a></li><li><a href="/rio-de-janeiro/tijuca/" data-id="3304557030">Tijuca</a></li><li><a href="/rio-de-janeiro/todos-os-santos/" data-id="3304557054">Todos os Santos</a></li><li><a href="/rio-de-janeiro/tomas-coelho/" data-id="3304557151">Tomás Coelho</a></li><li><a href="/rio-de-janeiro/turiacu/" data-id="3304557075">Turiaçu</a></li><li><a href="/rio-de-janeiro/urca/" data-id="3304557015">Urca</a></li><li><a href="/rio-de-janeiro/vargem-grande/" data-id="3304557134">Vargem Grande</a></li><li><a href="/rio-de-janeiro/vargem-pequena/" data-id="3304557133">Vargem Pequena</a></li><li><a href="/rio-de-janeiro/vasco-da-gama/" data-id="3304557159">Vasco da Gama</a></li><li><a href="/rio-de-janeiro/vaz-lobo/" data-id="3304557074">Vaz Lobo</a></li><li><a href="/rio-de-janeiro/vicente-de-carvalho/" data-id="3304557063">Vicente de Carvalho</a></li><li><a href="/rio-de-janeiro/vidigal/" data-id="3304557024">Vidigal</a></li><li><a href="/rio-de-janeiro/vigario-geral/" data-id="3304557045">Vigário Geral</a></li><li><a href="/rio-de-janeiro/vila-da-penha/" data-id="3304557064">Vila da Penha</a></li><li><a href="/rio-de-janeiro/vila-isabel/" data-id="3304557033">Vila Isabel</a></li><li><a href="/rio-de-janeiro/vila-kennedy/" data-id="3304557162">Vila Kennedy</a></li><li><a href="/rio-de-janeiro/vila-kosmos/" data-id="3304557062">Vila Kosmos</a></li><li><a href="/rio-de-janeiro/vila-militar/" data-id="3304557093">Vila Militar</a></li><li><a href="/rio-de-janeiro/vila-valqueire/" data-id="3304557091">Vila Valqueire</a></li><li><a href="/rio-de-janeiro/vista-alegre/" data-id="3304557065">Vista Alegre</a></li><li><a href="/rio-de-janeiro/zumbi/" data-id="3304557110">Zumbi</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Rio de Janeiro"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 61.9, "bbox": [-43.7961, -23.0824, -43.0991, -22.7462], "centro": [-43.4511, -22.9232], "fipezap_ref": "2026-09", "melhores": [{"nome": "Centro", "nota": 8.8}, {"nome": "Botafogo", "nota": 8.5}, {"nome": "G\u00e1vea", "nota": 8.5}], "nivel": "bairros", "nome": "Rio de Janeiro", "slug": "rio-de-janeiro", "uf": "RJ", "unidades": 162, "venda_m2": 11302};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=a00fadf5"></script>
+
+</body>
+</html>

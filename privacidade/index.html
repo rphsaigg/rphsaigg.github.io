@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidade · Bairro Ideal</title>
+<meta name="description" content="Como o Bairro Ideal trata dados: mapa sem cadastro e sem cookies; conta do Pro, marca e relatórios (LGPD).">
+<link rel="canonical" href="https://bairroideal.com.br/privacidade/">
+<meta property="og:title" content="Política de privacidade · Bairro Ideal">
+<meta property="og:description" content="Como o Bairro Ideal trata dados: mapa sem cadastro e sem cookies; conta do Pro, marca e relatórios (LGPD).">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/privacidade/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=f0c95426">
+<script>window.DADOS_V = "d8af76d4";</script>
+
+</head>
+<body class="">
+
+
+
+
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mb-abrir" d="M4 7h16M4 12h16M4 17h16"/><path class="mb-fechar" d="M6 6l12 12M18 6 6 18"/></svg><span>Menu</span></button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="m-drop">
+      <button type="button" class="m-link" aria-expanded="false" aria-controls="m-bairros">Bairros <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="m-painel" id="m-bairros">
+        <div class="m-col">
+          <p class="m-rot">Escolha a capital</p>
+          <ul class="m-caps"><li><a href="/aracaju/">Aracaju</a></li><li><a href="/belo-horizonte/">Belo Horizonte</a></li><li><a href="/belem/">Belém</a></li><li><a href="/boa-vista/">Boa Vista</a></li><li><a href="/brasilia/">Brasília</a></li><li><a href="/campo-grande/">Campo Grande</a></li><li><a href="/cuiaba/">Cuiabá</a></li><li><a href="/curitiba/">Curitiba</a></li><li><a href="/florianopolis/">Florianópolis</a></li><li><a href="/fortaleza/">Fortaleza</a></li><li><a href="/goiania/">Goiânia</a></li><li><a href="/joao-pessoa/">João Pessoa</a></li><li><a href="/macapa/">Macapá</a></li><li><a href="/maceio/">Maceió</a></li><li><a href="/manaus/">Manaus</a></li><li><a href="/natal/">Natal</a></li><li><a href="/palmas/">Palmas</a></li><li><a href="/porto-alegre/">Porto Alegre</a></li><li><a href="/porto-velho/">Porto Velho</a></li><li><a href="/recife/">Recife</a></li><li><a href="/rio-branco/">Rio Branco</a></li><li><a href="/rio-de-janeiro/">Rio de Janeiro</a></li><li><a href="/salvador/">Salvador</a></li><li><a href="/sao-luis/">São Luís</a></li><li><a href="/sao-paulo/">São Paulo</a></li><li><a href="/teresina/">Teresina</a></li><li><a href="/vitoria/">Vitória</a></li></ul>
+        </div>
+        <div class="m-col m-atalhos">
+          <p class="m-rot">Para decidir</p>
+          <a href="/brasilia/?morar=1"><b>Onde eu poderia morar melhor?</b><span>Com a sua renda e o local de trabalho (comece por Brasília ou escolha a capital)</span></a>
+          
+          <a href="/metodologia/"><b>Como calculamos as notas</b><span>Fontes oficiais e o que os números não mostram</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="m-link" href="/comparar/">Comparar</a>
+    <a class="m-link" href="/esse-aluguel-vale/">Esse aluguel vale?</a>
+    <a class="m-link" href="/falar-com-corretor/">Falar com corretor</a>
+    <span class="m-sep" aria-hidden="true"></span>
+    <a class="m-link" href="/contato/">Ajuda</a>
+    <a class="m-link m-pro" href="/para-corretores/">Sou corretor</a>
+    <a class="m-entrar" href="/conta/" id="m-entrar">Entrar</a>
+  </nav>
+</header>
+<script>
+// menu: abre/fecha o "Bairros" e o menu do celular; fecha com Esc ou clique fora. "Entrar" vira "Minha área" com sessão do Pro.
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('menu'),d=n.querySelector('.m-drop > button'),p=document.getElementById('m-bairros');
+function drop(v){d.setAttribute('aria-expanded',v);p.classList.toggle('aberto',v)}
+function menu(v){b.setAttribute('aria-expanded',v);n.classList.toggle('aberto',v);document.body.classList.toggle('menu-aberto',v);if(!v)drop(false)}
+b.onclick=function(){menu(b.getAttribute('aria-expanded')!=='true')};
+d.onclick=function(e){e.stopPropagation();drop(d.getAttribute('aria-expanded')!=='true')};
+document.addEventListener('click',function(e){if(!e.target.closest('.m-drop'))drop(false);if(!e.target.closest('.topo'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(d.getAttribute('aria-expanded')==='true'){drop(false);d.focus()}else menu(false)}});
+try{if(localStorage.getItem('bi_token'))document.getElementById('m-entrar').textContent='Minha área'}catch(e){}})();
+</script>
+
+<main class="pagina texto">
+  <h1>Política de privacidade</h1>
+  <p class="nota">Atualizada em 19/10/2026 (inclui o pedido de contato com corretor). Controlador: <b>Raphael Saigg Santos</b> (Bairro Ideal), contato <a href="mailto:rphsaigg@gmail.com">rphsaigg@gmail.com</a>.</p>
+
+  <h2>Navegação no mapa</h2>
+  <p>O mapa, as páginas de bairro e a comparação <b>não exigem cadastro e não usam cookies de rastreamento</b>. Na recomendação "Onde eu poderia morar melhor?", a renda, o aluguel e o local de trabalho que você informa são processados <b>só no seu navegador</b>: nada disso é enviado nem guardado por nós. Os pesos e a lista de comparação ficam guardados apenas no seu aparelho.</p>
+  <p>Para saber quais páginas são úteis, contamos visitas de forma <b>agregada</b>: dia e hora, página, site de origem, tipo de aparelho e o estado aproximado (informado pela rede da Cloudflare), além de usos como abrir uma região ou comparar. Não usamos cookies para isso, não guardamos o seu IP nem identificador, e não é possível saber quem visitou. Se o navegador envia o sinal "Do Not Track", nada é contado. Usamos também o Google Search Console, que fornece apenas dados agregados de busca.</p>
+
+  <h2 id="pedido-de-contato">Pedido de contato com corretor</h2>
+  <p>Só se você preencher o formulário <a href="/falar-com-corretor/">Falar com um corretor</a> e marcar a autorização, tratamos:</p>
+  <ul>
+    <li><b>Nome, WhatsApp e, se informar, e-mail</b>, para que corretores entrem em contato com você e para enviarmos o link do pedido.</li>
+    <li><b>O que você procura</b>: capital, bairros de interesse, alugar ou comprar, valor máximo, prazo e o recado que escrever.</li>
+  </ul>
+  <p><b>Base legal: o seu consentimento</b> (art. 7º, I, da LGPD), dado para esta finalidade específica. Com ele, enviamos esses dados a <b>até 3 corretores ou imobiliárias parceiros</b> (assinantes do Bairro Ideal Pro) que atendem a capital escolhida. Não vendemos listas de contatos, não enviamos o pedido a mais ninguém e não usamos esses dados para outra coisa. A renda e o local de trabalho que você digita no "Onde eu poderia morar melhor?" <b>não</b> fazem parte do pedido e continuam sem sair do seu navegador.</p>
+  <p><b>Prazo</b>: o pedido é apagado automaticamente 30 dias depois de enviado. <b>Cancelamento</b>: pelo link que você recebe ao enviar (e por e-mail, se informou), você vê a quem o pedido foi entregue e pode cancelar a qualquer momento; o pedido e as entregas são apagados na hora. Se um corretor já tiver salvo o seu contato, ele se compromete, pelos termos de uso, a usá-lo só para atender o seu pedido e a apagá-lo quando você pedir; você também pode nos escrever para ajudarmos.</p>
+  <p>Para evitar abuso, contamos quantos pedidos saem de um mesmo endereço IP e de um mesmo WhatsApp por dia; esse controle é apagado em até 24 horas.</p>
+
+  <h2>Contato com o corretor de um imóvel</h2>
+  <p>Na página de um imóvel, o botão de WhatsApp abre a conversa direto com o corretor, no seu aplicativo. Não registramos quem clicou nem o que foi conversado.</p>
+
+  <h2>Bairro Ideal Pro</h2>
+  <p>Se você cria uma conta no Pro, tratamos:</p>
+  <ul>
+    <li><b>E-mail</b>: para identificar a conta, enviar o código de acesso, confirmações de pagamento e avisos de vencimento.</li>
+    <li><b>Sua marca</b> (nome, imobiliária, CRECI, WhatsApp, e-mail e site de contato, apresentação): para exibi-la nos seus relatórios, que são abertos por quem tiver o link.</li>
+    <li><b>Relatórios</b> (título, nome do cliente, bairros escolhidos e recado): para guardar e mostrar o relatório a quem você enviar o link. Você é o controlador dos dados do seu cliente que escrever ali; nós apenas os armazenamos para você. Escreva só o necessário.</li>
+    <li><b>Imóveis e fotos que você cadastra</b>: para publicá-los na página do bairro, na página do imóvel e nos seus relatórios. Ficam visíveis a qualquer pessoa enquanto ativos. Fotos que nenhum imóvel usa são apagadas em até 2 dias, e todas são apagadas se você excluir a conta. Não publique fotos com pessoas, placas de carro ou documentos.</li>
+    <li><b>Capitais em que atende</b> e a escolha de receber pedidos de contato: para entregar a você pedidos de quem autorizou.</li>
+    <li><b>Pagamentos</b> (plano, valor, data, status e identificador do Mercado Pago): para liberar o acesso e cumprir obrigações fiscais.</li>
+    <li><b>Registros técnicos mínimos</b> (endereço IP nos limites de tentativas de login, por poucas horas): para segurança. Para impedir um segundo teste grátis no mesmo e-mail, guardamos um código derivado do e-mail (hash), que não permite recuperá-lo.</li>
+  </ul>
+  <p>Base legal: execução do contrato (art. 7º, V, da LGPD) e cumprimento de obrigação legal (art. 7º, II) para os registros de pagamento. Os dados ficam na Cloudflare (banco D1), com criptografia em trânsito. <b>Não vendemos nem compartilhamos</b> seus dados, exceto com o processador de pagamento (Mercado Pago) e o serviço de envio de e-mail (Resend), no limite necessário.</p>
+
+  <h2>Seus direitos</h2>
+  <p>Quem fez um pedido de contato pode vê-lo e cancelá-lo pelo link do pedido, a qualquer momento.</p>
+  <p>Você pode corrigir a marca e os relatórios e <b>excluir a conta e todos os dados</b> a qualquer momento em <a href="/conta/">Minha área</a>. A exclusão é imediata e os links dos relatórios param de funcionar; só os registros de pagamento ficam guardados pelo prazo da legislação fiscal. Para outros pedidos (confirmação de tratamento, portabilidade, informações), use o <a href="/contato/?assunto=privacidade">formulário de contato</a> ou escreva para <a href="mailto:rphsaigg@gmail.com">rphsaigg@gmail.com</a>.</p>
+</main>
+
+
+<footer class="rodape">
+  <p>Dados oficiais: IBGE (Censo 2022), INEP (Censo Escolar 2024 e IDEB 2023), DataSUS (CNES), Receita Federal (CNPJ), SSP-DF, ANP e FipeZap; parques e lazer do OpenStreetMap. Mapa-base © <a href="https://openfreemap.org">OpenFreeMap</a> e © <a href="https://www.openstreetmap.org/copyright">colaboradores do OpenStreetMap</a>.</p>
+  <p>© 2026 Bairro Ideal, um projeto Saigg Digital · <a href="/metodologia/">Metodologia e limites</a> · <a href="/esse-aluguel-vale/">Esse aluguel vale?</a> · <a href="/falar-com-corretor/">Falar com um corretor</a> · <a href="/para-corretores/">Bairro Ideal Pro</a> · <a href="/conta/">Minha área</a> · <a href="/termos/">Termos</a> · <a href="/privacidade/">Privacidade</a> · <a href="/contato/">Contato e suporte</a></p>
+</footer>
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+</body>
+</html>

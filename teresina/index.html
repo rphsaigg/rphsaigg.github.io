@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Teresina · Bairro Ideal</title>
+<meta name="description" content="Mapa de Teresina com notas de 123 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/teresina/">
+<meta property="og:title" content="Melhores bairros para morar em Teresina · Bairro Ideal">
+<meta property="og:description" content="Mapa de Teresina com notas de 123 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/teresina/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=f0c95426">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+
+
+
+
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mb-abrir" d="M4 7h16M4 12h16M4 17h16"/><path class="mb-fechar" d="M6 6l12 12M18 6 6 18"/></svg><span>Menu</span></button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="m-drop">
+      <button type="button" class="m-link ativo" aria-expanded="false" aria-controls="m-bairros">Bairros de Teresina <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="m-painel" id="m-bairros">
+        <div class="m-col">
+          <p class="m-rot">Escolha a capital</p>
+          <ul class="m-caps"><li><a href="/aracaju/">Aracaju</a></li><li><a href="/belo-horizonte/">Belo Horizonte</a></li><li><a href="/belem/">Belém</a></li><li><a href="/boa-vista/">Boa Vista</a></li><li><a href="/brasilia/">Brasília</a></li><li><a href="/campo-grande/">Campo Grande</a></li><li><a href="/cuiaba/">Cuiabá</a></li><li><a href="/curitiba/">Curitiba</a></li><li><a href="/florianopolis/">Florianópolis</a></li><li><a href="/fortaleza/">Fortaleza</a></li><li><a href="/goiania/">Goiânia</a></li><li><a href="/joao-pessoa/">João Pessoa</a></li><li><a href="/macapa/">Macapá</a></li><li><a href="/maceio/">Maceió</a></li><li><a href="/manaus/">Manaus</a></li><li><a href="/natal/">Natal</a></li><li><a href="/palmas/">Palmas</a></li><li><a href="/porto-alegre/">Porto Alegre</a></li><li><a href="/porto-velho/">Porto Velho</a></li><li><a href="/recife/">Recife</a></li><li><a href="/rio-branco/">Rio Branco</a></li><li><a href="/rio-de-janeiro/">Rio de Janeiro</a></li><li><a href="/salvador/">Salvador</a></li><li><a href="/sao-luis/">São Luís</a></li><li><a href="/sao-paulo/">São Paulo</a></li><li><a href="/teresina/" aria-current="page">Teresina</a></li><li><a href="/vitoria/">Vitória</a></li></ul>
+        </div>
+        <div class="m-col m-atalhos">
+          <p class="m-rot">Para decidir</p>
+          <a href="/teresina/?morar=1"><b>Onde eu poderia morar melhor?</b><span>Com a sua renda e o local de trabalho</span></a>
+          <a href="/teresina/melhores-bairros-para-familias/"><b>Melhores bairros de Teresina</b><span>Para famílias, aposentados, quem não tem carro e mais baratos</span></a>
+          <a href="/metodologia/"><b>Como calculamos as notas</b><span>Fontes oficiais e o que os números não mostram</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="m-link" href="/comparar/">Comparar</a>
+    <a class="m-link" href="/esse-aluguel-vale/">Esse aluguel vale?</a>
+    <a class="m-link" href="/falar-com-corretor/">Falar com corretor</a>
+    <span class="m-sep" aria-hidden="true"></span>
+    <a class="m-link" href="/contato/">Ajuda</a>
+    <a class="m-link m-pro" href="/para-corretores/">Sou corretor</a>
+    <a class="m-entrar" href="/conta/" id="m-entrar">Entrar</a>
+  </nav>
+</header>
+<script>
+// menu: abre/fecha o "Bairros" e o menu do celular; fecha com Esc ou clique fora. "Entrar" vira "Minha área" com sessão do Pro.
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('menu'),d=n.querySelector('.m-drop > button'),p=document.getElementById('m-bairros');
+function drop(v){d.setAttribute('aria-expanded',v);p.classList.toggle('aberto',v)}
+function menu(v){b.setAttribute('aria-expanded',v);n.classList.toggle('aberto',v);document.body.classList.toggle('menu-aberto',v);if(!v)drop(false)}
+b.onclick=function(){menu(b.getAttribute('aria-expanded')!=='true')};
+d.onclick=function(e){e.stopPropagation();drop(d.getAttribute('aria-expanded')!=='true')};
+document.addEventListener('click',function(e){if(!e.target.closest('.m-drop'))drop(false);if(!e.target.closest('.topo'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(d.getAttribute('aria-expanded')==='true'){drop(false);d.focus()}else menu(false)}});
+try{if(localStorage.getItem('bi_token'))document.getElementById('m-entrar').textContent='Minha área'}catch(e){}})();
+</script>
+
+<main class="app" data-capital="teresina">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina" selected>Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Teresina</h1>
+      <p class="sub">123 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes guias" open>
+      <summary>Guias de Teresina</summary>
+      <ul class="lista-guias"><li><a href="/teresina/melhores-bairros-para-familias/">Melhores bairros de Teresina para famílias com filhos</a></li><li><a href="/teresina/melhores-bairros-para-aposentados/">Melhores bairros de Teresina para aposentados e idosos</a></li><li><a href="/teresina/melhores-bairros-para-quem-nao-tem-carro/">Melhores bairros de Teresina para quem não tem carro</a></li><li><a href="/teresina/bairros-baratos-e-bons/">Bairros baratos e bons para morar em Teresina</a></li>
+        <li><a href="/esse-aluguel-vale/?capital=teresina">Esse aluguel vale? Confira um anúncio</a></li></ul>
+    </details>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 123 regiões de Teresina (A–Z)</summary>
+      <ul><li><a href="/teresina/acarape/" data-id="2211001009">Acarapé</a></li><li><a href="/teresina/aeroporto/" data-id="2211001007">Aeroporto</a></li><li><a href="/teresina/agua-mineral/" data-id="2211001108">Água Mineral</a></li><li><a href="/teresina/alegre/" data-id="2211001117">Alegre</a></li><li><a href="/teresina/alto-alegre/" data-id="2211001003">Alto Alegre</a></li><li><a href="/teresina/angelica/" data-id="2211001118">Angelica</a></li><li><a href="/teresina/angelim/" data-id="2211001030">Angelim</a></li><li><a href="/teresina/areias/" data-id="2211001032">Areias</a></li><li><a href="/teresina/aroeiras/" data-id="2211001066">Aroeiras</a></li><li><a href="/teresina/arvores-verdes/" data-id="2211001119">Árvores Verdes</a></li><li><a href="/teresina/beira-rio/" data-id="2211001051">Beira Rio</a></li><li><a href="/teresina/bela-vista/" data-id="2211001033">Bela Vista</a></li><li><a href="/teresina/bom-jesus/" data-id="2211001013">Bom Jesus</a></li><li><a href="/teresina/bom-principio/" data-id="2211001114">Bom Princípio</a></li><li><a href="/teresina/brasilar/" data-id="2211001034">Brasilar</a></li><li><a href="/teresina/buenos-aires/" data-id="2211001011">Buenos Aires</a></li><li><a href="/teresina/cabral/" data-id="2211001095">Cabral</a></li><li><a href="/teresina/campestre/" data-id="2211001067">Campestre</a></li><li><a href="/teresina/catarina/" data-id="2211001035">Catarina</a></li><li><a href="/teresina/centro/" data-id="2211001094">Centro</a></li><li><a href="/teresina/chapadinha/" data-id="2211001120">Chapadinha</a></li><li><a href="/teresina/cidade-jardim/" data-id="2211001121">Cidade jardim</a></li><li><a href="/teresina/cidade-nova/" data-id="2211001097">Cidade Nova</a></li><li><a href="/teresina/colorado/" data-id="2211001053">Colorado</a></li><li><a href="/teresina/comprida/" data-id="2211001052">Comprida</a></li><li><a href="/teresina/cristo-rei/" data-id="2211001096">Cristo Rei</a></li><li><a href="/teresina/distrito-industrial/" data-id="2211001036">Distrito Industrial</a></li><li><a href="/teresina/embrapa/" data-id="2211001015">Embrapa</a></li><li><a href="/teresina/esplanada/" data-id="2211001037">Esplanada</a></li><li><a href="/teresina/extrema/" data-id="2211001054">Extrema</a></li><li><a href="/teresina/fatima/" data-id="2211001068">Fátima</a></li><li><a href="/teresina/flor-do-campo/" data-id="2211001116">Flor do campo</a></li><li><a href="/teresina/frei-serafim/" data-id="2211001098">Frei Serafim</a></li><li><a href="/teresina/gurupi/" data-id="2211001055">Gurupi</a></li><li><a href="/teresina/horto/" data-id="2211001069">Horto</a></li><li><a href="/teresina/ilhotas/" data-id="2211001099">Ilhotas</a></li><li><a href="/teresina/ininga/" data-id="2211001070">Iningá</a></li><li><a href="/teresina/itaperu/" data-id="2211001029">Itaperu</a></li><li><a href="/teresina/itarare/" data-id="2211001056">Itararé</a></li><li><a href="/teresina/jacinta-andrade/" data-id="2211001122">Jacinta Andrade</a></li><li><a href="/teresina/joquei/" data-id="2211001071">Jóquei</a></li><li><a href="/teresina/livramento/" data-id="2211001057">Livramento</a></li><li><a href="/teresina/lourival-parente/" data-id="2211001038">Lourival Parente</a></li><li><a href="/teresina/macauba/" data-id="2211001104">Macaúba</a></li><li><a href="/teresina/mafrense/" data-id="2211001017">Mafrense</a></li><li><a href="/teresina/mafua/" data-id="2211001101">Mafuá</a></li><li><a href="/teresina/marques-de-paranagua/" data-id="2211001102">Marquês de Paranaguá</a></li><li><a href="/teresina/matadouro/" data-id="2211001020">Matadouro</a></li><li><a href="/teresina/matinha/" data-id="2211001100">Matinha</a></li><li><a href="/teresina/memorare/" data-id="2211001019">Memorare</a></li><li><a href="/teresina/mocambinho/" data-id="2211001021">Mocambinho</a></li><li><a href="/teresina/monte-castelo/" data-id="2211001105">Monte castelo</a></li><li><a href="/teresina/monte-verde/" data-id="2211001123">Monte Verde</a></li><li><a href="/teresina/morada-do-sol/" data-id="2211001073">Morada do Sol</a></li><li><a href="/teresina/morada-nova/" data-id="2211001039">Morada Nova</a></li><li><a href="/teresina/morro-da-esperanca/" data-id="2211001103">Morro da Esperança</a></li><li><a href="/teresina/morros/" data-id="2211001072">Morros</a></li><li><a href="/teresina/n-s-das-gracas/" data-id="2211001106">N.S.das Graças</a></li><li><a href="/teresina/noivos/" data-id="2211001075">Noivos</a></li><li><a href="/teresina/nova-brasilia/" data-id="2211001022">Nova Brasília</a></li><li><a href="/teresina/novo-horizonte/" data-id="2211001058">Novo Horizonte</a></li><li><a href="/teresina/novo-uruguai/" data-id="2211001074">Novo Uruguai</a></li><li><a href="/teresina/olarias/" data-id="2211001023">Olarias</a></li><li><a href="/teresina/parque-alvorada/" data-id="2211001124">Parque Alvorada</a></li><li><a href="/teresina/parque-brasil/" data-id="2211001125">Parque Brasil</a></li><li><a href="/teresina/parque-do-piaui/" data-id="2211001043">Parque do Piauí</a></li><li><a href="/teresina/parque-ideal/" data-id="2211001059">Parque Ideal</a></li><li><a href="/teresina/parque-jacinta/" data-id="2211001040">Parque Jacinta</a></li><li><a href="/teresina/parque-juliana/" data-id="2211001041">Parque Juliana</a></li><li><a href="/teresina/parque-poti/" data-id="2211001060">Parque Poti</a></li><li><a href="/teresina/parque-sao-joao/" data-id="2211001042">Parque São João</a></li><li><a href="/teresina/parque-sul/" data-id="2211001126">Parque Sul</a></li><li><a href="/teresina/pedra-miuda/" data-id="2211001127">Pedra Miúda</a></li><li><a href="/teresina/pedra-mole/" data-id="2211001076">Pedra Mole</a></li><li><a href="/teresina/picarra/" data-id="2211001004">Piçarra</a></li><li><a href="/teresina/picarreira/" data-id="2211001079">Piçarreira</a></li><li><a href="/teresina/pio-xii/" data-id="2211001006">Pio XII</a></li><li><a href="/teresina/piraja/" data-id="2211001107">Pirajá</a></li><li><a href="/teresina/planalto/" data-id="2211001078">Planalto</a></li><li><a href="/teresina/por-enquanto/" data-id="2211001002">Por Enquanto</a></li><li><a href="/teresina/portal-da-alegria/" data-id="2211001128">Portal da Alegria</a></li><li><a href="/teresina/porto-do-centro/" data-id="2211001077">Porto do Centro</a></li><li><a href="/teresina/poti-velho/" data-id="2211001024">Poti Velho</a></li><li><a href="/teresina/primavera/" data-id="2211001025">Primavera</a></li><li><a href="/teresina/promorar/" data-id="2211001044">Promorar</a></li><li><a href="/teresina/real-copagri/" data-id="2211001026">Real Copagri</a></li><li><a href="/teresina/recanto-das-palmeiras/" data-id="2211001080">Recanto das Palmeiras</a></li><li><a href="/teresina/redencao/" data-id="2211001008">Redenção</a></li><li><a href="/teresina/redonda/" data-id="2211001062">Redonda</a></li><li><a href="/teresina/renascenca/" data-id="2211001061">Renascença</a></li><li><a href="/teresina/saci/" data-id="2211001045">Saci</a></li><li><a href="/teresina/samapi/" data-id="2211001083">Samapi</a></li><li><a href="/teresina/santa-cruz/" data-id="2211001046">Santa Cruz</a></li><li><a href="/teresina/santa-isabel/" data-id="2211001086">Santa Isabel</a></li><li><a href="/teresina/santa-lia/" data-id="2211001084">Santa Lia</a></li><li><a href="/teresina/santa-luzia/" data-id="2211001047">Santa Luzia</a></li><li><a href="/teresina/santa-maria/" data-id="2211001129">Santa Maria</a></li><li><a href="/teresina/santa-rosa/" data-id="2211001111">Santa Rosa</a></li><li><a href="/teresina/santo-antonio/" data-id="2211001048">Santo Antônio</a></li><li><a href="/teresina/sao-cristovao/" data-id="2211001085">São Cristóvão</a></li><li><a href="/teresina/sao-joao/" data-id="2211001087">São João</a></li><li><a href="/teresina/sao-joaquim/" data-id="2211001028">São Joaquim</a></li><li><a href="/teresina/sao-lourenco/" data-id="2211001049">São Lourenço</a></li><li><a href="/teresina/sao-pedro/" data-id="2211001010">São Pedro</a></li><li><a href="/teresina/sao-raimundo/" data-id="2211001063">São Raimundo</a></li><li><a href="/teresina/sao-sebastiao/" data-id="2211001064">São Sebastião</a></li><li><a href="/teresina/satelite/" data-id="2211001082">Satélite</a></li><li><a href="/teresina/socopo/" data-id="2211001081">Socopó</a></li><li><a href="/teresina/tabajaras/" data-id="2211001088">Tabajaras</a></li><li><a href="/teresina/tabuleta/" data-id="2211001012">Tabuleta</a></li><li><a href="/teresina/tancredo-neves/" data-id="2211001109">Tancredo Neves</a></li><li><a href="/teresina/todos-os-santos/" data-id="2211001065">Todos os Santos</a></li><li><a href="/teresina/tres-andares/" data-id="2211001014">Três Andares</a></li><li><a href="/teresina/triunfo/" data-id="2211001050">Triunfo</a></li><li><a href="/teresina/uruguai/" data-id="2211001089">Uruguai</a></li><li><a href="/teresina/vale-do-gaviao/" data-id="2211001090">Vale do Gavião</a></li><li><a href="/teresina/vale-quem-tem/" data-id="2211001092">Vale Quem Tem</a></li><li><a href="/teresina/verde-lar/" data-id="2211001091">Verde Lar</a></li><li><a href="/teresina/verdecap/" data-id="2211001113">Verdecap</a></li><li><a href="/teresina/vermelha/" data-id="2211001018">Vermelha</a></li><li><a href="/teresina/vila-operaria/" data-id="2211001016">Vila Operária</a></li><li><a href="/teresina/vila-sao-francisco/" data-id="2211001027">Vila São Francisco</a></li><li><a href="/teresina/zoobotanico/" data-id="2211001093">Zoobotânico</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Teresina"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 32.6, "bbox": [-42.8632, -5.2141, -42.6949, -4.9568], "centro": [-42.782, -5.0788], "fipezap_ref": "2026-09", "melhores": [{"nome": "Centro", "nota": 8.6}, {"nome": "J\u00f3quei", "nota": 7.8}, {"nome": "Vermelha", "nota": 7.2}], "nivel": "bairros", "nome": "Teresina", "slug": "teresina", "uf": "PI", "unidades": 123, "venda_m2": 6075};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=a00fadf5"></script>
+
+</body>
+</html>

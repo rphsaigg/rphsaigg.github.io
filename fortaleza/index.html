@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Fortaleza · Bairro Ideal</title>
+<meta name="description" content="Mapa de Fortaleza com notas de 121 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/fortaleza/">
+<meta property="og:title" content="Melhores bairros para morar em Fortaleza · Bairro Ideal">
+<meta property="og:description" content="Mapa de Fortaleza com notas de 121 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/fortaleza/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=f0c95426">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+
+
+
+
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mb-abrir" d="M4 7h16M4 12h16M4 17h16"/><path class="mb-fechar" d="M6 6l12 12M18 6 6 18"/></svg><span>Menu</span></button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="m-drop">
+      <button type="button" class="m-link ativo" aria-expanded="false" aria-controls="m-bairros">Bairros de Fortaleza <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="m-painel" id="m-bairros">
+        <div class="m-col">
+          <p class="m-rot">Escolha a capital</p>
+          <ul class="m-caps"><li><a href="/aracaju/">Aracaju</a></li><li><a href="/belo-horizonte/">Belo Horizonte</a></li><li><a href="/belem/">Belém</a></li><li><a href="/boa-vista/">Boa Vista</a></li><li><a href="/brasilia/">Brasília</a></li><li><a href="/campo-grande/">Campo Grande</a></li><li><a href="/cuiaba/">Cuiabá</a></li><li><a href="/curitiba/">Curitiba</a></li><li><a href="/florianopolis/">Florianópolis</a></li><li><a href="/fortaleza/" aria-current="page">Fortaleza</a></li><li><a href="/goiania/">Goiânia</a></li><li><a href="/joao-pessoa/">João Pessoa</a></li><li><a href="/macapa/">Macapá</a></li><li><a href="/maceio/">Maceió</a></li><li><a href="/manaus/">Manaus</a></li><li><a href="/natal/">Natal</a></li><li><a href="/palmas/">Palmas</a></li><li><a href="/porto-alegre/">Porto Alegre</a></li><li><a href="/porto-velho/">Porto Velho</a></li><li><a href="/recife/">Recife</a></li><li><a href="/rio-branco/">Rio Branco</a></li><li><a href="/rio-de-janeiro/">Rio de Janeiro</a></li><li><a href="/salvador/">Salvador</a></li><li><a href="/sao-luis/">São Luís</a></li><li><a href="/sao-paulo/">São Paulo</a></li><li><a href="/teresina/">Teresina</a></li><li><a href="/vitoria/">Vitória</a></li></ul>
+        </div>
+        <div class="m-col m-atalhos">
+          <p class="m-rot">Para decidir</p>
+          <a href="/fortaleza/?morar=1"><b>Onde eu poderia morar melhor?</b><span>Com a sua renda e o local de trabalho</span></a>
+          <a href="/fortaleza/melhores-bairros-para-familias/"><b>Melhores bairros de Fortaleza</b><span>Para famílias, aposentados, quem não tem carro e mais baratos</span></a>
+          <a href="/metodologia/"><b>Como calculamos as notas</b><span>Fontes oficiais e o que os números não mostram</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="m-link" href="/comparar/">Comparar</a>
+    <a class="m-link" href="/esse-aluguel-vale/">Esse aluguel vale?</a>
+    <a class="m-link" href="/falar-com-corretor/">Falar com corretor</a>
+    <span class="m-sep" aria-hidden="true"></span>
+    <a class="m-link" href="/contato/">Ajuda</a>
+    <a class="m-link m-pro" href="/para-corretores/">Sou corretor</a>
+    <a class="m-entrar" href="/conta/" id="m-entrar">Entrar</a>
+  </nav>
+</header>
+<script>
+// menu: abre/fecha o "Bairros" e o menu do celular; fecha com Esc ou clique fora. "Entrar" vira "Minha área" com sessão do Pro.
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('menu'),d=n.querySelector('.m-drop > button'),p=document.getElementById('m-bairros');
+function drop(v){d.setAttribute('aria-expanded',v);p.classList.toggle('aberto',v)}
+function menu(v){b.setAttribute('aria-expanded',v);n.classList.toggle('aberto',v);document.body.classList.toggle('menu-aberto',v);if(!v)drop(false)}
+b.onclick=function(){menu(b.getAttribute('aria-expanded')!=='true')};
+d.onclick=function(e){e.stopPropagation();drop(d.getAttribute('aria-expanded')!=='true')};
+document.addEventListener('click',function(e){if(!e.target.closest('.m-drop'))drop(false);if(!e.target.closest('.topo'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(d.getAttribute('aria-expanded')==='true'){drop(false);d.focus()}else menu(false)}});
+try{if(localStorage.getItem('bi_token'))document.getElementById('m-entrar').textContent='Minha área'}catch(e){}})();
+</script>
+
+<main class="app" data-capital="fortaleza">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza" selected>Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Fortaleza</h1>
+      <p class="sub">121 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes guias" open>
+      <summary>Guias de Fortaleza</summary>
+      <ul class="lista-guias"><li><a href="/fortaleza/melhores-bairros-para-familias/">Melhores bairros de Fortaleza para famílias com filhos</a></li><li><a href="/fortaleza/melhores-bairros-para-aposentados/">Melhores bairros de Fortaleza para aposentados e idosos</a></li><li><a href="/fortaleza/melhores-bairros-para-quem-nao-tem-carro/">Melhores bairros de Fortaleza para quem não tem carro</a></li><li><a href="/fortaleza/bairros-baratos-e-bons/">Bairros baratos e bons para morar em Fortaleza</a></li>
+        <li><a href="/esse-aluguel-vale/?capital=fortaleza">Esse aluguel vale? Confira um anúncio</a></li></ul>
+    </details>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 121 regiões de Fortaleza (A–Z)</summary>
+      <ul><li><a href="/fortaleza/aerolandia/" data-id="2304400091">Aerolândia</a></li><li><a href="/fortaleza/aeroporto/" data-id="2304400092">Aeroporto</a></li><li><a href="/fortaleza/aldeota/" data-id="2304400002">Aldeota</a></li><li><a href="/fortaleza/alto-da-balanca/" data-id="2304400093">Alto da Balança</a></li><li><a href="/fortaleza/alvaro-weyne/" data-id="2304400003">Álvaro Weyne</a></li><li><a href="/fortaleza/amadeu-furtado/" data-id="2304400004">Amadeu Furtado</a></li><li><a href="/fortaleza/ancuri/" data-id="2304400050">Ancuri</a></li><li><a href="/fortaleza/antonio-bezerra/" data-id="2304400040">Antônio Bezerra</a></li><li><a href="/fortaleza/aracape/" data-id="2304400124">Aracapé</a></li><li><a href="/fortaleza/autran-nunes/" data-id="2304400041">Autran Nunes</a></li><li><a href="/fortaleza/barra-do-ceara/" data-id="2304400006">Barra do Ceará</a></li><li><a href="/fortaleza/barroso/" data-id="2304400051">Barroso</a></li><li><a href="/fortaleza/bela-vista/" data-id="2304400094">Bela Vista</a></li><li><a href="/fortaleza/benfica/" data-id="2304400007">Benfica</a></li><li><a href="/fortaleza/boa-vista-castelao/" data-id="2304400125">Boa Vista / Castelão</a></li><li><a href="/fortaleza/bom-futuro/" data-id="2304400008">Bom Futuro</a></li><li><a href="/fortaleza/bom-jardim/" data-id="2304400072">Bom Jardim</a></li><li><a href="/fortaleza/bonsucesso/" data-id="2304400073">Bonsucesso</a></li><li><a href="/fortaleza/cais-do-porto/" data-id="2304400110">Cais do Porto</a></li><li><a href="/fortaleza/cajazeiras/" data-id="2304400052">Cajazeiras</a></li><li><a href="/fortaleza/cambeba/" data-id="2304400053">Cambeba</a></li><li><a href="/fortaleza/canindezinho/" data-id="2304400074">Canindezinho</a></li><li><a href="/fortaleza/carlito-pamplona/" data-id="2304400009">Carlito Pamplona</a></li><li><a href="/fortaleza/centro/" data-id="2304400010">Centro</a></li><li><a href="/fortaleza/cidade-2000/" data-id="2304400111">Cidade 2000</a></li><li><a href="/fortaleza/cidade-dos-funcionarios/" data-id="2304400054">Cidade dos Funcionários</a></li><li><a href="/fortaleza/coacu/" data-id="2304400055">Coaçu</a></li><li><a href="/fortaleza/coco/" data-id="2304400011">Cocó</a></li><li><a href="/fortaleza/conjunto-ceara-i/" data-id="2304400042">Conjunto Ceará I</a></li><li><a href="/fortaleza/conjunto-ceara-ii/" data-id="2304400075">Conjunto Ceará II</a></li><li><a href="/fortaleza/conjunto-esperanca/" data-id="2304400076">Conjunto Esperança</a></li><li><a href="/fortaleza/conjunto-palmeiras/" data-id="2304400118">Conjunto Palmeiras</a></li><li><a href="/fortaleza/couto-fernandes/" data-id="2304400096">Couto Fernandes</a></li><li><a href="/fortaleza/cristo-redentor/" data-id="2304400012">Cristo Redentor</a></li><li><a href="/fortaleza/curio/" data-id="2304400056">Curió</a></li><li><a href="/fortaleza/damas/" data-id="2304400013">Damas</a></li><li><a href="/fortaleza/de-lourdes/" data-id="2304400115">De Lourdes</a></li><li><a href="/fortaleza/democrito-rocha/" data-id="2304400097">Demócrito Rocha</a></li><li><a href="/fortaleza/dende/" data-id="2304400077">Dendê</a></li><li><a href="/fortaleza/dias-macedo/" data-id="2304400098">Dias Macedo</a></li><li><a href="/fortaleza/dionisio-torres/" data-id="2304400014">Dionísio Torres</a></li><li><a href="/fortaleza/dom-lustosa/" data-id="2304400043">Dom Lustosa</a></li><li><a href="/fortaleza/edson-queiroz/" data-id="2304400057">Edson Queiroz</a></li><li><a href="/fortaleza/ellery/" data-id="2304400038">Ellery</a></li><li><a href="/fortaleza/engenheiro-luciano-cavalcante/" data-id="2304400058">Engenheiro Luciano Cavalcante</a></li><li><a href="/fortaleza/farias-brito/" data-id="2304400015">Farias Brito</a></li><li><a href="/fortaleza/fatima/" data-id="2304400016">Fátima</a></li><li><a href="/fortaleza/floresta/" data-id="2304400017">Floresta</a></li><li><a href="/fortaleza/genibau/" data-id="2304400044">Genibaú</a></li><li><a href="/fortaleza/granja-lisboa/" data-id="2304400078">Granja Lisboa</a></li><li><a href="/fortaleza/granja-portugal/" data-id="2304400079">Granja Portugal</a></li><li><a href="/fortaleza/guajeru/" data-id="2304400059">Guajeru</a></li><li><a href="/fortaleza/guararapes/" data-id="2304400060">Guararapes</a></li><li><a href="/fortaleza/henrique-jorge/" data-id="2304400045">Henrique Jorge</a></li><li><a href="/fortaleza/itaoca/" data-id="2304400099">Itaoca</a></li><li><a href="/fortaleza/itaperi/" data-id="2304400100">Itaperi</a></li><li><a href="/fortaleza/jacarecanga/" data-id="2304400018">Jacarecanga</a></li><li><a href="/fortaleza/jangurussu/" data-id="2304400061">Jangurussu</a></li><li><a href="/fortaleza/jardim-america/" data-id="2304400019">Jardim América</a></li><li><a href="/fortaleza/jardim-cearense/" data-id="2304400080">Jardim Cearense</a></li><li><a href="/fortaleza/jardim-das-oliveiras/" data-id="2304400062">Jardim das Oliveiras</a></li><li><a href="/fortaleza/jardim-guanabara/" data-id="2304400020">Jardim Guanabara</a></li><li><a href="/fortaleza/jardim-iracema/" data-id="2304400021">Jardim Iracema</a></li><li><a href="/fortaleza/joao-xxiii/" data-id="2304400046">João XXIII</a></li><li><a href="/fortaleza/joaquim-tavora/" data-id="2304400022">Joaquim Távora</a></li><li><a href="/fortaleza/joquei-clube/" data-id="2304400101">Jóquei Clube</a></li><li><a href="/fortaleza/jose-bonifacio/" data-id="2304400023">José Bonifácio</a></li><li><a href="/fortaleza/jose-de-alencar/" data-id="2304400049">José de Alencar</a></li><li><a href="/fortaleza/lagoa-redonda/" data-id="2304400063">Lagoa Redonda</a></li><li><a href="/fortaleza/manoel-satiro/" data-id="2304400081">Manoel Sátiro</a></li><li><a href="/fortaleza/manuel-dias-branco/" data-id="2304400112">Manuel Dias Branco</a></li><li><a href="/fortaleza/maraponga/" data-id="2304400082">Maraponga</a></li><li><a href="/fortaleza/meireles/" data-id="2304400024">Meireles</a></li><li><a href="/fortaleza/messejana/" data-id="2304400065">Messejana</a></li><li><a href="/fortaleza/mondubim/" data-id="2304400083">Mondubim</a></li><li><a href="/fortaleza/monte-castelo/" data-id="2304400025">Monte Castelo</a></li><li><a href="/fortaleza/montese/" data-id="2304400103">Montese</a></li><li><a href="/fortaleza/moura-brasil/" data-id="2304400005">Moura Brasil</a></li><li><a href="/fortaleza/mucuripe/" data-id="2304400026">Mucuripe</a></li><li><a href="/fortaleza/novo-mondubim/" data-id="2304400121">Novo Mondubim</a></li><li><a href="/fortaleza/olavo-oliveira/" data-id="2304400122">Olavo Oliveira</a></li><li><a href="/fortaleza/padre-andrade/" data-id="2304400047">Padre Andrade</a></li><li><a href="/fortaleza/panamericano/" data-id="2304400104">Panamericano</a></li><li><a href="/fortaleza/papicu/" data-id="2304400027">Papicu</a></li><li><a href="/fortaleza/parangaba/" data-id="2304400105">Parangaba</a></li><li><a href="/fortaleza/parque-araxa/" data-id="2304400028">Parque Araxá</a></li><li><a href="/fortaleza/parque-dois-irmaos/" data-id="2304400084">Parque Dois Irmãos</a></li><li><a href="/fortaleza/parque-iracema/" data-id="2304400066">Parque Iracema</a></li><li><a href="/fortaleza/parque-manibura/" data-id="2304400067">Parque Manibura</a></li><li><a href="/fortaleza/parque-presidente-vargas/" data-id="2304400085">Parque Presidente Vargas</a></li><li><a href="/fortaleza/parque-santa-maria/" data-id="2304400123">Parque Santa Maria</a></li><li><a href="/fortaleza/parque-santa-rosa/" data-id="2304400087">Parque Santa Rosa</a></li><li><a href="/fortaleza/parque-sao-jose/" data-id="2304400086">Parque São José</a></li><li><a href="/fortaleza/parquelandia/" data-id="2304400029">Parquelândia</a></li><li><a href="/fortaleza/parreao/" data-id="2304400030">Parreão</a></li><li><a href="/fortaleza/passare/" data-id="2304400088">Passaré</a></li><li><a href="/fortaleza/paupina/" data-id="2304400068">Paupina</a></li><li><a href="/fortaleza/pedras/" data-id="2304400069">Pedras</a></li><li><a href="/fortaleza/pici/" data-id="2304400106">Pici</a></li><li><a href="/fortaleza/pirambu/" data-id="2304400031">Pirambu</a></li><li><a href="/fortaleza/planalto-ayrton-senna/" data-id="2304400116">Planalto Ayrton Senna</a></li><li><a href="/fortaleza/praia-de-iracema/" data-id="2304400032">Praia de Iracema</a></li><li><a href="/fortaleza/praia-do-futuro-i/" data-id="2304400113">Praia do Futuro I</a></li><li><a href="/fortaleza/praia-do-futuro-ii/" data-id="2304400114">Praia do Futuro II</a></li><li><a href="/fortaleza/prefeito-jose-walter/" data-id="2304400089">Prefeito José Walter</a></li><li><a href="/fortaleza/presidente-kennedy/" data-id="2304400033">Presidente Kennedy</a></li><li><a href="/fortaleza/quintino-cunha/" data-id="2304400048">Quintino Cunha</a></li><li><a href="/fortaleza/rodolfo-teofilo/" data-id="2304400034">Rodolfo Teófilo</a></li><li><a href="/fortaleza/sabiaguaba/" data-id="2304400070">Sabiaguaba</a></li><li><a href="/fortaleza/salinas/" data-id="2304400071">Salinas</a></li><li><a href="/fortaleza/sao-bento/" data-id="2304400119">São Bento</a></li><li><a href="/fortaleza/sao-gerardo/" data-id="2304400001">São Gerardo</a></li><li><a href="/fortaleza/sao-joao-do-tauape/" data-id="2304400035">São João do Tauape</a></li><li><a href="/fortaleza/sapiranga-coite/" data-id="2304400064">Sapiranga / Coité</a></li><li><a href="/fortaleza/serrinha/" data-id="2304400107">Serrinha</a></li><li><a href="/fortaleza/siqueira/" data-id="2304400090">Siqueira</a></li><li><a href="/fortaleza/varjota/" data-id="2304400036">Varjota</a></li><li><a href="/fortaleza/vicente-pinzon/" data-id="2304400037">Vicente Pinzón</a></li><li><a href="/fortaleza/vila-peri/" data-id="2304400108">Vila Peri</a></li><li><a href="/fortaleza/vila-uniao/" data-id="2304400109">Vila União</a></li><li><a href="/fortaleza/vila-velha/" data-id="2304400039">Vila Velha</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Fortaleza"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 42.2, "bbox": [-38.6379, -3.8946, -38.4014, -3.692], "centro": [-38.528, -3.7858], "fipezap_ref": "2026-09", "melhores": [{"nome": "Centro", "nota": 8.1}, {"nome": "F\u00e1tima", "nota": 7.8}, {"nome": "Benfica", "nota": 7.6}], "nivel": "bairros", "nome": "Fortaleza", "slug": "fortaleza", "uf": "CE", "unidades": 121, "venda_m2": 9660};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=a00fadf5"></script>
+
+</body>
+</html>

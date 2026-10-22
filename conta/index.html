@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha área · Bairro Ideal Pro</title>
+<meta name="description" content="Entre para criar relatórios de bairro com a sua marca.">
+<link rel="canonical" href="https://bairroideal.com.br/conta/">
+<meta property="og:title" content="Minha área · Bairro Ideal Pro">
+<meta property="og:description" content="Entre para criar relatórios de bairro com a sua marca.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/conta/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=f0c95426">
+<script>window.DADOS_V = "d8af76d4";</script>
+<meta name="robots" content="noindex">
+</head>
+<body class="">
+
+
+
+
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mb-abrir" d="M4 7h16M4 12h16M4 17h16"/><path class="mb-fechar" d="M6 6l12 12M18 6 6 18"/></svg><span>Menu</span></button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="m-drop">
+      <button type="button" class="m-link" aria-expanded="false" aria-controls="m-bairros">Bairros <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="m-painel" id="m-bairros">
+        <div class="m-col">
+          <p class="m-rot">Escolha a capital</p>
+          <ul class="m-caps"><li><a href="/aracaju/">Aracaju</a></li><li><a href="/belo-horizonte/">Belo Horizonte</a></li><li><a href="/belem/">Belém</a></li><li><a href="/boa-vista/">Boa Vista</a></li><li><a href="/brasilia/">Brasília</a></li><li><a href="/campo-grande/">Campo Grande</a></li><li><a href="/cuiaba/">Cuiabá</a></li><li><a href="/curitiba/">Curitiba</a></li><li><a href="/florianopolis/">Florianópolis</a></li><li><a href="/fortaleza/">Fortaleza</a></li><li><a href="/goiania/">Goiânia</a></li><li><a href="/joao-pessoa/">João Pessoa</a></li><li><a href="/macapa/">Macapá</a></li><li><a href="/maceio/">Maceió</a></li><li><a href="/manaus/">Manaus</a></li><li><a href="/natal/">Natal</a></li><li><a href="/palmas/">Palmas</a></li><li><a href="/porto-alegre/">Porto Alegre</a></li><li><a href="/porto-velho/">Porto Velho</a></li><li><a href="/recife/">Recife</a></li><li><a href="/rio-branco/">Rio Branco</a></li><li><a href="/rio-de-janeiro/">Rio de Janeiro</a></li><li><a href="/salvador/">Salvador</a></li><li><a href="/sao-luis/">São Luís</a></li><li><a href="/sao-paulo/">São Paulo</a></li><li><a href="/teresina/">Teresina</a></li><li><a href="/vitoria/">Vitória</a></li></ul>
+        </div>
+        <div class="m-col m-atalhos">
+          <p class="m-rot">Para decidir</p>
+          <a href="/brasilia/?morar=1"><b>Onde eu poderia morar melhor?</b><span>Com a sua renda e o local de trabalho (comece por Brasília ou escolha a capital)</span></a>
+          
+          <a href="/metodologia/"><b>Como calculamos as notas</b><span>Fontes oficiais e o que os números não mostram</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="m-link" href="/comparar/">Comparar</a>
+    <a class="m-link" href="/esse-aluguel-vale/">Esse aluguel vale?</a>
+    <a class="m-link" href="/falar-com-corretor/">Falar com corretor</a>
+    <span class="m-sep" aria-hidden="true"></span>
+    <a class="m-link" href="/contato/">Ajuda</a>
+    <a class="m-link m-pro" href="/para-corretores/">Sou corretor</a>
+    <a class="m-entrar ativo" href="/conta/" id="m-entrar">Entrar</a>
+  </nav>
+</header>
+<script>
+// menu: abre/fecha o "Bairros" e o menu do celular; fecha com Esc ou clique fora. "Entrar" vira "Minha área" com sessão do Pro.
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('menu'),d=n.querySelector('.m-drop > button'),p=document.getElementById('m-bairros');
+function drop(v){d.setAttribute('aria-expanded',v);p.classList.toggle('aberto',v)}
+function menu(v){b.setAttribute('aria-expanded',v);n.classList.toggle('aberto',v);document.body.classList.toggle('menu-aberto',v);if(!v)drop(false)}
+b.onclick=function(){menu(b.getAttribute('aria-expanded')!=='true')};
+d.onclick=function(e){e.stopPropagation();drop(d.getAttribute('aria-expanded')!=='true')};
+document.addEventListener('click',function(e){if(!e.target.closest('.m-drop'))drop(false);if(!e.target.closest('.topo'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(d.getAttribute('aria-expanded')==='true'){drop(false);d.focus()}else menu(false)}});
+try{if(localStorage.getItem('bi_token'))document.getElementById('m-entrar').textContent='Minha área'}catch(e){}})();
+</script>
+
+<main class="pagina conta">
+  <section id="c-login" class="c-caixa c-entrar">
+    <span class="selo">Bairro Ideal Pro</span>
+    <h1>Entrar</h1>
+    <p class="lead">Sem senha: enviamos um código para o seu e-mail. Na primeira vez, a conta é criada na hora.</p>
+    <form id="f-email" class="c-form">
+      <label>E-mail <input id="c-email" type="text" inputmode="email" required autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="voce@exemplo.com"></label>
+      <button class="btn" type="submit">Receber código</button>
+    </form>
+    <form id="f-codigo" class="c-form" hidden>
+      <label>Código de 6 dígitos <input id="c-codigo" inputmode="numeric" autocomplete="one-time-code" maxlength="6" required></label>
+      <button class="btn" type="submit">Entrar</button> <button class="link" type="button" id="c-voltar">usar outro e-mail</button>
+    </form>
+    <p id="m-entrar" class="c-msg"></p>
+    <p class="nota">Ao entrar, você concorda com os <a href="/termos/">termos de uso</a> e a <a href="/privacidade/">política de privacidade</a>. Ainda não conhece? <a href="/para-corretores/">Veja o que o Pro faz</a>.</p>
+  </section>
+
+  <div id="c-painel" hidden>
+    <div class="c-topo"><h1>Minha área</h1><p class="nota"><span id="c-quem"></span> · <button class="link" type="button" id="c-sair">sair</button></p></div>
+
+    <section class="c-caixa">
+      <h2>Plano</h2>
+      <p id="c-estado"></p>
+      <button class="btn" type="button" id="c-teste" hidden></button>
+      <div id="c-periodos" class="c-periodos"></div>
+      
+      <p id="m-plano" class="c-msg"></p>
+    </section>
+
+    <section class="c-caixa" id="contatos">
+      <h2>Pedidos de contato</h2>
+      <p class="nota">Pessoas que querem alugar ou comprar e autorizaram o envio dos dados a você (cada pedido vai a até 3 corretores e some em 30 dias). Use os dados só para atender o pedido; se a pessoa pedir, apague o contato dela.</p>
+      <div id="c-pedidos"></div>
+    </section>
+
+    <section class="c-caixa" id="imoveis">
+      <div class="c-topo-sec"><h2>Meus imóveis</h2><button class="btn sec" type="button" id="im-novo">＋ Cadastrar imóvel</button></div>
+      <p class="nota">Os imóveis ativos aparecem na página do bairro, com o seu contato e o preço comparado à estimativa da região, e podem ir nos seus relatórios. Somem das páginas se o Pro vencer.</p>
+      <form id="f-imovel" class="c-form c-grade" hidden>
+        <input type="hidden" id="i-id">
+        <label class="largo">Título <input id="i-titulo" maxlength="100" required placeholder="Ex.: Apartamento de 2 quartos perto do metrô"></label>
+        <label>Finalidade <select id="i-finalidade"><option>Aluguel</option><option>Venda</option></select></label>
+        <label>Tipo <select id="i-tipo"><option>Apartamento</option><option>Casa</option><option>Casa em condomínio</option><option>Kitnet ou studio</option><option>Cobertura</option><option>Terreno</option><option>Sala comercial</option><option>Loja</option></select></label>
+        <label>Capital <select id="i-capital" required></select></label>
+        <label>Bairro <select id="i-regiao" required disabled></select></label>
+        <label><span id="i-preco-rot">Aluguel por mês (R$)</span> <input id="i-preco" inputmode="numeric" required></label>
+        <label>Área (m²) <input id="i-area" inputmode="numeric" required></label>
+        <label>Condomínio (R$/mês) <input id="i-condominio" inputmode="numeric"></label>
+        <label>IPTU (R$/mês) <input id="i-iptu" inputmode="numeric"></label>
+        <label>Quartos <input id="i-quartos" inputmode="numeric" maxlength="2"></label>
+        <label>Banheiros <input id="i-banheiros" inputmode="numeric" maxlength="2"></label>
+        <label>Vagas <input id="i-vagas" inputmode="numeric" maxlength="2"></label>
+        <label>Seu código (opcional) <input id="i-codigo" maxlength="30"></label>
+        <label class="largo">Descrição <textarea id="i-descricao" maxlength="2000" rows="4"></textarea></label>
+        <div class="largo c-checks"><label class="c-check"><input type="checkbox" id="i-mobiliado"> Mobiliado</label><label class="c-check"><input type="checkbox" id="i-aceita_pet"> Aceita pet</label><label class="c-check"><input type="checkbox" id="i-ativo" checked> Ativo (aparece no site)</label></div>
+        <div class="largo"><span class="c-rot">Fotos (até 8; a primeira é a capa)</span>
+          <div id="i-fotos" class="i-fotos"></div>
+          <input type="file" id="i-arquivos" accept="image/jpeg,image/png,image/webp" multiple>
+          <p class="nota">Reduzimos as fotos no seu aparelho antes de enviar. Use só fotos suas ou com autorização do proprietário.</p></div>
+        <div class="largo cta"><button class="btn" type="submit">Salvar imóvel</button><button class="btn sec" type="button" id="i-cancelar">Cancelar</button></div>
+      </form>
+      <p id="m-imovel" class="c-msg"></p>
+      <div id="c-imoveis"></div>
+    </section>
+
+    <section class="c-caixa">
+      <h2>Novo relatório para cliente</h2>
+      <p class="nota" id="r-bloqueio" hidden>Ative o teste grátis ou um período acima para criar relatórios.</p>
+      <form id="f-rel" class="c-form">
+        <label>Título <input id="r-titulo" maxlength="100" placeholder="Ex.: Três opções perto do seu trabalho"></label>
+        <label>Cliente (opcional) <input id="r-cliente" maxlength="80" placeholder="Ex.: Família Souza"></label>
+        <div><span class="c-rot">Bairros (até 3)</span><div id="r-locais"></div></div>
+        <div id="r-imoveis-caixa" hidden><span class="c-rot">Seus imóveis neste relatório (até 6, opcional)</span><div id="r-imoveis" class="c-caps"></div></div>
+        <label>Recado para o cliente (opcional) <textarea id="r-obs" maxlength="1500" rows="3" placeholder="Ex.: Separei estas regiões porque cabem no orçamento e ficam a até 30 minutos do seu trabalho."></textarea></label>
+        <p class="nota">O link do relatório pode ser aberto por qualquer pessoa que o receber. Não coloque CPF, renda ou endereço do cliente.</p>
+        <div class="cta"><button class="btn" type="submit">Criar e copiar link</button><button class="btn sec" type="button" id="r-previa">Pré-visualizar</button></div>
+      </form>
+      <p id="m-rel" class="c-msg"></p>
+    </section>
+
+    <section class="c-caixa">
+      <h2>Meus relatórios</h2>
+      <div id="c-lista"></div>
+    </section>
+
+    <section class="c-caixa">
+      <h2>Sua marca nos relatórios</h2>
+      <p class="nota">Aparece no topo de cada relatório enquanto o Pro estiver ativo, com o botão de WhatsApp para o cliente falar com você.</p>
+      <form id="f-marca" class="c-form c-grade">
+        <label>Seu nome <input id="p-nome" maxlength="80" required></label>
+        <label>Imobiliária (opcional) <input id="p-empresa" maxlength="80"></label>
+        <label>CRECI <input id="p-creci" maxlength="30" placeholder="Ex.: CRECI 12345-F"></label>
+        <label>WhatsApp (com DDD) <input id="p-whatsapp" maxlength="20" inputmode="tel" placeholder="(61) 99999-0000"></label>
+        <label>E-mail de contato <input id="p-email_contato" type="email" maxlength="120"></label>
+        <label>Site (https://…) <input id="p-site" type="url" maxlength="160" pattern="https://.*"></label>
+        <label>Cor da marca <input id="p-cor" type="color" value="#0b6b56"></label>
+        <div class="largo"><span class="c-rot">Capitais em que você atende (até 3)</span><div class="c-caps" id="p-capitais"></div></div>
+        <label class="largo c-check"><input type="checkbox" id="p-recebe_contatos"> Quero receber pedidos de contato de quem procura imóvel nessas capitais</label>
+        <label class="largo">Apresentação curta <textarea id="p-apresentacao" maxlength="300" rows="2" placeholder="Ex.: Ajudo famílias a encontrar o bairro certo em Brasília há 10 anos."></textarea></label>
+        <div class="largo"><button class="btn" type="submit">Salvar marca</button></div>
+      </form>
+      <p id="m-marca" class="c-msg"></p>
+    </section>
+
+    <p class="nota c-rodape"><a href="/termos/">Termos</a> · <a href="/privacidade/">Privacidade</a> · <a href="/contato/?assunto=pro">Suporte</a> · <button class="link perigo" type="button" id="c-excluir">Excluir minha conta e meus dados</button></p>
+  </div>
+</main>
+<script>window.CAPITAIS = [{"nome": "Aracaju", "slug": "aracaju"}, {"nome": "Belo Horizonte", "slug": "belo-horizonte"}, {"nome": "Bel\u00e9m", "slug": "belem"}, {"nome": "Boa Vista", "slug": "boa-vista"}, {"nome": "Bras\u00edlia", "slug": "brasilia"}, {"nome": "Campo Grande", "slug": "campo-grande"}, {"nome": "Cuiab\u00e1", "slug": "cuiaba"}, {"nome": "Curitiba", "slug": "curitiba"}, {"nome": "Florian\u00f3polis", "slug": "florianopolis"}, {"nome": "Fortaleza", "slug": "fortaleza"}, {"nome": "Goi\u00e2nia", "slug": "goiania"}, {"nome": "Jo\u00e3o Pessoa", "slug": "joao-pessoa"}, {"nome": "Macap\u00e1", "slug": "macapa"}, {"nome": "Macei\u00f3", "slug": "maceio"}, {"nome": "Manaus", "slug": "manaus"}, {"nome": "Natal", "slug": "natal"}, {"nome": "Palmas", "slug": "palmas"}, {"nome": "Porto Alegre", "slug": "porto-alegre"}, {"nome": "Porto Velho", "slug": "porto-velho"}, {"nome": "Recife", "slug": "recife"}, {"nome": "Rio Branco", "slug": "rio-branco"}, {"nome": "Rio de Janeiro", "slug": "rio-de-janeiro"}, {"nome": "Salvador", "slug": "salvador"}, {"nome": "S\u00e3o Lu\u00eds", "slug": "sao-luis"}, {"nome": "S\u00e3o Paulo", "slug": "sao-paulo"}, {"nome": "Teresina", "slug": "teresina"}, {"nome": "Vit\u00f3ria", "slug": "vitoria"}];</script>
+
+
+<footer class="rodape">
+  <p>Dados oficiais: IBGE (Censo 2022), INEP (Censo Escolar 2024 e IDEB 2023), DataSUS (CNES), Receita Federal (CNPJ), SSP-DF, ANP e FipeZap; parques e lazer do OpenStreetMap. Mapa-base © <a href="https://openfreemap.org">OpenFreeMap</a> e © <a href="https://www.openstreetmap.org/copyright">colaboradores do OpenStreetMap</a>.</p>
+  <p>© 2026 Bairro Ideal, um projeto Saigg Digital · <a href="/metodologia/">Metodologia e limites</a> · <a href="/esse-aluguel-vale/">Esse aluguel vale?</a> · <a href="/falar-com-corretor/">Falar com um corretor</a> · <a href="/para-corretores/">Bairro Ideal Pro</a> · <a href="/conta/">Minha área</a> · <a href="/termos/">Termos</a> · <a href="/privacidade/">Privacidade</a> · <a href="/contato/">Contato e suporte</a></p>
+</footer>
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+<script src="/static/imoveis.js?v=f4cea07b" defer></script><script src="/static/conta.js?v=074ffb47" defer></script>
+</body>
+</html>

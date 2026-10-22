@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Florianópolis · Bairro Ideal</title>
+<meta name="description" content="Mapa de Florianópolis com notas de 87 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/florianopolis/">
+<meta property="og:title" content="Melhores bairros para morar em Florianópolis · Bairro Ideal">
+<meta property="og:description" content="Mapa de Florianópolis com notas de 87 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/florianopolis/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=f0c95426">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+
+
+
+
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mb-abrir" d="M4 7h16M4 12h16M4 17h16"/><path class="mb-fechar" d="M6 6l12 12M18 6 6 18"/></svg><span>Menu</span></button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="m-drop">
+      <button type="button" class="m-link ativo" aria-expanded="false" aria-controls="m-bairros">Bairros de Florianópolis <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="m-painel" id="m-bairros">
+        <div class="m-col">
+          <p class="m-rot">Escolha a capital</p>
+          <ul class="m-caps"><li><a href="/aracaju/">Aracaju</a></li><li><a href="/belo-horizonte/">Belo Horizonte</a></li><li><a href="/belem/">Belém</a></li><li><a href="/boa-vista/">Boa Vista</a></li><li><a href="/brasilia/">Brasília</a></li><li><a href="/campo-grande/">Campo Grande</a></li><li><a href="/cuiaba/">Cuiabá</a></li><li><a href="/curitiba/">Curitiba</a></li><li><a href="/florianopolis/" aria-current="page">Florianópolis</a></li><li><a href="/fortaleza/">Fortaleza</a></li><li><a href="/goiania/">Goiânia</a></li><li><a href="/joao-pessoa/">João Pessoa</a></li><li><a href="/macapa/">Macapá</a></li><li><a href="/maceio/">Maceió</a></li><li><a href="/manaus/">Manaus</a></li><li><a href="/natal/">Natal</a></li><li><a href="/palmas/">Palmas</a></li><li><a href="/porto-alegre/">Porto Alegre</a></li><li><a href="/porto-velho/">Porto Velho</a></li><li><a href="/recife/">Recife</a></li><li><a href="/rio-branco/">Rio Branco</a></li><li><a href="/rio-de-janeiro/">Rio de Janeiro</a></li><li><a href="/salvador/">Salvador</a></li><li><a href="/sao-luis/">São Luís</a></li><li><a href="/sao-paulo/">São Paulo</a></li><li><a href="/teresina/">Teresina</a></li><li><a href="/vitoria/">Vitória</a></li></ul>
+        </div>
+        <div class="m-col m-atalhos">
+          <p class="m-rot">Para decidir</p>
+          <a href="/florianopolis/?morar=1"><b>Onde eu poderia morar melhor?</b><span>Com a sua renda e o local de trabalho</span></a>
+          <a href="/florianopolis/melhores-bairros-para-familias/"><b>Melhores bairros de Florianópolis</b><span>Para famílias, aposentados, quem não tem carro e mais baratos</span></a>
+          <a href="/metodologia/"><b>Como calculamos as notas</b><span>Fontes oficiais e o que os números não mostram</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="m-link" href="/comparar/">Comparar</a>
+    <a class="m-link" href="/esse-aluguel-vale/">Esse aluguel vale?</a>
+    <a class="m-link" href="/falar-com-corretor/">Falar com corretor</a>
+    <span class="m-sep" aria-hidden="true"></span>
+    <a class="m-link" href="/contato/">Ajuda</a>
+    <a class="m-link m-pro" href="/para-corretores/">Sou corretor</a>
+    <a class="m-entrar" href="/conta/" id="m-entrar">Entrar</a>
+  </nav>
+</header>
+<script>
+// menu: abre/fecha o "Bairros" e o menu do celular; fecha com Esc ou clique fora. "Entrar" vira "Minha área" com sessão do Pro.
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('menu'),d=n.querySelector('.m-drop > button'),p=document.getElementById('m-bairros');
+function drop(v){d.setAttribute('aria-expanded',v);p.classList.toggle('aberto',v)}
+function menu(v){b.setAttribute('aria-expanded',v);n.classList.toggle('aberto',v);document.body.classList.toggle('menu-aberto',v);if(!v)drop(false)}
+b.onclick=function(){menu(b.getAttribute('aria-expanded')!=='true')};
+d.onclick=function(e){e.stopPropagation();drop(d.getAttribute('aria-expanded')!=='true')};
+document.addEventListener('click',function(e){if(!e.target.closest('.m-drop'))drop(false);if(!e.target.closest('.topo'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(d.getAttribute('aria-expanded')==='true'){drop(false);d.focus()}else menu(false)}});
+try{if(localStorage.getItem('bi_token'))document.getElementById('m-entrar').textContent='Minha área'}catch(e){}})();
+</script>
+
+<main class="app" data-capital="florianopolis">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis" selected>Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Florianópolis</h1>
+      <p class="sub">87 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes guias" open>
+      <summary>Guias de Florianópolis</summary>
+      <ul class="lista-guias"><li><a href="/florianopolis/melhores-bairros-para-familias/">Melhores bairros de Florianópolis para famílias com filhos</a></li><li><a href="/florianopolis/melhores-bairros-para-aposentados/">Melhores bairros de Florianópolis para aposentados e idosos</a></li><li><a href="/florianopolis/melhores-bairros-para-quem-nao-tem-carro/">Melhores bairros de Florianópolis para quem não tem carro</a></li><li><a href="/florianopolis/bairros-baratos-e-bons/">Bairros baratos e bons para morar em Florianópolis</a></li>
+        <li><a href="/esse-aluguel-vale/?capital=florianopolis">Esse aluguel vale? Confira um anúncio</a></li></ul>
+    </details>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 87 regiões de Florianópolis (A–Z)</summary>
+      <ul><li><a href="/florianopolis/abraao/" data-id="4205407023">Abraão</a></li><li><a href="/florianopolis/acores/" data-id="4205407138">Açores</a></li><li><a href="/florianopolis/agronomica/" data-id="4205407002">Agronômica</a></li><li><a href="/florianopolis/alto-ribeirao/" data-id="4205407142">Alto Ribeirão</a></li><li><a href="/florianopolis/alto-ribeirao-leste/" data-id="4205407153">Alto Ribeirão Leste</a></li><li><a href="/florianopolis/armacao/" data-id="4205407137">Armação</a></li><li><a href="/florianopolis/autodromo/" data-id="4205407104">Autódromo</a></li><li><a href="/florianopolis/balneario/" data-id="4205407027">Balneário</a></li><li><a href="/florianopolis/barra-da-lagoa/" data-id="4205407110">Barra da Lagoa</a></li><li><a href="/florianopolis/barra-do-sambaqui/" data-id="4205407152">Barra do Sambaqui</a></li><li><a href="/florianopolis/base-aerea/" data-id="4205407107">Base Aérea</a></li><li><a href="/florianopolis/bom-abrigo/" data-id="4205407089">Bom Abrigo</a></li><li><a href="/florianopolis/cachoeira-do-bom-jesus/" data-id="4205407090">Cachoeira do Bom Jesus</a></li><li><a href="/florianopolis/cachoeira-do-bom-jesus-leste/" data-id="4205407114">Cachoeira do Bom Jesus Leste</a></li><li><a href="/florianopolis/cacupe/" data-id="4205407150">Cacupé</a></li><li><a href="/florianopolis/caiacanga/" data-id="4205407145">Caiacanga</a></li><li><a href="/florianopolis/caieira/" data-id="4205407148">Caieira</a></li><li><a href="/florianopolis/campeche-central/" data-id="4205407102">Campeche Central</a></li><li><a href="/florianopolis/campeche-leste/" data-id="4205407103">Campeche Leste</a></li><li><a href="/florianopolis/campeche-norte/" data-id="4205407115">Campeche Norte</a></li><li><a href="/florianopolis/campeche-sul/" data-id="4205407117">Campeche Sul</a></li><li><a href="/florianopolis/canasvieiras/" data-id="4205407119">Canasvieiras</a></li><li><a href="/florianopolis/canto/" data-id="4205407028">Canto</a></li><li><a href="/florianopolis/canto-da-lagoa/" data-id="4205407131">Canto da Lagoa</a></li><li><a href="/florianopolis/canto-do-lamim/" data-id="4205407094">Canto do Lamim</a></li><li><a href="/florianopolis/canto-dos-aracas/" data-id="4205407130">Canto dos Araçás</a></li><li><a href="/florianopolis/capivari/" data-id="4205407128">Capivari</a></li><li><a href="/florianopolis/capoeiras/" data-id="4205407029">Capoeiras</a></li><li><a href="/florianopolis/carianos/" data-id="4205407141">Carianos</a></li><li><a href="/florianopolis/centro/" data-id="4205407001">Centro</a></li><li><a href="/florianopolis/coloninha/" data-id="4205407031">Coloninha</a></li><li><a href="/florianopolis/coqueiros/" data-id="4205407020">Coqueiros</a></li><li><a href="/florianopolis/corrego-grande/" data-id="4205407009">Córrego Grande</a></li><li><a href="/florianopolis/costeira-do-pirajubae/" data-id="4205407011">Costeira do Pirajubaé</a></li><li><a href="/florianopolis/costeira-do-ribeirao/" data-id="4205407144">Costeira do Ribeirão</a></li><li><a href="/florianopolis/daniela/" data-id="4205407123">Daniela</a></li><li><a href="/florianopolis/dunas-da-lagoa/" data-id="4205407133">Dunas da Lagoa</a></li><li><a href="/florianopolis/estreito/" data-id="4205407018">Estreito</a></li><li><a href="/florianopolis/forte/" data-id="4205407122">Forte</a></li><li><a href="/florianopolis/ingleses-centro/" data-id="4205407124">Ingleses Centro</a></li><li><a href="/florianopolis/ingleses-norte/" data-id="4205407125">Ingleses Norte</a></li><li><a href="/florianopolis/ingleses-sul/" data-id="4205407126">Ingleses Sul</a></li><li><a href="/florianopolis/itacorubi/" data-id="4205407087">Itacorubi</a></li><li><a href="/florianopolis/itaguacu/" data-id="4205407022">Itaguaçu</a></li><li><a href="/florianopolis/jardim-atlantico/" data-id="4205407026">Jardim Atlântico</a></li><li><a href="/florianopolis/joao-paulo/" data-id="4205407005">João Paulo</a></li><li><a href="/florianopolis/jose-mendes/" data-id="4205407012">José Mendes</a></li><li><a href="/florianopolis/jurere/" data-id="4205407093">Jurerê</a></li><li><a href="/florianopolis/jurere-leste/" data-id="4205407120">Jurere Leste</a></li><li><a href="/florianopolis/jurere-oeste/" data-id="4205407121">Jurere Oeste</a></li><li><a href="/florianopolis/lagoa/" data-id="4205407129">Lagoa</a></li><li><a href="/florianopolis/lagoa-pequena/" data-id="4205407100">Lagoa Pequena</a></li><li><a href="/florianopolis/lagoinha-do-norte/" data-id="4205407113">Lagoinha do Norte</a></li><li><a href="/florianopolis/moenda/" data-id="4205407105">Moenda</a></li><li><a href="/florianopolis/monte-cristo/" data-id="4205407030">Monte Cristo</a></li><li><a href="/florianopolis/monte-verde/" data-id="4205407088">Monte Verde</a></li><li><a href="/florianopolis/morro-das-pedras/" data-id="4205407116">Morro das Pedras</a></li><li><a href="/florianopolis/morro-do-peralta/" data-id="4205407109">Morro do Peralta</a></li><li><a href="/florianopolis/pantanal/" data-id="4205407010">Pantanal</a></li><li><a href="/florianopolis/pantano-do-sul/" data-id="4205407136">Pântano do Sul</a></li><li><a href="/florianopolis/pedrita/" data-id="4205407118">Pedrita</a></li><li><a href="/florianopolis/ponta-das-canas/" data-id="4205407112">Ponta das Canas</a></li><li><a href="/florianopolis/porto-da-lagoa/" data-id="4205407132">Porto da Lagoa</a></li><li><a href="/florianopolis/praia-brava/" data-id="4205407111">Praia Brava</a></li><li><a href="/florianopolis/praia-mole/" data-id="4205407135">Praia Mole</a></li><li><a href="/florianopolis/ratones/" data-id="4205407140">Ratones</a></li><li><a href="/florianopolis/recanto-dos-acores/" data-id="4205407097">Recanto dos Açores</a></li><li><a href="/florianopolis/ressacada/" data-id="4205407106">Ressacada</a></li><li><a href="/florianopolis/retiro/" data-id="4205407134">Retiro</a></li><li><a href="/florianopolis/ribeirao-da-ilha/" data-id="4205407143">Ribeirão da Ilha</a></li><li><a href="/florianopolis/rio-das-pacas/" data-id="4205407139">Rio das Pacas</a></li><li><a href="/florianopolis/rio-tavares-central/" data-id="4205407101">Rio Tavares Central</a></li><li><a href="/florianopolis/rio-tavares-do-norte/" data-id="4205407099">Rio Tavares do Norte</a></li><li><a href="/florianopolis/rio-vermelho/" data-id="4205407098">Rio Vermelho</a></li><li><a href="/florianopolis/saco-dos-limoes/" data-id="4205407083">Saco dos Limões</a></li><li><a href="/florianopolis/saco-grande/" data-id="4205407006">Saco Grande</a></li><li><a href="/florianopolis/sambaqui/" data-id="4205407151">Sambaqui</a></li><li><a href="/florianopolis/santa-monica/" data-id="4205407016">Santa Mônica</a></li><li><a href="/florianopolis/santinho/" data-id="4205407127">Santinho</a></li><li><a href="/florianopolis/santo-antonio/" data-id="4205407149">Santo Antônio</a></li><li><a href="/florianopolis/tapera/" data-id="4205407146">Tapera</a></li><li><a href="/florianopolis/tapera-da-base/" data-id="4205407147">Tapera da Base</a></li><li><a href="/florianopolis/trindade/" data-id="4205407086">Trindade</a></li><li><a href="/florianopolis/vargem-de-fora/" data-id="4205407095">Vargem de Fora</a></li><li><a href="/florianopolis/vargem-do-bom-jesus/" data-id="4205407092">Vargem do Bom Jesus</a></li><li><a href="/florianopolis/vargem-grande/" data-id="4205407091">Vargem Grande</a></li><li><a href="/florianopolis/vargem-pequena/" data-id="4205407096">Vargem Pequena</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Florianópolis"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 61.8, "bbox": [-48.6063, -27.8195, -48.3752, -27.3875], "centro": [-48.4954, -27.5705], "fipezap_ref": "2026-09", "melhores": [{"nome": "Centro", "nota": 8.5}, {"nome": "Canto", "nota": 7.8}, {"nome": "Trindade", "nota": 7.7}], "nivel": "bairros", "nome": "Florian\u00f3polis", "slug": "florianopolis", "uf": "SC", "unidades": 87, "venda_m2": 13607};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=a00fadf5"></script>
+
+</body>
+</html>

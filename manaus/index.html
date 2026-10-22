@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Manaus · Bairro Ideal</title>
+<meta name="description" content="Mapa de Manaus com notas de 63 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/manaus/">
+<meta property="og:title" content="Melhores bairros para morar em Manaus · Bairro Ideal">
+<meta property="og:description" content="Mapa de Manaus com notas de 63 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/manaus/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=f0c95426">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+
+
+
+
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mb-abrir" d="M4 7h16M4 12h16M4 17h16"/><path class="mb-fechar" d="M6 6l12 12M18 6 6 18"/></svg><span>Menu</span></button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="m-drop">
+      <button type="button" class="m-link ativo" aria-expanded="false" aria-controls="m-bairros">Bairros de Manaus <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="m-painel" id="m-bairros">
+        <div class="m-col">
+          <p class="m-rot">Escolha a capital</p>
+          <ul class="m-caps"><li><a href="/aracaju/">Aracaju</a></li><li><a href="/belo-horizonte/">Belo Horizonte</a></li><li><a href="/belem/">Belém</a></li><li><a href="/boa-vista/">Boa Vista</a></li><li><a href="/brasilia/">Brasília</a></li><li><a href="/campo-grande/">Campo Grande</a></li><li><a href="/cuiaba/">Cuiabá</a></li><li><a href="/curitiba/">Curitiba</a></li><li><a href="/florianopolis/">Florianópolis</a></li><li><a href="/fortaleza/">Fortaleza</a></li><li><a href="/goiania/">Goiânia</a></li><li><a href="/joao-pessoa/">João Pessoa</a></li><li><a href="/macapa/">Macapá</a></li><li><a href="/maceio/">Maceió</a></li><li><a href="/manaus/" aria-current="page">Manaus</a></li><li><a href="/natal/">Natal</a></li><li><a href="/palmas/">Palmas</a></li><li><a href="/porto-alegre/">Porto Alegre</a></li><li><a href="/porto-velho/">Porto Velho</a></li><li><a href="/recife/">Recife</a></li><li><a href="/rio-branco/">Rio Branco</a></li><li><a href="/rio-de-janeiro/">Rio de Janeiro</a></li><li><a href="/salvador/">Salvador</a></li><li><a href="/sao-luis/">São Luís</a></li><li><a href="/sao-paulo/">São Paulo</a></li><li><a href="/teresina/">Teresina</a></li><li><a href="/vitoria/">Vitória</a></li></ul>
+        </div>
+        <div class="m-col m-atalhos">
+          <p class="m-rot">Para decidir</p>
+          <a href="/manaus/?morar=1"><b>Onde eu poderia morar melhor?</b><span>Com a sua renda e o local de trabalho</span></a>
+          <a href="/manaus/melhores-bairros-para-familias/"><b>Melhores bairros de Manaus</b><span>Para famílias, aposentados, quem não tem carro e mais baratos</span></a>
+          <a href="/metodologia/"><b>Como calculamos as notas</b><span>Fontes oficiais e o que os números não mostram</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="m-link" href="/comparar/">Comparar</a>
+    <a class="m-link" href="/esse-aluguel-vale/">Esse aluguel vale?</a>
+    <a class="m-link" href="/falar-com-corretor/">Falar com corretor</a>
+    <span class="m-sep" aria-hidden="true"></span>
+    <a class="m-link" href="/contato/">Ajuda</a>
+    <a class="m-link m-pro" href="/para-corretores/">Sou corretor</a>
+    <a class="m-entrar" href="/conta/" id="m-entrar">Entrar</a>
+  </nav>
+</header>
+<script>
+// menu: abre/fecha o "Bairros" e o menu do celular; fecha com Esc ou clique fora. "Entrar" vira "Minha área" com sessão do Pro.
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('menu'),d=n.querySelector('.m-drop > button'),p=document.getElementById('m-bairros');
+function drop(v){d.setAttribute('aria-expanded',v);p.classList.toggle('aberto',v)}
+function menu(v){b.setAttribute('aria-expanded',v);n.classList.toggle('aberto',v);document.body.classList.toggle('menu-aberto',v);if(!v)drop(false)}
+b.onclick=function(){menu(b.getAttribute('aria-expanded')!=='true')};
+d.onclick=function(e){e.stopPropagation();drop(d.getAttribute('aria-expanded')!=='true')};
+document.addEventListener('click',function(e){if(!e.target.closest('.m-drop'))drop(false);if(!e.target.closest('.topo'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(d.getAttribute('aria-expanded')==='true'){drop(false);d.focus()}else menu(false)}});
+try{if(localStorage.getItem('bi_token'))document.getElementById('m-entrar').textContent='Minha área'}catch(e){}})();
+</script>
+
+<main class="app" data-capital="manaus">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus" selected>Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Manaus</h1>
+      <p class="sub">63 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes guias" open>
+      <summary>Guias de Manaus</summary>
+      <ul class="lista-guias"><li><a href="/manaus/melhores-bairros-para-familias/">Melhores bairros de Manaus para famílias com filhos</a></li><li><a href="/manaus/melhores-bairros-para-aposentados/">Melhores bairros de Manaus para aposentados e idosos</a></li><li><a href="/manaus/melhores-bairros-para-quem-nao-tem-carro/">Melhores bairros de Manaus para quem não tem carro</a></li><li><a href="/manaus/bairros-baratos-e-bons/">Bairros baratos e bons para morar em Manaus</a></li>
+        <li><a href="/esse-aluguel-vale/?capital=manaus">Esse aluguel vale? Confira um anúncio</a></li></ul>
+    </details>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 63 regiões de Manaus (A–Z)</summary>
+      <ul><li><a href="/manaus/adrianopolis/" data-id="1302603040">Adrianópolis</a></li><li><a href="/manaus/aleixo/" data-id="1302603039">Aleixo</a></li><li><a href="/manaus/alvorada/" data-id="1302603016">Alvorada</a></li><li><a href="/manaus/armando-mendes/" data-id="1302603052">Armando Mendes</a></li><li><a href="/manaus/betania/" data-id="1302603027">Betânia</a></li><li><a href="/manaus/cachoeirinha/" data-id="1302603005">Cachoeirinha</a></li><li><a href="/manaus/centro/" data-id="1302603001">Centro</a></li><li><a href="/manaus/chapada/" data-id="1302603043">Chapada</a></li><li><a href="/manaus/cidade-de-deus/" data-id="1302603059">Cidade de Deus</a></li><li><a href="/manaus/cidade-nova/" data-id="1302603049">Cidade Nova</a></li><li><a href="/manaus/colonia-antonio-aleixo/" data-id="1302603034">Colônia Antônio Aleixo</a></li><li><a href="/manaus/colonia-oliveira-machado/" data-id="1302603028">Colônia Oliveira Machado</a></li><li><a href="/manaus/colonia-santo-antonio/" data-id="1302603044">Colônia Santo Antônio</a></li><li><a href="/manaus/colonia-terra-nova/" data-id="1302603046">Colônia Terra Nova</a></li><li><a href="/manaus/compensa/" data-id="1302603010">Compensa</a></li><li><a href="/manaus/coroado/" data-id="1302603023">Coroado</a></li><li><a href="/manaus/crespo/" data-id="1302603030">Crespo</a></li><li><a href="/manaus/da-paz/" data-id="1302603018">Da Paz</a></li><li><a href="/manaus/distrito-industrial-i/" data-id="1302603032">Distrito Industrial I</a></li><li><a href="/manaus/distrito-industrial-ii/" data-id="1302603057">Distrito Industrial II</a></li><li><a href="/manaus/dom-pedro-i/" data-id="1302603036">Dom Pedro I</a></li><li><a href="/manaus/educandos/" data-id="1302603024">Educandos</a></li><li><a href="/manaus/flores/" data-id="1302603037">Flores</a></li><li><a href="/manaus/gilberto-mestrinho/" data-id="1302603062">Gilberto Mestrinho</a></li><li><a href="/manaus/gloria/" data-id="1302603007">Glória</a></li><li><a href="/manaus/japiim/" data-id="1302603022">Japiim</a></li><li><a href="/manaus/jorge-teixeira/" data-id="1302603056">Jorge Teixeira</a></li><li><a href="/manaus/lago-azul/" data-id="1302603063">Lago Azul</a></li><li><a href="/manaus/lirio-do-vale/" data-id="1302603014">Lírio do Vale</a></li><li><a href="/manaus/mauazinho/" data-id="1302603033">Mauazinho</a></li><li><a href="/manaus/monte-das-oliveiras/" data-id="1302603048">Monte das Oliveiras</a></li><li><a href="/manaus/morro-da-liberdade/" data-id="1302603026">Morro da Liberdade</a></li><li><a href="/manaus/nossa-senhora-aparecida/" data-id="1302603002">Nossa Senhora Aparecida</a></li><li><a href="/manaus/nossa-senhora-das-gracas/" data-id="1302603041">Nossa Senhora das Graças</a></li><li><a href="/manaus/nova-cidade/" data-id="1302603060">Nova Cidade</a></li><li><a href="/manaus/nova-esperanca/" data-id="1302603013">Nova Esperança</a></li><li><a href="/manaus/novo-aleixo/" data-id="1302603058">Novo Aleixo</a></li><li><a href="/manaus/novo-israel/" data-id="1302603045">Novo Israel</a></li><li><a href="/manaus/parque-10-de-novembro/" data-id="1302603038">Parque 10 de Novembro</a></li><li><a href="/manaus/petropolis/" data-id="1302603021">Petrópolis</a></li><li><a href="/manaus/planalto/" data-id="1302603015">Planalto</a></li><li><a href="/manaus/ponta-negra/" data-id="1302603050">Ponta Negra</a></li><li><a href="/manaus/praca-14-de-janeiro/" data-id="1302603004">Praça 14 de Janeiro</a></li><li><a href="/manaus/presidente-vargas/" data-id="1302603003">Presidente Vargas</a></li><li><a href="/manaus/puraquequara/" data-id="1302603035">Puraquequara</a></li><li><a href="/manaus/raiz/" data-id="1302603019">Raiz</a></li><li><a href="/manaus/redencao/" data-id="1302603017">Redenção</a></li><li><a href="/manaus/santa-etelvina/" data-id="1302603047">Santa Etelvina</a></li><li><a href="/manaus/santa-luzia/" data-id="1302603025">Santa Luzia</a></li><li><a href="/manaus/santo-agostinho/" data-id="1302603012">Santo Agostinho</a></li><li><a href="/manaus/santo-antonio/" data-id="1302603008">Santo Antônio</a></li><li><a href="/manaus/sao-francisco/" data-id="1302603020">São Francisco</a></li><li><a href="/manaus/sao-geraldo/" data-id="1302603042">São Geraldo</a></li><li><a href="/manaus/sao-jorge/" data-id="1302603011">São Jorge</a></li><li><a href="/manaus/sao-jose-operario/" data-id="1302603054">São José Operário</a></li><li><a href="/manaus/sao-lazaro/" data-id="1302603029">São Lázaro</a></li><li><a href="/manaus/sao-raimundo/" data-id="1302603006">São Raimundo</a></li><li><a href="/manaus/tancredo-neves/" data-id="1302603055">Tancredo Neves</a></li><li><a href="/manaus/taruma/" data-id="1302603051">Tarumã</a></li><li><a href="/manaus/taruma-acu/" data-id="1302603061">Tarumã-Açu</a></li><li><a href="/manaus/vila-buriti/" data-id="1302603031">Vila Buriti</a></li><li><a href="/manaus/vila-da-prata/" data-id="1302603009">Vila da Prata</a></li><li><a href="/manaus/zumbi-dos-palmares/" data-id="1302603053">Zumbi dos Palmares</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Manaus"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 53.0, "bbox": [-60.1163, -3.1631, -59.8158, -2.914], "centro": [-59.9817, -3.0437], "fipezap_ref": "2026-09", "melhores": [{"nome": "Centro", "nota": 8.1}, {"nome": "Dom Pedro I", "nota": 7.5}, {"nome": "Cachoeirinha", "nota": 7.4}], "nivel": "bairros", "nome": "Manaus", "slug": "manaus", "uf": "AM", "unidades": 63, "venda_m2": 7860};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=a00fadf5"></script>
+
+</body>
+</html>

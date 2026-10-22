@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Porto Velho · Bairro Ideal</title>
+<meta name="description" content="Mapa de Porto Velho com notas de 57 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/porto-velho/">
+<meta property="og:title" content="Melhores bairros para morar em Porto Velho · Bairro Ideal">
+<meta property="og:description" content="Mapa de Porto Velho com notas de 57 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/porto-velho/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=f0c95426">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+
+
+
+
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mb-abrir" d="M4 7h16M4 12h16M4 17h16"/><path class="mb-fechar" d="M6 6l12 12M18 6 6 18"/></svg><span>Menu</span></button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="m-drop">
+      <button type="button" class="m-link ativo" aria-expanded="false" aria-controls="m-bairros">Bairros de Porto Velho <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="m-painel" id="m-bairros">
+        <div class="m-col">
+          <p class="m-rot">Escolha a capital</p>
+          <ul class="m-caps"><li><a href="/aracaju/">Aracaju</a></li><li><a href="/belo-horizonte/">Belo Horizonte</a></li><li><a href="/belem/">Belém</a></li><li><a href="/boa-vista/">Boa Vista</a></li><li><a href="/brasilia/">Brasília</a></li><li><a href="/campo-grande/">Campo Grande</a></li><li><a href="/cuiaba/">Cuiabá</a></li><li><a href="/curitiba/">Curitiba</a></li><li><a href="/florianopolis/">Florianópolis</a></li><li><a href="/fortaleza/">Fortaleza</a></li><li><a href="/goiania/">Goiânia</a></li><li><a href="/joao-pessoa/">João Pessoa</a></li><li><a href="/macapa/">Macapá</a></li><li><a href="/maceio/">Maceió</a></li><li><a href="/manaus/">Manaus</a></li><li><a href="/natal/">Natal</a></li><li><a href="/palmas/">Palmas</a></li><li><a href="/porto-alegre/">Porto Alegre</a></li><li><a href="/porto-velho/" aria-current="page">Porto Velho</a></li><li><a href="/recife/">Recife</a></li><li><a href="/rio-branco/">Rio Branco</a></li><li><a href="/rio-de-janeiro/">Rio de Janeiro</a></li><li><a href="/salvador/">Salvador</a></li><li><a href="/sao-luis/">São Luís</a></li><li><a href="/sao-paulo/">São Paulo</a></li><li><a href="/teresina/">Teresina</a></li><li><a href="/vitoria/">Vitória</a></li></ul>
+        </div>
+        <div class="m-col m-atalhos">
+          <p class="m-rot">Para decidir</p>
+          <a href="/porto-velho/?morar=1"><b>Onde eu poderia morar melhor?</b><span>Com a sua renda e o local de trabalho</span></a>
+          <a href="/porto-velho/melhores-bairros-para-familias/"><b>Melhores bairros de Porto Velho</b><span>Para famílias, aposentados, quem não tem carro e mais baratos</span></a>
+          <a href="/metodologia/"><b>Como calculamos as notas</b><span>Fontes oficiais e o que os números não mostram</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="m-link" href="/comparar/">Comparar</a>
+    <a class="m-link" href="/esse-aluguel-vale/">Esse aluguel vale?</a>
+    <a class="m-link" href="/falar-com-corretor/">Falar com corretor</a>
+    <span class="m-sep" aria-hidden="true"></span>
+    <a class="m-link" href="/contato/">Ajuda</a>
+    <a class="m-link m-pro" href="/para-corretores/">Sou corretor</a>
+    <a class="m-entrar" href="/conta/" id="m-entrar">Entrar</a>
+  </nav>
+</header>
+<script>
+// menu: abre/fecha o "Bairros" e o menu do celular; fecha com Esc ou clique fora. "Entrar" vira "Minha área" com sessão do Pro.
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('menu'),d=n.querySelector('.m-drop > button'),p=document.getElementById('m-bairros');
+function drop(v){d.setAttribute('aria-expanded',v);p.classList.toggle('aberto',v)}
+function menu(v){b.setAttribute('aria-expanded',v);n.classList.toggle('aberto',v);document.body.classList.toggle('menu-aberto',v);if(!v)drop(false)}
+b.onclick=function(){menu(b.getAttribute('aria-expanded')!=='true')};
+d.onclick=function(e){e.stopPropagation();drop(d.getAttribute('aria-expanded')!=='true')};
+document.addEventListener('click',function(e){if(!e.target.closest('.m-drop'))drop(false);if(!e.target.closest('.topo'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(d.getAttribute('aria-expanded')==='true'){drop(false);d.focus()}else menu(false)}});
+try{if(localStorage.getItem('bi_token'))document.getElementById('m-entrar').textContent='Minha área'}catch(e){}})();
+</script>
+
+<main class="app" data-capital="porto-velho">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba">Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho" selected>Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Porto Velho</h1>
+      <p class="sub">57 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes guias" open>
+      <summary>Guias de Porto Velho</summary>
+      <ul class="lista-guias"><li><a href="/porto-velho/melhores-bairros-para-familias/">Melhores bairros de Porto Velho para famílias com filhos</a></li><li><a href="/porto-velho/melhores-bairros-para-aposentados/">Melhores bairros de Porto Velho para aposentados e idosos</a></li><li><a href="/porto-velho/melhores-bairros-para-quem-nao-tem-carro/">Melhores bairros de Porto Velho para quem não tem carro</a></li>
+        <li><a href="/esse-aluguel-vale/?capital=porto-velho">Esse aluguel vale? Confira um anúncio</a></li></ul>
+    </details>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 57 regiões de Porto Velho (A–Z)</summary>
+      <ul><li><a href="/porto-velho/aeroclube/" data-id="1100205043">Aeroclube</a></li><li><a href="/porto-velho/agenor-m-de-carvalho/" data-id="1100205040">Agenor M. de Carvalho</a></li><li><a href="/porto-velho/aponia/" data-id="1100205061">Aponiã</a></li><li><a href="/porto-velho/areal/" data-id="1100205023">Areal</a></li><li><a href="/porto-velho/areia-branca/" data-id="1100205052">Areia Branca</a></li><li><a href="/porto-velho/arigolandia/" data-id="1100205016">Arigolândia</a></li><li><a href="/porto-velho/baixa-uniao/" data-id="1100205021">Baixa União</a></li><li><a href="/porto-velho/caiari/" data-id="1100205018">Caiari</a></li><li><a href="/porto-velho/caladinho/" data-id="1100205046">Caladinho</a></li><li><a href="/porto-velho/cascalheira/" data-id="1100205053">Cascalheira</a></li><li><a href="/porto-velho/castanheira/" data-id="1100205045">Castanheira</a></li><li><a href="/porto-velho/centro/" data-id="1100205017">Centro</a></li><li><a href="/porto-velho/cidade-do-lobo/" data-id="1100205049">Cidade do Lobo</a></li><li><a href="/porto-velho/cidade-nova/" data-id="1100205063">Cidade Nova</a></li><li><a href="/porto-velho/cohab/" data-id="1100205044">Cohab</a></li><li><a href="/porto-velho/conceicao/" data-id="1100205062">Conceição</a></li><li><a href="/porto-velho/costa-e-silva/" data-id="1100205036">Costa e Silva</a></li><li><a href="/porto-velho/cunia/" data-id="1100205059">Cuniã</a></li><li><a href="/porto-velho/eldorado/" data-id="1100205042">Eldorado</a></li><li><a href="/porto-velho/eletronorte/" data-id="1100205050">Eletronorte</a></li><li><a href="/porto-velho/embratel/" data-id="1100205031">Embratel</a></li><li><a href="/porto-velho/escola-de-policia/" data-id="1100205054">Escola de Polícia</a></li><li><a href="/porto-velho/flodoaldo-pontes-pinto/" data-id="1100205003">Flodoaldo Pontes Pinto</a></li><li><a href="/porto-velho/floresta/" data-id="1100205026">Floresta</a></li><li><a href="/porto-velho/igarape/" data-id="1100205060">Igarapé</a></li><li><a href="/porto-velho/industrial/" data-id="1100205005">Industrial</a></li><li><a href="/porto-velho/juscelino-kubitschek/" data-id="1100205002">Juscelino Kubitschek</a></li><li><a href="/porto-velho/lagoa/" data-id="1100205039">Lagoa</a></li><li><a href="/porto-velho/lagoinha/" data-id="1100205057">Lagoinha</a></li><li><a href="/porto-velho/liberdade/" data-id="1100205008">Liberdade</a></li><li><a href="/porto-velho/mato-grosso/" data-id="1100205012">Mato Grosso</a></li><li><a href="/porto-velho/militar/" data-id="1100205025">Militar</a></li><li><a href="/porto-velho/mocambo/" data-id="1100205020">Mocambo</a></li><li><a href="/porto-velho/nacional/" data-id="1100205038">Nacional</a></li><li><a href="/porto-velho/nossa-senhora-das-gracas/" data-id="1100205011">Nossa Senhora das Graças</a></li><li><a href="/porto-velho/nova-esperanca/" data-id="1100205064">Nova Esperança</a></li><li><a href="/porto-velho/nova-floresta/" data-id="1100205047">Nova Floresta</a></li><li><a href="/porto-velho/nova-porto-velho/" data-id="1100205006">Nova Porto Velho</a></li><li><a href="/porto-velho/novo-horizonte/" data-id="1100205051">Novo Horizonte</a></li><li><a href="/porto-velho/olaria/" data-id="1100205015">Olaria</a></li><li><a href="/porto-velho/panair/" data-id="1100205027">Panair</a></li><li><a href="/porto-velho/pedrinhas/" data-id="1100205030">Pedrinhas</a></li><li><a href="/porto-velho/planalto/" data-id="1100205056">Planalto</a></li><li><a href="/porto-velho/quilometro-um/" data-id="1100205022">Quilômetro Um</a></li><li><a href="/porto-velho/rio-madeira/" data-id="1100205041">Rio Madeira</a></li><li><a href="/porto-velho/roque/" data-id="1100205007">Roque</a></li><li><a href="/porto-velho/santa-barbara/" data-id="1100205019">Santa Bárbara</a></li><li><a href="/porto-velho/sao-cristovao/" data-id="1100205010">São Cristóvão</a></li><li><a href="/porto-velho/sao-joao-bosco/" data-id="1100205009">São João Bosco</a></li><li><a href="/porto-velho/sao-sebastiao/" data-id="1100205037">São Sebastião</a></li><li><a href="/porto-velho/tancredo-neves/" data-id="1100205032">Tancredo Neves</a></li><li><a href="/porto-velho/teixeirao/" data-id="1100205055">Teixeirão</a></li><li><a href="/porto-velho/tiradentes/" data-id="1100205004">Tiradentes</a></li><li><a href="/porto-velho/tres-marias/" data-id="1100205058">Três Marias</a></li><li><a href="/porto-velho/triangulo/" data-id="1100205024">Triângulo</a></li><li><a href="/porto-velho/tucumanzal/" data-id="1100205014">Tucumanzal</a></li><li><a href="/porto-velho/tupi/" data-id="1100205033">Tupi</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Porto Velho"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": null, "bbox": [-63.9274, -8.8187, -63.8328, -8.711], "centro": [-63.8792, -8.7631], "fipezap_ref": null, "melhores": [{"nome": "Olaria", "nota": 7.3}, {"nome": "S\u00e3o Jo\u00e3o Bosco", "nota": 7.1}, {"nome": "Flodoaldo Pontes Pinto", "nota": 6.8}], "nivel": "bairros", "nome": "Porto Velho", "slug": "porto-velho", "uf": "RO", "unidades": 57, "venda_m2": null};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=a00fadf5"></script>
+
+</body>
+</html>

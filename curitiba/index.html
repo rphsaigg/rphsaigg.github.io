@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melhores bairros para morar em Curitiba · Bairro Ideal</title>
+<meta name="description" content="Mapa de Curitiba com notas de 75 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<link rel="canonical" href="https://bairroideal.com.br/curitiba/">
+<meta property="og:title" content="Melhores bairros para morar em Curitiba · Bairro Ideal">
+<meta property="og:description" content="Mapa de Curitiba com notas de 75 bairros em educação, saúde, saneamento, rua, lazer e comércio, e aluguel estimado. Dados oficiais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/curitiba/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=f0c95426">
+<script>window.DADOS_V = "d8af76d4";</script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+</head>
+<body class="tela-mapa">
+
+
+
+
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mb-abrir" d="M4 7h16M4 12h16M4 17h16"/><path class="mb-fechar" d="M6 6l12 12M18 6 6 18"/></svg><span>Menu</span></button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="m-drop">
+      <button type="button" class="m-link ativo" aria-expanded="false" aria-controls="m-bairros">Bairros de Curitiba <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="m-painel" id="m-bairros">
+        <div class="m-col">
+          <p class="m-rot">Escolha a capital</p>
+          <ul class="m-caps"><li><a href="/aracaju/">Aracaju</a></li><li><a href="/belo-horizonte/">Belo Horizonte</a></li><li><a href="/belem/">Belém</a></li><li><a href="/boa-vista/">Boa Vista</a></li><li><a href="/brasilia/">Brasília</a></li><li><a href="/campo-grande/">Campo Grande</a></li><li><a href="/cuiaba/">Cuiabá</a></li><li><a href="/curitiba/" aria-current="page">Curitiba</a></li><li><a href="/florianopolis/">Florianópolis</a></li><li><a href="/fortaleza/">Fortaleza</a></li><li><a href="/goiania/">Goiânia</a></li><li><a href="/joao-pessoa/">João Pessoa</a></li><li><a href="/macapa/">Macapá</a></li><li><a href="/maceio/">Maceió</a></li><li><a href="/manaus/">Manaus</a></li><li><a href="/natal/">Natal</a></li><li><a href="/palmas/">Palmas</a></li><li><a href="/porto-alegre/">Porto Alegre</a></li><li><a href="/porto-velho/">Porto Velho</a></li><li><a href="/recife/">Recife</a></li><li><a href="/rio-branco/">Rio Branco</a></li><li><a href="/rio-de-janeiro/">Rio de Janeiro</a></li><li><a href="/salvador/">Salvador</a></li><li><a href="/sao-luis/">São Luís</a></li><li><a href="/sao-paulo/">São Paulo</a></li><li><a href="/teresina/">Teresina</a></li><li><a href="/vitoria/">Vitória</a></li></ul>
+        </div>
+        <div class="m-col m-atalhos">
+          <p class="m-rot">Para decidir</p>
+          <a href="/curitiba/?morar=1"><b>Onde eu poderia morar melhor?</b><span>Com a sua renda e o local de trabalho</span></a>
+          <a href="/curitiba/melhores-bairros-para-familias/"><b>Melhores bairros de Curitiba</b><span>Para famílias, aposentados, quem não tem carro e mais baratos</span></a>
+          <a href="/metodologia/"><b>Como calculamos as notas</b><span>Fontes oficiais e o que os números não mostram</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="m-link" href="/comparar/">Comparar</a>
+    <a class="m-link" href="/esse-aluguel-vale/">Esse aluguel vale?</a>
+    <a class="m-link" href="/falar-com-corretor/">Falar com corretor</a>
+    <span class="m-sep" aria-hidden="true"></span>
+    <a class="m-link" href="/contato/">Ajuda</a>
+    <a class="m-link m-pro" href="/para-corretores/">Sou corretor</a>
+    <a class="m-entrar" href="/conta/" id="m-entrar">Entrar</a>
+  </nav>
+</header>
+<script>
+// menu: abre/fecha o "Bairros" e o menu do celular; fecha com Esc ou clique fora. "Entrar" vira "Minha área" com sessão do Pro.
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('menu'),d=n.querySelector('.m-drop > button'),p=document.getElementById('m-bairros');
+function drop(v){d.setAttribute('aria-expanded',v);p.classList.toggle('aberto',v)}
+function menu(v){b.setAttribute('aria-expanded',v);n.classList.toggle('aberto',v);document.body.classList.toggle('menu-aberto',v);if(!v)drop(false)}
+b.onclick=function(){menu(b.getAttribute('aria-expanded')!=='true')};
+d.onclick=function(e){e.stopPropagation();drop(d.getAttribute('aria-expanded')!=='true')};
+document.addEventListener('click',function(e){if(!e.target.closest('.m-drop'))drop(false);if(!e.target.closest('.topo'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(d.getAttribute('aria-expanded')==='true'){drop(false);d.focus()}else menu(false)}});
+try{if(localStorage.getItem('bi_token'))document.getElementById('m-entrar').textContent='Minha área'}catch(e){}})();
+</script>
+
+<main class="app" data-capital="curitiba">
+  <aside class="painel" id="painel">
+    <div class="painel-topo">
+      <select id="troca-capital" aria-label="Trocar de capital">
+        <option value="aracaju">Aracaju</option><option value="belo-horizonte">Belo Horizonte</option><option value="belem">Belém</option><option value="boa-vista">Boa Vista</option><option value="brasilia">Brasília</option><option value="campo-grande">Campo Grande</option><option value="cuiaba">Cuiabá</option><option value="curitiba" selected>Curitiba</option><option value="florianopolis">Florianópolis</option><option value="fortaleza">Fortaleza</option><option value="goiania">Goiânia</option><option value="joao-pessoa">João Pessoa</option><option value="macapa">Macapá</option><option value="maceio">Maceió</option><option value="manaus">Manaus</option><option value="natal">Natal</option><option value="palmas">Palmas</option><option value="porto-alegre">Porto Alegre</option><option value="porto-velho">Porto Velho</option><option value="recife">Recife</option><option value="rio-branco">Rio Branco</option><option value="rio-de-janeiro">Rio de Janeiro</option><option value="salvador">Salvador</option><option value="sao-luis">São Luís</option><option value="sao-paulo">São Paulo</option><option value="teresina">Teresina</option><option value="vitoria">Vitória</option>
+      </select>
+      <h1>Onde morar em Curitiba</h1>
+      <p class="sub">75 bairros comparados por tema. Notas de 0 a 10 dentro da cidade.</p>
+    </div>
+    <button class="btn-morar" id="abrir-morar" type="button" aria-expanded="false" aria-controls="morar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+      Onde eu poderia morar melhor?
+    </button>
+    <form class="morar" id="morar" hidden>
+      <p class="privado">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou guardado.</p>
+      <div class="linha2">
+        <label>Renda da família (R$/mês)<input name="renda" inputmode="numeric" placeholder="Ex.: 6.000" required></label>
+        <label>Moro em
+          <select name="atual"><option value="">Não informar</option></select>
+        </label>
+      </div>
+      <fieldset class="seg"><legend>Minha moradia</legend>
+        <label><input type="radio" name="moradia" value="aluguel" checked> Pago aluguel</label>
+        <label><input type="radio" name="moradia" value="propria"> Imóvel próprio</label>
+      </fieldset>
+      <div class="linha2">
+        <label class="so-aluguel">Aluguel atual (R$/mês)<input name="aluguel" inputmode="numeric" placeholder="Ex.: 1.800"></label>
+        <label class="so-propria" hidden>Valor do meu imóvel (R$)<input name="imovel" inputmode="numeric" placeholder="Ex.: 450.000"></label>
+        <label>Tamanho que procuro
+          <select name="area"><option value="40">Até 40 m² (1 quarto)</option><option value="60" selected>Cerca de 60 m² (2 quartos)</option><option value="80">Cerca de 80 m² (3 quartos)</option><option value="110">110 m² ou mais</option></select>
+        </label>
+      </div>
+      <div class="linha2">
+        <label>Trabalho em
+          <select name="trabalho"><option value="">Não informar</option></select>
+        </label>
+        <label>Vou ao trabalho de
+          <select name="modo"><option value="carro">Carro ou moto</option><option value="onibus" selected>Ônibus ou metrô</option><option value="bike">Bicicleta</option><option value="pe">A pé</option></select>
+        </label>
+      </div>
+      <label>Trajeto máximo (só ida)
+        <select name="max"><option value="30">30 minutos</option><option value="45" selected>45 minutos</option><option value="60">1 hora</option><option value="999">Tanto faz</option></select>
+      </label>
+      <button class="btn" type="submit">Ver onde posso morar melhor</button>
+    </form>
+    <div id="resultado" class="resultado" hidden></div>
+    <div class="temas" role="tablist" aria-label="Tema do mapa">
+      <button data-tema="geral" class="ativo">Geral</button>
+      <button data-tema="educacao">Educação</button>
+      <button data-tema="saude">Saúde</button>
+      <button data-tema="saneamento">Saneamento</button>
+      <button data-tema="rua">Rua</button>
+      <button data-tema="lazer">Lazer</button>
+      <button data-tema="comercio">Comércio</button>
+      <button data-tema="seguranca">Segurança</button>
+      <button data-tema="custo">Aluguel</button>
+    </div>
+    <details class="pesos" id="pesos">
+      <summary>Ajustar o que importa para você</summary>
+      <div id="pesos-lista"></div>
+      <button class="link" id="pesos-zerar" type="button">Voltar aos pesos iguais</button>
+    </details>
+    <div class="camadas">
+      <label><input type="checkbox" id="cam-escolas"> Escolas</label>
+      <label><input type="checkbox" id="cam-saude"> Hospitais, UBS e UPAs</label>
+    </div>
+    <div class="leg-pontos" id="leg-pontos" hidden>
+      <span class="lp-esc"><i style="background:#1f6fb2"></i>Escola pública</span><span class="lp-esc"><i style="background:#e07b39"></i>Escola particular</span>
+      <span class="lp-sau"><i style="background:#c0392b"></i>Hospital</span><span class="lp-sau"><i style="background:#16a085"></i>UBS</span><span class="lp-sau"><i style="background:#8e44ad"></i>UPA / pronto-socorro</span>
+      <small>Passe o cursor sobre um ponto para ver o nome.</small>
+    </div>
+    <div id="bandeja" class="bandeja" hidden></div>
+    <div id="ficha" class="ficha" hidden></div>
+    <div id="ranking" class="ranking"><p class="nota">Carregando o mapa…</p></div>
+    <details class="todas-regioes guias" open>
+      <summary>Guias de Curitiba</summary>
+      <ul class="lista-guias"><li><a href="/curitiba/melhores-bairros-para-familias/">Melhores bairros de Curitiba para famílias com filhos</a></li><li><a href="/curitiba/melhores-bairros-para-aposentados/">Melhores bairros de Curitiba para aposentados e idosos</a></li><li><a href="/curitiba/melhores-bairros-para-quem-nao-tem-carro/">Melhores bairros de Curitiba para quem não tem carro</a></li><li><a href="/curitiba/bairros-baratos-e-bons/">Bairros baratos e bons para morar em Curitiba</a></li>
+        <li><a href="/esse-aluguel-vale/?capital=curitiba">Esse aluguel vale? Confira um anúncio</a></li></ul>
+    </details>
+    <details class="todas-regioes" id="todas-regioes">
+      <summary>Todas as 75 regiões de Curitiba (A–Z)</summary>
+      <ul><li><a href="/curitiba/abranches/" data-id="4106902050">Abranches</a></li><li><a href="/curitiba/agua-verde/" data-id="4106902009">Água Verde</a></li><li><a href="/curitiba/ahu/" data-id="4106902014">Ahú</a></li><li><a href="/curitiba/alto-boqueirao/" data-id="4106902064">Alto Boqueirão</a></li><li><a href="/curitiba/alto-da-gloria/" data-id="4106902004">Alto da Glória</a></li><li><a href="/curitiba/alto-da-rua-xv/" data-id="4106902005">Alto da Rua XV</a></li><li><a href="/curitiba/atuba/" data-id="4106902055">Atuba</a></li><li><a href="/curitiba/augusta/" data-id="4106902068">Augusta</a></li><li><a href="/curitiba/bacacheri/" data-id="4106902035">Bacacheri</a></li><li><a href="/curitiba/bairro-alto/" data-id="4106902036">Bairro Alto</a></li><li><a href="/curitiba/barreirinha/" data-id="4106902052">Barreirinha</a></li><li><a href="/curitiba/batel/" data-id="4106902010">Batel</a></li><li><a href="/curitiba/bigorrilho/" data-id="4106902011">Bigorrilho</a></li><li><a href="/curitiba/boa-vista/" data-id="4106902034">Boa Vista</a></li><li><a href="/curitiba/bom-retiro/" data-id="4106902013">Bom Retiro</a></li><li><a href="/curitiba/boqueirao/" data-id="4106902056">Boqueirão</a></li><li><a href="/curitiba/botiatuvinha/" data-id="4106902061">Botiatuvinha</a></li><li><a href="/curitiba/cabral/" data-id="4106902016">Cabral</a></li><li><a href="/curitiba/cachoeira/" data-id="4106902051">Cachoeira</a></li><li><a href="/curitiba/cajuru/" data-id="4106902021">Cajuru</a></li><li><a href="/curitiba/campina-do-siqueira/" data-id="4106902030">Campina do Siqueira</a></li><li><a href="/curitiba/campo-comprido/" data-id="4106902044">Campo Comprido</a></li><li><a href="/curitiba/campo-de-santana/" data-id="4106902071">Campo de Santana</a></li><li><a href="/curitiba/capao-da-imbuia/" data-id="4106902020">Capão da Imbuia</a></li><li><a href="/curitiba/capao-raso/" data-id="4106902058">Capão Raso</a></li><li><a href="/curitiba/cascatinha/" data-id="4106902047">Cascatinha</a></li><li><a href="/curitiba/caximba/" data-id="4106902070">Caximba</a></li><li><a href="/curitiba/centro/" data-id="4106902001">Centro</a></li><li><a href="/curitiba/centro-civico/" data-id="4106902003">Centro Cívico</a></li><li><a href="/curitiba/cidade-industrial-de-curitiba/" data-id="4106902075">Cidade Industrial de Curitiba</a></li><li><a href="/curitiba/cristo-rei/" data-id="4106902006">Cristo Rei</a></li><li><a href="/curitiba/fanny/" data-id="4106902039">Fanny</a></li><li><a href="/curitiba/fazendinha/" data-id="4106902042">Fazendinha</a></li><li><a href="/curitiba/ganchinho/" data-id="4106902072">Ganchinho</a></li><li><a href="/curitiba/guabirotuba/" data-id="4106902023">Guabirotuba</a></li><li><a href="/curitiba/guaira/" data-id="4106902026">Guaíra</a></li><li><a href="/curitiba/hauer/" data-id="4106902038">Hauer</a></li><li><a href="/curitiba/hugo-lange/" data-id="4106902017">Hugo Lange</a></li><li><a href="/curitiba/jardim-botanico/" data-id="4106902007">Jardim Botânico</a></li><li><a href="/curitiba/jardim-das-americas/" data-id="4106902022">Jardim das Américas</a></li><li><a href="/curitiba/jardim-social/" data-id="4106902018">Jardim Social</a></li><li><a href="/curitiba/juveve/" data-id="4106902015">Juvevê</a></li><li><a href="/curitiba/lamenha-pequena/" data-id="4106902062">Lamenha Pequena</a></li><li><a href="/curitiba/lindoia/" data-id="4106902040">Lindóia</a></li><li><a href="/curitiba/merces/" data-id="4106902012">Mercês</a></li><li><a href="/curitiba/mossungue/" data-id="4106902045">Mossunguê</a></li><li><a href="/curitiba/novo-mundo/" data-id="4106902041">Novo Mundo</a></li><li><a href="/curitiba/orleans/" data-id="4106902059">Orleans</a></li><li><a href="/curitiba/parolin/" data-id="4106902025">Parolin</a></li><li><a href="/curitiba/pilarzinho/" data-id="4106902032">Pilarzinho</a></li><li><a href="/curitiba/pinheirinho/" data-id="4106902066">Pinheirinho</a></li><li><a href="/curitiba/portao/" data-id="4106902027">Portão</a></li><li><a href="/curitiba/prado-velho/" data-id="4106902024">Prado Velho</a></li><li><a href="/curitiba/reboucas/" data-id="4106902008">Rebouças</a></li><li><a href="/curitiba/riviera/" data-id="4106902069">Riviera</a></li><li><a href="/curitiba/santa-candida/" data-id="4106902053">Santa Cândida</a></li><li><a href="/curitiba/santa-felicidade/" data-id="4106902063">Santa Felicidade</a></li><li><a href="/curitiba/santa-quiteria/" data-id="4106902043">Santa Quitéria</a></li><li><a href="/curitiba/santo-inacio/" data-id="4106902046">Santo Inácio</a></li><li><a href="/curitiba/sao-braz/" data-id="4106902060">São Braz</a></li><li><a href="/curitiba/sao-francisco/" data-id="4106902002">São Francisco</a></li><li><a href="/curitiba/sao-joao/" data-id="4106902048">São João</a></li><li><a href="/curitiba/sao-lourenco/" data-id="4106902033">São Lourenço</a></li><li><a href="/curitiba/sao-miguel/" data-id="4106902067">São Miguel</a></li><li><a href="/curitiba/seminario/" data-id="4106902029">Seminário</a></li><li><a href="/curitiba/sitio-cercado/" data-id="4106902065">Sítio Cercado</a></li><li><a href="/curitiba/taboao/" data-id="4106902049">Taboão</a></li><li><a href="/curitiba/taruma/" data-id="4106902019">Tarumã</a></li><li><a href="/curitiba/tatuquara/" data-id="4106902074">Tatuquara</a></li><li><a href="/curitiba/tingui/" data-id="4106902054">Tinguí</a></li><li><a href="/curitiba/uberaba/" data-id="4106902037">Uberaba</a></li><li><a href="/curitiba/umbara/" data-id="4106902073">Umbará</a></li><li><a href="/curitiba/vila-izabel/" data-id="4106902028">Vila Izabel</a></li><li><a href="/curitiba/vista-alegre/" data-id="4106902031">Vista Alegre</a></li><li><a href="/curitiba/xaxim/" data-id="4106902057">Xaxim</a></li></ul>
+    </details>
+  </aside>
+  <section class="mapa-wrap">
+    <div id="mapa" aria-label="Mapa de Curitiba"></div>
+    <div class="legenda" id="legenda"></div>
+  </section>
+</main>
+<script>window.CAPITAL = {"aluguel_m2": 49.4, "bbox": [-49.3893, -25.6454, -49.1852, -25.3451], "centro": [-49.2883, -25.4779], "fipezap_ref": "2026-09", "melhores": [{"nome": "Rebou\u00e7as", "nota": 8.3}, {"nome": "Centro", "nota": 8.2}, {"nome": "Merc\u00eas", "nota": 8.2}], "nivel": "bairros", "nome": "Curitiba", "slug": "curitiba", "uf": "PR", "unidades": 75, "venda_m2": 11766};</script>
+
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="/static/mapa.js?v=a00fadf5"></script>
+
+</body>
+</html>
