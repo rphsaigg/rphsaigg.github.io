@@ -1,0 +1,920 @@
+[
+{
+"slug": "rio-branco",
+"nome": "Rio Branco",
+"uf": "AC",
+"unidades": 104,
+"nivel": "zonas",
+"centro": [
+-68.3717,
+-10.0662
+],
+"bbox": [
+-69.3638,
+-10.4853,
+-67.4822,
+-9.5052
+],
+"aluguel_m2": null,
+"venda_m2": null,
+"fipezap_ref": null,
+"melhores": [
+{
+"nome": "Capoeira",
+"nota": 8.4
+},
+{
+"nome": "Triângulo Velho",
+"nota": 7.9
+},
+{
+"nome": "Tangará",
+"nota": 7.9
+}
+]
+},
+{
+"slug": "maceio",
+"nome": "Maceió",
+"uf": "AL",
+"unidades": 50,
+"nivel": "bairros",
+"centro": [
+-35.7181,
+-9.583
+],
+"bbox": [
+-35.8144,
+-9.7131,
+-35.5585,
+-9.4719
+],
+"aluguel_m2": 56.6,
+"venda_m2": 10061,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Farol",
+"nota": 8.0
+},
+{
+"nome": "Ponta Verde",
+"nota": 7.7
+},
+{
+"nome": "Pajuçara",
+"nota": 7.7
+}
+]
+},
+{
+"slug": "macapa",
+"nome": "Macapá",
+"uf": "AP",
+"unidades": 61,
+"nivel": "bairros",
+"centro": [
+-51.1008,
+0.0332
+],
+"bbox": [
+-51.2036,
+-0.0562,
+-51.0236,
+0.1146
+],
+"aluguel_m2": null,
+"venda_m2": null,
+"fipezap_ref": null,
+"melhores": [
+{
+"nome": "Central",
+"nota": 8.6
+},
+{
+"nome": "Trem",
+"nota": 8.2
+},
+{
+"nome": "Santa Rita",
+"nota": 7.5
+}
+]
+},
+{
+"slug": "manaus",
+"nome": "Manaus",
+"uf": "AM",
+"unidades": 63,
+"nivel": "bairros",
+"centro": [
+-59.9817,
+-3.0437
+],
+"bbox": [
+-60.1163,
+-3.1631,
+-59.8158,
+-2.914
+],
+"aluguel_m2": 53.0,
+"venda_m2": 7860,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Centro",
+"nota": 8.1
+},
+{
+"nome": "Dom Pedro I",
+"nota": 7.5
+},
+{
+"nome": "Cachoeirinha",
+"nota": 7.4
+}
+]
+},
+{
+"slug": "salvador",
+"nome": "Salvador",
+"uf": "BA",
+"unidades": 170,
+"nivel": "bairros",
+"centro": [
+-38.4435,
+-12.9054
+],
+"bbox": [
+-38.6575,
+-13.0173,
+-38.3043,
+-12.7424
+],
+"aluguel_m2": 55.4,
+"venda_m2": 8691,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Rio Vermelho",
+"nota": 8.8
+},
+{
+"nome": "Caminho das Árvores",
+"nota": 8.3
+},
+{
+"nome": "Pituba",
+"nota": 8.0
+}
+]
+},
+{
+"slug": "fortaleza",
+"nome": "Fortaleza",
+"uf": "CE",
+"unidades": 121,
+"nivel": "bairros",
+"centro": [
+-38.528,
+-3.7858
+],
+"bbox": [
+-38.6379,
+-3.8946,
+-38.4014,
+-3.692
+],
+"aluguel_m2": 42.2,
+"venda_m2": 9660,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Centro",
+"nota": 8.1
+},
+{
+"nome": "Fátima",
+"nota": 7.8
+},
+{
+"nome": "Benfica",
+"nota": 7.6
+}
+]
+},
+{
+"slug": "brasilia",
+"nome": "Brasília",
+"uf": "DF",
+"unidades": 33,
+"nivel": "subdistritos",
+"centro": [
+-47.7968,
+-15.7812
+],
+"bbox": [
+-48.2858,
+-16.05,
+-47.3085,
+-15.5018
+],
+"aluguel_m2": 53.8,
+"venda_m2": 10453,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Lago Sul",
+"nota": 7.8
+},
+{
+"nome": "Plano Piloto",
+"nota": 7.7
+},
+{
+"nome": "Taguatinga",
+"nota": 7.5
+}
+]
+},
+{
+"slug": "vitoria",
+"nome": "Vitória",
+"uf": "ES",
+"unidades": 80,
+"nivel": "bairros",
+"centro": [
+-40.2884,
+-20.2789
+],
+"bbox": [
+-40.359,
+-20.3247,
+-40.2149,
+-20.239
+],
+"aluguel_m2": 57.1,
+"venda_m2": 15905,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Santa Lúcia",
+"nota": 8.5
+},
+{
+"nome": "Enseada do Suá",
+"nota": 8.3
+},
+{
+"nome": "Centro",
+"nota": 7.8
+}
+]
+},
+{
+"slug": "goiania",
+"nome": "Goiânia",
+"uf": "GO",
+"unidades": 63,
+"nivel": "subdistritos",
+"centro": [
+-49.281,
+-16.6611
+],
+"bbox": [
+-49.4469,
+-16.8319,
+-49.078,
+-16.5154
+],
+"aluguel_m2": 43.9,
+"venda_m2": 8527,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "U.T.P. Central",
+"nota": 8.3
+},
+{
+"nome": "U.T.P. Marista",
+"nota": 8.2
+},
+{
+"nome": "U.T.P. Cidade Jardim",
+"nota": 8.0
+}
+]
+},
+{
+"slug": "sao-luis",
+"nome": "São Luís",
+"uf": "MA",
+"unidades": 118,
+"nivel": "zonas",
+"centro": [
+-44.2771,
+-2.6292
+],
+"bbox": [
+-44.4136,
+-2.7992,
+-44.1617,
+-2.4733
+],
+"aluguel_m2": 58.0,
+"venda_m2": 8951,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Belira",
+"nota": 8.2
+},
+{
+"nome": "Camboa",
+"nota": 8.1
+},
+{
+"nome": "Condomínio Jardim Tropical",
+"nota": 7.8
+}
+]
+},
+{
+"slug": "cuiaba",
+"nome": "Cuiabá",
+"uf": "MT",
+"unidades": 119,
+"nivel": "bairros",
+"centro": [
+-56.055,
+-15.6068
+],
+"bbox": [
+-56.144,
+-15.6826,
+-55.9335,
+-15.5336
+],
+"aluguel_m2": 48.9,
+"venda_m2": 7102,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Quilombo",
+"nota": 7.8
+},
+{
+"nome": "Areão",
+"nota": 7.6
+},
+{
+"nome": "Araés",
+"nota": 7.6
+}
+]
+},
+{
+"slug": "campo-grande",
+"nome": "Campo Grande",
+"uf": "MS",
+"unidades": 74,
+"nivel": "bairros",
+"centro": [
+-54.6188,
+-20.4798
+],
+"bbox": [
+-54.7632,
+-20.5909,
+-54.5035,
+-20.3708
+],
+"aluguel_m2": 32.9,
+"venda_m2": 6724,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Centro",
+"nota": 8.4
+},
+{
+"nome": "Chácara Cachoeira",
+"nota": 8.0
+},
+{
+"nome": "Amambaí",
+"nota": 7.9
+}
+]
+},
+{
+"slug": "belo-horizonte",
+"nome": "Belo Horizonte",
+"uf": "MG",
+"unidades": 476,
+"nivel": "bairros",
+"centro": [
+-43.96,
+-19.9027
+],
+"bbox": [
+-44.0633,
+-20.0597,
+-43.8572,
+-19.7764
+],
+"aluguel_m2": 50.8,
+"venda_m2": 10686,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Barro Preto",
+"nota": 8.7
+},
+{
+"nome": "Centro",
+"nota": 8.7
+},
+{
+"nome": "Savassi",
+"nota": 8.7
+}
+]
+},
+{
+"slug": "belem",
+"nome": "Belém",
+"uf": "PA",
+"unidades": 71,
+"nivel": "bairros",
+"centro": [
+-48.4421,
+-1.3213
+],
+"bbox": [
+-48.5077,
+-1.4792,
+-48.3278,
+-1.0494
+],
+"aluguel_m2": 62.3,
+"venda_m2": 8830,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Nazaré",
+"nota": 8.4
+},
+{
+"nome": "Batista Campos",
+"nota": 8.3
+},
+{
+"nome": "São Brás",
+"nota": 8.1
+}
+]
+},
+{
+"slug": "joao-pessoa",
+"nome": "João Pessoa",
+"uf": "PB",
+"unidades": 64,
+"nivel": "bairros",
+"centro": [
+-34.859,
+-7.1619
+],
+"bbox": [
+-34.9431,
+-7.2458,
+-34.7931,
+-7.056
+],
+"aluguel_m2": 51.9,
+"venda_m2": 8431,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Estados",
+"nota": 7.8
+},
+{
+"nome": "Jardim Oceania",
+"nota": 7.7
+},
+{
+"nome": "Manaíra",
+"nota": 7.6
+}
+]
+},
+{
+"slug": "curitiba",
+"nome": "Curitiba",
+"uf": "PR",
+"unidades": 75,
+"nivel": "bairros",
+"centro": [
+-49.2883,
+-25.4779
+],
+"bbox": [
+-49.3893,
+-25.6454,
+-49.1852,
+-25.3451
+],
+"aluguel_m2": 49.4,
+"venda_m2": 11766,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Rebouças",
+"nota": 8.3
+},
+{
+"nome": "Centro",
+"nota": 8.2
+},
+{
+"nome": "Mercês",
+"nota": 8.2
+}
+]
+},
+{
+"slug": "recife",
+"nome": "Recife",
+"uf": "PE",
+"unidades": 94,
+"nivel": "bairros",
+"centro": [
+-34.9342,
+-8.0389
+],
+"bbox": [
+-35.0167,
+-8.1551,
+-34.859,
+-7.9292
+],
+"aluguel_m2": 64.4,
+"venda_m2": 9045,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Boa Vista",
+"nota": 8.6
+},
+{
+"nome": "Parnamirim",
+"nota": 8.0
+},
+{
+"nome": "Santo Amaro",
+"nota": 7.9
+}
+]
+},
+{
+"slug": "teresina",
+"nome": "Teresina",
+"uf": "PI",
+"unidades": 123,
+"nivel": "bairros",
+"centro": [
+-42.782,
+-5.0788
+],
+"bbox": [
+-42.8632,
+-5.2141,
+-42.6949,
+-4.9568
+],
+"aluguel_m2": 32.6,
+"venda_m2": 6075,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Centro",
+"nota": 8.6
+},
+{
+"nome": "Jóquei",
+"nota": 7.8
+},
+{
+"nome": "Vermelha",
+"nota": 7.2
+}
+]
+},
+{
+"slug": "rio-de-janeiro",
+"nome": "Rio de Janeiro",
+"uf": "RJ",
+"unidades": 162,
+"nivel": "bairros",
+"centro": [
+-43.4511,
+-22.9232
+],
+"bbox": [
+-43.7961,
+-23.0824,
+-43.0991,
+-22.7462
+],
+"aluguel_m2": 61.9,
+"venda_m2": 11302,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Centro",
+"nota": 8.8
+},
+{
+"nome": "Botafogo",
+"nota": 8.5
+},
+{
+"nome": "Gávea",
+"nota": 8.5
+}
+]
+},
+{
+"slug": "natal",
+"nome": "Natal",
+"uf": "RN",
+"unidades": 36,
+"nivel": "bairros",
+"centro": [
+-35.2319,
+-5.801
+],
+"bbox": [
+-35.2913,
+-5.8998,
+-35.1529,
+-5.704
+],
+"aluguel_m2": 45.7,
+"venda_m2": 6465,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Tirol",
+"nota": 8.3
+},
+{
+"nome": "Lagoa Nova",
+"nota": 8.0
+},
+{
+"nome": "Capim Macio",
+"nota": 7.7
+}
+]
+},
+{
+"slug": "porto-alegre",
+"nome": "Porto Alegre",
+"uf": "RS",
+"unidades": 94,
+"nivel": "bairros",
+"centro": [
+-51.1645,
+-30.0953
+],
+"bbox": [
+-51.3032,
+-30.2694,
+-51.0119,
+-29.9323
+],
+"aluguel_m2": 46.8,
+"venda_m2": 7545,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Centro Histórico",
+"nota": 8.0
+},
+{
+"nome": "Moinhos de Vento",
+"nota": 7.9
+},
+{
+"nome": "Cristo Redentor",
+"nota": 7.8
+}
+]
+},
+{
+"slug": "porto-velho",
+"nome": "Porto Velho",
+"uf": "RO",
+"unidades": 57,
+"nivel": "bairros",
+"centro": [
+-63.8792,
+-8.7631
+],
+"bbox": [
+-63.9274,
+-8.8187,
+-63.8328,
+-8.711
+],
+"aluguel_m2": null,
+"venda_m2": null,
+"fipezap_ref": null,
+"melhores": [
+{
+"nome": "Olaria",
+"nota": 7.3
+},
+{
+"nome": "São João Bosco",
+"nota": 7.1
+},
+{
+"nome": "Flodoaldo Pontes Pinto",
+"nota": 6.8
+}
+]
+},
+{
+"slug": "boa-vista",
+"nome": "Boa Vista",
+"uf": "RR",
+"unidades": 55,
+"nivel": "bairros",
+"centro": [
+-60.7227,
+2.8133
+],
+"bbox": [
+-60.8074,
+2.7449,
+-60.6221,
+2.8701
+],
+"aluguel_m2": null,
+"venda_m2": null,
+"fipezap_ref": null,
+"melhores": [
+{
+"nome": "Centro",
+"nota": 8.4
+},
+{
+"nome": "São Francisco",
+"nota": 8.1
+},
+{
+"nome": "Mecejana",
+"nota": 7.9
+}
+]
+},
+{
+"slug": "florianopolis",
+"nome": "Florianópolis",
+"uf": "SC",
+"unidades": 87,
+"nivel": "bairros",
+"centro": [
+-48.4954,
+-27.5705
+],
+"bbox": [
+-48.6063,
+-27.8195,
+-48.3752,
+-27.3875
+],
+"aluguel_m2": 61.8,
+"venda_m2": 13607,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Centro",
+"nota": 8.5
+},
+{
+"nome": "Canto",
+"nota": 7.8
+},
+{
+"nome": "Trindade",
+"nota": 7.7
+}
+]
+},
+{
+"slug": "sao-paulo",
+"nome": "São Paulo",
+"uf": "SP",
+"unidades": 96,
+"nivel": "distritos",
+"centro": [
+-46.6481,
+-23.6501
+],
+"bbox": [
+-46.8262,
+-24.0084,
+-46.3652,
+-23.3563
+],
+"aluguel_m2": 65.8,
+"venda_m2": 12206,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Santo Amaro",
+"nota": 8.8
+},
+{
+"nome": "Santana",
+"nota": 8.6
+},
+{
+"nome": "Tatuapé",
+"nota": 8.6
+}
+]
+},
+{
+"slug": "aracaju",
+"nome": "Aracaju",
+"uf": "SE",
+"unidades": 48,
+"nivel": "bairros",
+"centro": [
+-37.0925,
+-10.989
+],
+"bbox": [
+-37.1718,
+-11.138,
+-37.0336,
+-10.8631
+],
+"aluguel_m2": 36.0,
+"venda_m2": 5875,
+"fipezap_ref": "2026-09",
+"melhores": [
+{
+"nome": "Centro",
+"nota": 8.2
+},
+{
+"nome": "São José",
+"nota": 8.2
+},
+{
+"nome": "Siqueira Campos",
+"nota": 8.1
+}
+]
+},
+{
+"slug": "palmas",
+"nome": "Palmas",
+"uf": "TO",
+"unidades": 69,
+"nivel": "zonas",
+"centro": [
+-48.1307,
+-10.2219
+],
+"bbox": [
+-48.3761,
+-10.4601,
+-47.7933,
+-9.9281
+],
+"aluguel_m2": null,
+"venda_m2": null,
+"fipezap_ref": null,
+"melhores": [
+{
+"nome": "QI 35",
+"nota": 8.2
+},
+{
+"nome": "Jardim Aureny III",
+"nota": 7.8
+},
+{
+"nome": "L-16",
+"nota": 7.7
+}
+]
+}
+]
