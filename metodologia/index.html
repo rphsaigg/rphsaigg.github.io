@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como calculamos as notas · Bairro Ideal</title>
+<meta name="description" content="Fontes, método e limites do mapa de onde morar: IBGE, INEP, DataSUS, OpenStreetMap, ANP e FipeZap.">
+<link rel="canonical" href="https://bairroideal.com.br/metodologia/">
+<meta property="og:title" content="Como calculamos as notas · Bairro Ideal">
+<meta property="og:description" content="Fontes, método e limites do mapa de onde morar: IBGE, INEP, DataSUS, OpenStreetMap, ANP e FipeZap.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bairroideal.com.br/metodologia/">
+<meta name="theme-color" content="#0b6b56">
+<meta property="og:site_name" content="Bairro Ideal">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/estilo.css?v=ea13e2ce">
+<script>window.DADOS_V = "6b40a93e";</script>
+
+</head>
+<body class="">
+
+
+
+
+<header class="topo">
+  <a class="marca" href="/"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Bairro Ideal</b></a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mb-abrir" d="M4 7h16M4 12h16M4 17h16"/><path class="mb-fechar" d="M6 6l12 12M18 6 6 18"/></svg><span>Menu</span></button>
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="m-drop">
+      <button type="button" class="m-link ativo" aria-expanded="false" aria-controls="m-bairros">Bairros <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="m-painel" id="m-bairros">
+        <div class="m-col">
+          <p class="m-rot">Escolha a capital</p>
+          <ul class="m-caps"><li><a href="/aracaju/">Aracaju</a></li><li><a href="/belo-horizonte/">Belo Horizonte</a></li><li><a href="/belem/">Belém</a></li><li><a href="/boa-vista/">Boa Vista</a></li><li><a href="/brasilia/">Brasília</a></li><li><a href="/campo-grande/">Campo Grande</a></li><li><a href="/cuiaba/">Cuiabá</a></li><li><a href="/curitiba/">Curitiba</a></li><li><a href="/florianopolis/">Florianópolis</a></li><li><a href="/fortaleza/">Fortaleza</a></li><li><a href="/goiania/">Goiânia</a></li><li><a href="/joao-pessoa/">João Pessoa</a></li><li><a href="/macapa/">Macapá</a></li><li><a href="/maceio/">Maceió</a></li><li><a href="/manaus/">Manaus</a></li><li><a href="/natal/">Natal</a></li><li><a href="/palmas/">Palmas</a></li><li><a href="/porto-alegre/">Porto Alegre</a></li><li><a href="/porto-velho/">Porto Velho</a></li><li><a href="/recife/">Recife</a></li><li><a href="/rio-branco/">Rio Branco</a></li><li><a href="/rio-de-janeiro/">Rio de Janeiro</a></li><li><a href="/salvador/">Salvador</a></li><li><a href="/sao-luis/">São Luís</a></li><li><a href="/sao-paulo/">São Paulo</a></li><li><a href="/teresina/">Teresina</a></li><li><a href="/vitoria/">Vitória</a></li></ul>
+        </div>
+        <div class="m-col m-atalhos">
+          <p class="m-rot">Para decidir</p>
+          <a href="/brasilia/?morar=1"><b>Onde eu poderia morar melhor?</b><span>Com a sua renda e o local de trabalho (comece por Brasília ou escolha a capital)</span></a>
+          
+          <a href="/achar-bairro/"><b>Descreva o bairro que você procura</b><span>Escreva em uma frase e receba os bairros que combinam</span></a>
+          <a href="/meu-endereco/"><b>Nota do endereço</b><span>O que dá para fazer a pé em 15 minutos</span></a>
+          <a href="/comprar-ou-alugar/"><b>Comprar ou alugar?</b><span>Simulador com o preço do seu bairro</span></a>
+          <a href="/onde-abrir-negocio/"><b>Onde abrir meu negócio</b><span>Bairros com menos concorrência</span></a>
+          <a href="/metodologia/" aria-current="page"><b>Como calculamos as notas</b><span>Fontes oficiais e o que os números não mostram</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="m-link" href="/comparar/">Comparar</a>
+    <a class="m-link" href="/esse-aluguel-vale/">Esse aluguel vale?</a>
+    <a class="m-link" href="/falar-com-corretor/">Falar com corretor</a>
+    <span class="m-sep" aria-hidden="true"></span>
+    <a class="m-link" href="/contato/">Ajuda</a>
+    <a class="m-link m-pro" href="/para-corretores/">Sou corretor</a>
+    <a class="m-entrar" href="/conta/" id="m-entrar">Entrar</a>
+  </nav>
+</header>
+<script>
+// menu: abre/fecha o "Bairros" e o menu do celular; fecha com Esc ou clique fora. "Entrar" vira "Minha área" com sessão do Pro.
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('menu'),d=n.querySelector('.m-drop > button'),p=document.getElementById('m-bairros');
+function drop(v){d.setAttribute('aria-expanded',v);p.classList.toggle('aberto',v)}
+function menu(v){b.setAttribute('aria-expanded',v);n.classList.toggle('aberto',v);document.body.classList.toggle('menu-aberto',v);if(!v)drop(false)}
+b.onclick=function(){menu(b.getAttribute('aria-expanded')!=='true')};
+d.onclick=function(e){e.stopPropagation();drop(d.getAttribute('aria-expanded')!=='true')};
+document.addEventListener('click',function(e){if(!e.target.closest('.m-drop'))drop(false);if(!e.target.closest('.topo'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(d.getAttribute('aria-expanded')==='true'){drop(false);d.focus()}else menu(false)}});
+try{if(localStorage.getItem('bi_token'))document.getElementById('m-entrar').textContent='Minha área'}catch(e){}})();
+</script>
+
+<main class="pagina texto">
+  <h1>Como calculamos as notas</h1>
+  <p class="lead">Tudo aqui vem de bases públicas. Explicamos cada número, e principalmente o que eles não conseguem mostrar.</p>
+
+  <h2>A região</h2>
+  <p>Na maioria das capitais usamos os <b>bairros oficiais do IBGE</b> (Censo 2022). São Paulo não tem bairros oficiais no IBGE, então usamos os 96 <b>distritos</b>. Em Brasília usamos as <b>regiões administrativas</b>; em Goiânia, as unidades territoriais de planejamento. Rio Branco, São Luís e Palmas também não têm bairros no IBGE: nelas, juntamos os setores censitários em <b>zonas</b> de cerca de 1,2 km e damos a cada zona o nome do bairro ou conjunto mais próximo no OpenStreetMap. Em Palmas, que se organiza por quadras, alguns nomes são aproximados.</p>
+
+  <h2>A nota</h2>
+  <p>Nos indicadores de cobertura (água, esgoto, coleta de lixo e infraestrutura da rua), a nota é o próprio percentual: 95% dos domicílios com esgoto na rede valem 9,5. Os demais indicadores são comparados só com as outras regiões da <b>mesma cidade</b>: 10 é a melhor região da cidade nesse ponto e 0 é a pior. A nota de um tema é a média dos seus indicadores, e a nota geral é a média dos temas disponíveis na cidade, todos com o mesmo peso. No mapa, você pode mudar os pesos. Uma nota 8 em Belo Horizonte, portanto, <b>não</b> se compara com uma nota 8 em Recife.</p>
+  <p>Contamos o que existe dentro da região em relação ao número de moradores. Para regiões com poucos moradores, como centros comerciais e campi, usamos como base a população típica dos bairros da cidade, para que uma única clínica não pareça "muita oferta". Para não ignorar o que fica logo do outro lado da divisa, também medimos a distância, em linha reta, do centro habitado da região até a UBS, o hospital, a UPA, a escola pública e a creche mais próximas.</p>
+
+  <h2>Os temas e as fontes</h2>
+  <table>
+    <tr><th>Tema</th><th>Indicadores</th><th>Fonte</th></tr>
+    <tr><td>Educação</td><td>IDEB médio das escolas públicas (ponderado por matrículas), escolas por criança de 0 a 14 anos, escolas com biblioteca, laboratório e quadra, oferta de escolas particulares, distância até a escola pública e a creche mais próximas</td><td>INEP: Censo Escolar 2024, IDEB 2023, Catálogo de Escolas (via IPEA/geobr)</td></tr>
+    <tr><td>Saúde</td><td>UBS, hospitais, UPAs e prontos-socorros, clínicas de especialidades, laboratórios, por morador, e distância até a UBS, o hospital e a UPA mais próximos</td><td>DataSUS: CNES (cadastro ativo)</td></tr>
+    <tr><td>Saneamento</td><td>Domicílios com água da rede geral, esgoto ligado à rede e lixo coletado</td><td>IBGE: Censo 2022</td></tr>
+    <tr><td>Infraestrutura da rua</td><td>Moradores em ruas com pavimento, iluminação, calçada, árvores, bueiro, rampa e ponto de ônibus</td><td>IBGE: Censo 2022, entorno dos domicílios</td></tr>
+    <tr><td>Lazer e cultura</td><td>Área verde por morador, parques, praças, espaços de esporte, cultura, bares, restaurantes e academias</td><td>OpenStreetMap; bares, restaurantes e academias pelo CNPJ (Receita Federal)</td></tr>
+    <tr><td>Comércio e serviços</td><td>Mercados e padarias, lojas, farmácias, bancos e lotéricas, salões, pet shops e shoppings por morador, e preço da gasolina</td><td>Receita Federal: CNPJ ativos (out/2026), localizados pelo bairro ou CEP do cadastro; OpenStreetMap (shoppings); ANP</td></tr>
+    <tr><td>Segurança</td><td>Roubos e mortes violentas intencionais (homicídio doloso, latrocínio e lesão corporal seguida de morte) por 100 mil moradores, em 2025</td><td>Secretarias estaduais de segurança, só onde publicam em formato aberto: <b>Distrito Federal</b> (SSP-DF, por região administrativa), <b>São Paulo</b> (SSP-SP, boletins de ocorrência com coordenadas, por distrito) e <b>Rio de Janeiro</b> (ISP-RJ, por circunscrição de delegacia). Nas demais capitais ainda não há dado por bairro</td></tr>
+    <tr><td>Custo de moradia</td><td>Aluguel e compra por m² <b>estimados</b></td><td>FipeZap + renda da região (IBGE)</td></tr>
+  </table>
+
+  <h2>Limites que você precisa saber</h2>
+  <ul>
+    <li><b>Não existe preço oficial de aluguel por bairro.</b> Partimos do preço do m² da cidade no FipeZap, que reflete sobretudo os anúncios das áreas mais procuradas, e o ajustamos pela renda mediana de cada região: regiões de renda mais baixa têm aluguel estimado menor. É uma <b>estimativa</b>: confira anúncios reais antes de decidir. O FipeZap não cobre Macapá, Boa Vista e Porto Velho.</li>
+    <li><b>Escolas particulares não têm nota oficial.</b> O IDEB só existe para a rede pública. Por isso a rede privada entra pela oferta e pela infraestrutura.</li>
+    <li><b>O OpenStreetMap é colaborativo.</b> Ele é muito completo em algumas cidades e falho em outras: parques e praças podem estar subestimados onde o mapa é pouco editado. O comércio vem do CNPJ, que inclui MEIs que trabalham em casa e usa o endereço declarado à Receita.</li>
+    <li><b>Ainda não medimos onde as pessoas adoecem menos.</b> Os óbitos do Censo vêm subnotificados, então não os usamos. Estamos preparando um indicador com as internações do SUS por local de residência.</li>
+    <li><b>Segurança só existe em três capitais e cada uma tem seu método.</b> Compare notas de segurança apenas dentro da mesma cidade. <b>Brasília:</b> balanço por região administrativa. <b>São Paulo:</b> cada ocorrência com latitude e longitude cai no distrito em que aconteceu; cerca de 12% dos boletins não têm coordenada válida e entram repartidos como os demais, delegacia por delegacia. <b>Rio de Janeiro:</b> o ISP só publica por delegacia (CISP), que é maior do que o bairro. Dividimos os crimes de cada CISP entre os bairros que ela cobre, na proporção da população (dos setores do Censo 2010 sobre a população de 2022), e todos os bairros da mesma CISP ficam com a mesma taxa. Por isso um bairro calmo que divide a delegacia com o Centro (Paquetá, por exemplo) herda a taxa alta do Centro. Onde a delegacia tem registros claramente incompletos (a 11ª DP, da Rocinha, registra menos de um décimo da taxa típica da cidade), ficamos sem dado em vez de mostrar uma região "segura" por falta de registro.</li>
+    <li><b>Crime por morador penaliza o centro.</b> Os roubos são divididos pelos moradores, não pelas pessoas que circulam. Distritos com muita gente de passagem e poucos moradores (Sé, República, Brás, Bom Retiro, Barra Funda, o Centro do Rio) aparecem com taxas altas. Nos três casos entram só boletins de ocorrência: o que não é registrado fica de fora, e onde a confiança na polícia é menor o registro tende a ser menor. Furto fica de fora porque se concentra em áreas comerciais.</li>
+    <li>Regiões com menos de mil moradores aparecem marcadas: nelas, uma única escola ou clínica muda muito a nota.</li>
+  </ul>
+  <h2 id="evolucao">Bairro em ascensão ou em declínio (2010 → 2022)</h2>
+  <p>Na ficha de alguns bairros aparece quanto eles mudaram entre o Censo 2010 e o de 2022: moradores, renda dos responsáveis pelos domicílios e cobertura de água e esgoto na rede. O selo <b>em ascensão</b> ou <b>em declínio</b> olha só a <b>renda</b>: ascensão quando a renda do bairro, em relação à média da cidade, subiu 10% ou mais e a renda real (descontado o INPC de julho de 2010 a julho de 2022) não caiu; declínio quando a renda relativa caiu 10% ou mais e a real não subiu mais de 10%. Nos demais casos, o selo é <b>estável</b>. Água, esgoto e população aparecem como contexto e não entram no selo. Não é nota nem previsão de preço de imóvel.</p>
+  <ul>
+    <li><b>Só onde o contorno é comparável.</b> O Censo 2010 não tem os bairros de 2022: ele é por setor censitário. Cada setor de 2010 vai para o bairro de 2022 onde cai o seu ponto central, e só mostramos a evolução se a soma desses setores coincide com o contorno do bairro de 2022 (ao menos 80% de coincidência de área), com pelo menos 300 domicílios em 2010 e 1.000 moradores em 2022. Onde o limite foi redesenhado, onde um setor rural gigante se dividiu entre bairros ou onde o bairro é novo, não há comparação. As zonas de Rio Branco, São Luís e Palmas (grade própria) ficam de fora.</li>
+    <li><b>Renda dos responsáveis com rendimento.</b> O IBGE não informa, por setor, quantos responsáveis têm rendimento em 2010; ponderamos pelos domicílios. A renda de 2010 é nominal de julho de 2010; a comparação real usa o INPC (×2,08 até julho de 2022).</li>
+    <li><b>Mudança de quem mora, não necessariamente de quem ficou.</b> Um bairro "em ascensão" pode ter recebido moradores de renda maior sem que quem morava lá tenha ganhado mais; um "em declínio" pode ter perdido moradores de renda alta. O Censo não acompanha as pessoas.</li>
+    <li><b>Coleta de lixo fica de fora.</b> O Censo 2022 separa o lixo coletado por serviço de limpeza do depositado em caçamba (comum em favelas); o de 2010 junta os dois, e a comparação mostraria queda onde não houve.</li>
+    <li>Moradores de 2010: pessoas em domicílios particulares permanentes; 2022: população residente (a diferença, população em domicílios coletivos, é de cerca de 1%).</li>
+  </ul>
+  <p class="nota">Encontrou algo estranho no seu bairro? <a href="/contato/?assunto=dado">Avise a gente pelo formulário de contato</a>.</p>
+  <h2 id="risco">Áreas de risco de deslizamento e inundação</h2>
+  <p>A página de cada bairro diz se há moradias em áreas oficialmente mapeadas como de risco de deslizamento, inundação, enxurrada ou erosão, e quantos moradores vivem nelas. <b>Não entra na nota geral</b>, porque as fontes têm datas e métodos diferentes entre as cidades. Usamos uma fonte por capital:</p>
+  <ul>
+    <li><b>Serviço Geológico do Brasil (SGB, antigo CPRM)</b>, setorização de risco geológico: polígonos visitados em campo, com o tipo de processo, o grau (alto ou muito alto) e o número estimado de moradores. Usado em todas as capitais que o SGB mapeou, com datas de 2012 a 2025 (o ano aparece na página). Cada setor conta para o bairro onde fica o seu ponto central.</li>
+    <li><b>IBGE e CEMADEN, 2010</b> (Base Territorial Estatística de Áreas de Risco, do estudo "População em áreas de risco no Brasil"): usado em São Paulo, Rio de Janeiro, Belo Horizonte, Salvador, Recife, Vitória e Natal, que fazem o próprio mapeamento e não estão na base do SGB. Os moradores são os do Censo 2010, contados pela parte de cada setor censitário que fica dentro da área de risco. Essas áreas cobrem quarteirões inteiros em volta das moradias em risco, então tendem a contar mais gente do que o risco real, e obras feitas depois de 2010 não aparecem.</li>
+    <li><b>Não compare cidades entre si</b>: o SGB marca só os setores de risco alto e muito alto, e o mapeamento de 2010 é mais amplo. Dentro da mesma cidade, a comparação entre bairros faz sentido.</li>
+    <li>Ruas que alagam sem moradias em risco não aparecem. Palmas não tem mapeamento em nenhuma das duas fontes. Para um imóvel específico, consulte a Defesa Civil da cidade.</li>
+  </ul>
+  <h2 id="calor">Calor do bairro (temperatura da superfície)</h2>
+  <p>Mostra quais bairros ficam mais quentes ou mais frescos que a média da cidade. Usamos a banda de temperatura da superfície dos satélites <b>Landsat 8 e 9</b> (USGS, Collection 2, nível 2, servida pelo Microsoft Planetary Computer): até 8 passagens de 2023 a 2025 com pouca nuvem, todas por volta das 10h. Em cada passagem, tiramos nuvens, sombras e água e calculamos quanto cada ponto está acima ou abaixo da mediana da cidade naquele dia; depois, a mediana dessas diferenças. O valor do bairro é a média dos pontos dentro dele. <b>Não entra na nota geral.</b></p>
+  <ul>
+    <li>É a temperatura do <b>chão e dos telhados</b>, não a do ar que você sente: asfalto e telhado escuro chegam a ficar 10 °C ou mais acima de um parque arborizado. Ainda assim, bairros com a superfície mais quente costumam ter o ar mais quente à tarde e à noite (ilhas de calor).</li>
+    <li>Compare bairros da mesma cidade; entre cidades, as datas e o clima das passagens são diferentes.</li>
+    <li>O satélite enxerga em blocos de cerca de 100 m: ruas arborizadas dentro de um bairro quente não aparecem.</li>
+  </ul>
+  <h2 id="ferramentas">Como funcionam as ferramentas novas</h2>
+  <ul>
+    <li><b>Nota do endereço</b> (<a href="/meu-endereco/">/meu-endereco/</a>): para o ponto escolhido, mede a distância em linha reta até o mercado, a escola pública, a UBS, o parque ou praça, os bares e restaurantes e o esporte, cultura ou shopping mais próximos. Cada item vale 1 até 400 m e cai até 0 aos 2 km; mercado pesa 2, escola e UBS e parque 1,5, os demais 1. O trajeto a pé é a distância × 1,25 a 4,8 km/h. Usa pontos do OpenStreetMap, das escolas do INEP e das unidades do CNES: onde o OpenStreetMap tem pouco mapeado, a nota subestima. O ponto não sai do seu navegador; só o texto do endereço vai ao Nominatim.</li>
+    <li><b>Descreva o bairro</b> (<a href="/achar-bairro/">/achar-bairro/</a>): lê a frase por palavras-chave (capital, valor, tamanho e prioridades), converte as prioridades em pesos dos temas e ordena os bairros do mesmo cálculo do mapa. Mostra o que entendeu. Não usa inteligência artificial nem envia o texto.</li>
+    <li><b>Onde abrir meu negócio</b> (<a href="/onde-abrir-negocio/">/onde-abrir-negocio/</a>): compara moradores (com a renda no peso escolhido) com os estabelecimentos ativos do mesmo tipo no CNPJ da Receita Federal. Bairros grandes sem nenhum cadastro ficam sem nota, porque as empresas costumam estar registradas em outro bairro. Não mede fluxo de pessoas, aluguel comercial nem qualidade dos concorrentes.</li>
+    <li><b>Comprar ou alugar</b> (<a href="/comprar-ou-alugar/">/comprar-ou-alugar/</a>): simulação mensal com Tabela Price, valorização do imóvel, reajuste do aluguel, rendimento do dinheiro investido, custos de compra, IPTU e manutenção e 6% de corretagem na venda. As premissas são exemplos editáveis; é uma ferramenta educativa, não uma recomendação.</li>
+    <li><b>Tempo até o trabalho</b> (botão no mapa de cada capital): tempo de carro <b>sem trânsito</b> do centro de cada região até o centro da região onde você trabalha, pelo caminho mais rápido nas ruas do OpenStreetMap. A velocidade de cada rua é 70% do limite informado no OpenStreetMap ou, sem limite, a típica do tipo de via (de 10 km/h numa rua de pedestres a 80 km/h numa via expressa), respeitando a mão das ruas. No horário de pico, conte de 1,5 a 2 vezes mais. Ônibus e metrô ainda usam a estimativa por distância.</li>
+    <li><b>Metrô, trem e BRT</b>: linhas e estações do OpenStreetMap, um mapa colaborativo. Linhas em obra ficam de fora e pode faltar uma linha recente. A "estação mais próxima" é medida em linha reta a partir do centro habitado da região e só aparece até 5 km.</li>
+    <li><b>Relevo 3D</b>: altitude dos Terrain Tiles (dados abertos reunidos pela Mapzen, de fontes como SRTM), com o relevo exagerado 1,6 vez para os morros aparecerem.</li>
+    <li><b>Bairros parecidos em outras capitais</b>: distância entre os perfis (notas de educação, saúde, saneamento, rua, lazer e comércio, mais a renda mediana) das regiões com 3 mil moradores ou mais; no máximo uma por capital. As notas são relativas a cada cidade.</li>
+  </ul>
+</main>
+
+
+<footer class="rodape">
+  <p>Dados oficiais: IBGE (Censo 2022), INEP (Censo Escolar 2024 e IDEB 2023), DataSUS (CNES), Receita Federal (CNPJ), SSP-DF, SSP-SP, ISP-RJ, ANP e FipeZap; áreas de risco do Serviço Geológico do Brasil e do CEMADEN; parques e lazer do OpenStreetMap. Mapa-base © <a href="https://openfreemap.org">OpenFreeMap</a> e © <a href="https://www.openstreetmap.org/copyright">colaboradores do OpenStreetMap</a>.</p>
+  <p>© 2026 Bairro Ideal, um projeto Saigg Digital · <a href="/metodologia/">Metodologia e limites</a> · <a href="/esse-aluguel-vale/">Esse aluguel vale?</a> · <a href="/meu-endereco/">Nota do endereço</a> · <a href="/achar-bairro/">Achar bairro</a> · <a href="/comprar-ou-alugar/">Comprar ou alugar</a> · <a href="/onde-abrir-negocio/">Onde abrir negócio</a> · <a href="/selo-para-site/">Selo para corretores</a> · <a href="/falar-com-corretor/">Falar com um corretor</a> · <a href="/para-corretores/">Bairro Ideal Pro</a> · <a href="/conta/">Minha área</a> · <a href="/termos/">Termos</a> · <a href="/privacidade/">Privacidade</a> · <a href="/contato/">Contato e suporte</a></p>
+</footer>
+
+<script>
+// medição própria, sem cookies (Worker saigg-app): página visitada e alguns usos (abrir região, comparar, "Morar melhor")
+(function(){var W='https://saigg-app.montacamisa.workers.dev/v',ok=location.hostname==='bairroideal.com.br'&&navigator.doNotTrack!=='1';
+function env(o){if(!ok)return;try{navigator.sendBeacon(W,JSON.stringify(o))}catch(e){}}
+window.biEvento=function(e,a){env({e:e,p:location.pathname,a:String(a||'').slice(0,160)})};
+env({p:location.pathname,r:document.referrer,u:new URLSearchParams(location.search).get('utm_source')||''});})();
+</script>
+
+</body>
+</html>

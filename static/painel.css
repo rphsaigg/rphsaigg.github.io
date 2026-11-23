@@ -1,0 +1,62 @@
+/* Painel de analytics (/painel/) — usa os tokens de estilo.css */
+.admin{max-width:1180px;margin:0 auto;padding:1.4rem 1rem 3rem}
+.admin h1{font-size:1.5rem;margin-bottom:.4rem}
+.admin h2{font-size:.95rem;font-weight:700;margin-bottom:.9rem;color:var(--ink)}
+.link{background:none;border:0;color:var(--ink-2);font:600 .92rem var(--font);cursor:pointer}
+.admin section.cartao:not(.entrar){margin:0 0 1rem}
+.cartao{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem 1.2rem;margin-bottom:1rem;min-width:0}
+.entrar{max-width:420px;margin:3rem auto}
+.entrar form{display:flex;flex-direction:column;gap:.8rem;margin-top:1rem}
+.entrar label{display:flex;flex-direction:column;gap:.3rem;font-weight:600;font-size:.9rem}
+.entrar input{font:1rem var(--font);padding:.7rem .8rem;border:1px solid var(--line-2);border-radius:10px}
+.erro{color:#b42318;font-size:.9rem;min-height:1.2em}
+
+.filtros{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin-bottom:1rem}
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{border:0;background:none;font:600 .86rem var(--font);color:var(--ink-2);padding:.4rem .85rem;border-radius:999px;cursor:pointer}
+.seg button.ativo{background:var(--acento);color:#fff}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem;margin-bottom:1rem}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:.9rem 1rem;display:flex;flex-direction:column;gap:.15rem}
+.kpi .r{font-size:.8rem;color:var(--muted);font-weight:600}
+.kpi b{font-size:1.75rem;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi .s{font-size:.78rem;color:var(--muted)}
+.var.sobe{color:#0b6b56}.var.desce{color:#b42318}
+
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:0 1rem}
+.grade .largo{grid-column:1/-1}
+@media (max-width:420px){.grade{grid-template-columns:1fr}}
+
+.grafico-dias svg{width:100%;height:auto;display:block}
+.grafico-dias text{font:11px var(--font);fill:var(--muted)}
+.grafico-dias .grade-l{stroke:var(--line);stroke-width:1}
+.grafico-dias .barra{fill:var(--acento)}
+.grafico-dias .alvo{fill:transparent}
+.grafico-dias g:hover .barra{fill:#08513f}
+.grafico-dias g:hover .alvo{fill:var(--acento-2)}
+
+.barras{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.55rem}
+.barras li{display:grid;grid-template-columns:1fr auto;gap:.2rem .6rem;font-size:.88rem;cursor:default}
+.barras .rot{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-2)}
+.barras .v{font-weight:700;font-variant-numeric:tabular-nums}
+.barras .trilho{grid-column:1/-1;height:6px;background:var(--bg);border-radius:4px}
+.barras .trilho i{display:block;height:100%;background:var(--acento);border-radius:4px}
+.barras li:hover .rot{color:var(--ink)}
+.vazio{color:var(--muted);font-size:.88rem;margin:0}
+
+.horas{display:grid;grid-template-columns:repeat(24,1fr);gap:2px;height:120px;align-items:end;border-bottom:1px solid var(--line)}
+.horas span{height:100%;display:flex;align-items:flex-end}
+.horas span:hover{background:var(--acento-2)}
+.horas i{display:block;width:100%;background:var(--acento);border-radius:3px 3px 0 0}
+.horas-eixo{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);margin-top:.3rem}
+
+.dica-graf{position:fixed;z-index:20;pointer-events:none;background:var(--ink);color:#fff;font-size:.8rem;line-height:1.4;padding:.45rem .65rem;border-radius:8px;max-width:280px;box-shadow:var(--sombra)}
+.carregando{opacity:.55;transition:opacity .2s}
+
+.google h3{font-size:.85rem;font-weight:700;color:var(--ink-2);margin:1.1rem 0 .7rem}
+.cab-google{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.4rem}
+.cab-google h2 .nota{font-weight:500;margin-left:.3rem}
+.kpis.mini{margin-bottom:0}
+.kpis.mini .kpi{background:var(--bg);border:0}
+.kpis.mini .kpi b{font-size:1.4rem}
+.google .grade{gap:0 1.6rem}
